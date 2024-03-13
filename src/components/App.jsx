@@ -15,6 +15,21 @@
 // const RegisterPage = lazy(() => import('../pages/RegisterPage/RegisterPage'));
 // const ReportsPage = lazy(() => import('../pages/ReportsPage/ReportsPage'));
 
-export const App = () => {
-  return <div></div>;
+// export const App = () => {
+//   return <div> hello
+    
+//   </div>;
+// };
+
+
+import React from 'react';
+
+const App = () => {
+  return (
+    <div>
+      <h1>Hello, world!</h1>
+    </div>
+  );
 };
+
+export default App;
