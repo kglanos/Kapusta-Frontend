@@ -1,13 +1,10 @@
 {
   "files": {
-    "main.css": "/Kapusta-Frontend/static/css/main.7acaea2f.css",
-    "main.js": "/Kapusta-Frontend/static/js/main.30e279fc.js",
+    "main.js": "/Kapusta-Frontend/static/js/main.dcc2a9f5.js",
     "index.html": "/Kapusta-Frontend/index.html",
-    "main.7acaea2f.css.map": "/Kapusta-Frontend/static/css/main.7acaea2f.css.map",
-    "main.30e279fc.js.map": "/Kapusta-Frontend/static/js/main.30e279fc.js.map"
+    "main.dcc2a9f5.js.map": "/Kapusta-Frontend/static/js/main.dcc2a9f5.js.map"
   },
   "entrypoints": [
-    "static/css/main.7acaea2f.css",
-    "static/js/main.30e279fc.js"
+    "static/js/main.dcc2a9f5.js"
   ]
 }
