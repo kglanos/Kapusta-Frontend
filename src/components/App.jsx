@@ -1,20 +1,63 @@
-// import React, { lazy, Suspense, useEffect } from 'react';
-// import { Navigate, Route, Routes } from 'react-router-dom';
-// import { useDispatch } from 'react-redux';
-// import { ToastContainer } from 'react-toastify';
-// import { refreshUser } from '../redux/Auth/operations';
-// import { useAuth } from '../redux/Auth/useAuth';
-// import { PrivateRoute } from './PrivateRoute';
-// import { RestrictedRoute } from './RestrictedRoute';
-// import { useScreenSize } from 'hooks/useScreenSize';
+import { Route, Routes } from 'react-router-dom';
+import { lazy, useEffect } from 'react';
+import { currentUser } from '../redux/Auth/operations';
+import Layout from './Layout/Layout';
+import { useDispatch, useSelector } from 'react-redux';
+import { Loader } from './Loader/Loader';
+import { selectIsRefreshing } from '../redux/Auth/selectors';
+import { RestrictedRoute } from './RestrictedRoute';
+import { PrivateRoute } from './PrivateRoute';
 
-// const ExpensesPage = lazy(() => import('../pages/ExpensesPage/ExpensesPage'));
-// const HomePage = lazy(() => import('../pages/HomePage/HomePage'));
-// const IncomePage = lazy(() => import('../pages/IncomePage/IncomePage'));
-// const LoginPage = lazy(() => import('../pages/LoginPage/LoginPage'));
-// const RegisterPage = lazy(() => import('../pages/RegisterPage/RegisterPage'));
-// const ReportsPage = lazy(() => import('../pages/ReportsPage/ReportsPage'));
+const HomePage = lazy(() => import('../pages/HomePage/HomePage'));
+const RegisterPage = lazy(() => import('../pages/RegisterPage/RegisterPage'));
+const LoginPage = lazy(() => import('../pages/LoginPage/LoginPage'));
+const ExpensesPage = lazy(() => import('../pages/ExpensesPage/ExpensesPage'));
+const IncomePage = lazy(() => import('../pages/IncomePage/IncomePage'));
+const ReportsPage = lazy(() => import('../pages/ReportsPage/ReportsPage'));
+const NotFoundPage = lazy(() => import('../pages/NotFoundPage/NotFoundPage'));
 
-export const App = () => {
-  return <div></div>;
+const App = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(currentUser());
+  }, [dispatch]);
+
+  const isRefreshing = useSelector(selectIsRefreshing);
+
+  if (isRefreshing) {
+    return <Loader />;
+  }
+
+  return (
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<HomePage />} />
+        <Route
+          path="/register"
+          element={
+            <RestrictedRoute component={RegisterPage} path="/expenses" />
+          }
+        />
+        <Route
+          path="/login"
+          element={<RestrictedRoute component={LoginPage} path="/expenses" />}
+        />
+        <Route
+          path="/expenses"
+          element={<PrivateRoute component={ExpensesPage} path="/login" />}
+        />
+        <Route
+          path="/income"
+          element={<PrivateRoute component={IncomePage} path="/login" />}
+        />
+        <Route
+          path="/reports"
+          element={<PrivateRoute component={ReportsPage} path="/login" />}
+        />
+        <Route path="*" element={<NotFoundPage />} />
+      </Route>
+    </Routes>
+  );
 };
+
+export { App };
