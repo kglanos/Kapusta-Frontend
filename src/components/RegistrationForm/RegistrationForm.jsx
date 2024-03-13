@@ -25,7 +25,8 @@ const RegistrationForm = () => {
         <label>Password</label>
         <input name="password" type="password" autoComplete="off" />
 
-        <button type="submit">Register</button>
+        <button type="submit">Log in</button>
+        <button type="submit">Registration</button>
       </form>
     </div>
   );
