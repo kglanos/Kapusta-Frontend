@@ -34,25 +34,23 @@ const App = () => {
         <Route index element={<HomePage />} />
         <Route
           path="/register"
-          element={
-            <RestrictedRoute component={RegisterPage} path="/expenses" />
-          }
+          element={<RestrictedRoute component={RegisterPage} />}
         />
         <Route
           path="/login"
-          element={<RestrictedRoute component={LoginPage} path="/expenses" />}
+          element={<RestrictedRoute component={LoginPage} />}
         />
         <Route
           path="/expenses"
-          element={<PrivateRoute component={ExpensesPage} path="/login" />}
+          element={<PrivateRoute component={ExpensesPage} />}
         />
         <Route
           path="/income"
-          element={<PrivateRoute component={IncomePage} path="/login" />}
+          element={<PrivateRoute component={IncomePage} />}
         />
         <Route
           path="/reports"
-          element={<PrivateRoute component={ReportsPage} path="/login" />}
+          element={<PrivateRoute component={ReportsPage} />}
         />
         <Route path="*" element={<NotFoundPage />} />
       </Route>
