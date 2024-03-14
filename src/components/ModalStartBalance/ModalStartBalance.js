@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import s from './modalStartBalanse.scss';
+import s from './ModalStartBalanse.scss';
 
 const ModalStartBalanse = () => {
   const [showModalStartBalanse, setShowModalStartBalanse] = useState(true);
@@ -13,7 +13,7 @@ const ModalStartBalanse = () => {
         <p className={s.text}>
           Hello! To get started, enter the current balance of your account!
         </p>
-        <p className={s.textNo}> You can't spend money until you have it :) </p>
+        <p className={s.textNo}> You can't spend money until you have it! </p>
       </div>
     </>
   );
