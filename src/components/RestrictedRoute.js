@@ -1,15 +1,10 @@
-import { selectIsLoggedIn } from '../redux/Auth/selectors';
+import { Navigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import { Navigate } from 'react-router';
+import { selectIsLoggedIn } from '../redux/Auth/selectors';
 
 export const RestrictedRoute = ({ component: Component }) => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
 
-  // Jeśli użytkownik jest zalogowany, przekierowuj go na stronę '/expenses'
-  if (isLoggedIn) {
-    return <Navigate to="/expenses" replace />;
-  }
-
-  // Jeśli użytkownik nie jest zalogowany, przekierowuj go na stronę '/login'
-  return <Navigate to="/login" replace />;
+  // Jeśli użytkownik jest zalogowany, przekieruj go do /expenses, w przeciwnym razie zezwól na dostęp do komponentu (w tym przypadku login)
+  return isLoggedIn ? <Navigate to="/expenses" /> : <Component />;
 };
