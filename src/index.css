@@ -7,6 +7,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url('./images/desktop/desktop-bg.png');
+  background-size: 100vw 70vh;
+  background-position: center top;
+  background-repeat: no-repeat;
 }
 
 code {
