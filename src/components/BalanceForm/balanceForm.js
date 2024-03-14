@@ -1,8 +1,9 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { userPutBallanse } from 'components/ModalStartBalanse/modalStartBalanse';
+import { userPutBallance } from '../../redux/asyncthunc';
+import ModalStartBalance from '../../components/ModalStartBalance/ModalStartBalance';
 
-import s from './balancceform.module.scss';
+import s from './balanceForm.module.scss';
 
 const BalanceForm = () => {
   const dispatch = useDispatch();
@@ -25,7 +26,7 @@ const BalanceForm = () => {
   const handleClick = e => {
     e.preventDefault();
     if (!rebalancing & (ballance !== '')) {
-      dispatch(userPutBallanse(ballance));
+      dispatch(userPutBallance(ballance));
     }
   };
   return (
@@ -42,10 +43,10 @@ const BalanceForm = () => {
         onChange={handleChange}
       />
 
-      <button className={s.btn} type="button" onClick={handleclick}>
+      <button className={s.btn} type="button" onClick={handleClick}>
         Confirm
       </button>
-      {ballance === '' && <ModalStartBalanse />}
+      {ballance === '' && <ModalStartBalance />}
     </form>
   );
 };
