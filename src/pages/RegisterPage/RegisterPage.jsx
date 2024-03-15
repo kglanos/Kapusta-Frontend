@@ -1,5 +1,8 @@
 import { RegistrationForm } from '../../components/RegistrationForm/RegistrationForm';
+import { CabbageGroup } from '../../components/CabbageGroup/CabbageGroup.';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
+import { CabbageCouple } from '../../components/CabbageCouple/CabbageCouple';
+import { MainLogo } from '../../components/MainLogo/MainLogo';
 import { useScreenSize } from '../../hooks/useScreenSize'
 
 const Register = () => {
@@ -11,7 +14,10 @@ const Register = () => {
         <Helmet>
           <title>Registration</title>
         </Helmet>
-        <RegistrationForm screenSize={{ mobileScreen, tabletScreen, desktopScreen }} />
+    <CabbageGroup />
+    <MainLogo />
+    <RegistrationForm screenSize={{ mobileScreen, tabletScreen, desktopScreen }} />
+    <CabbageCouple />
       </div>
     </HelmetProvider>
   );
