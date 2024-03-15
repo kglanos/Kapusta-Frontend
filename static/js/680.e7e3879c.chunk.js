@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkkapusta_frontend=self.webpackChunkkapusta_frontend||[]).push([[680],{680:function(n,e,t){t.r(e);var s=t(3050),r=t(184);e.default=function(){return(0,r.jsx)(s.B6,{children:(0,r.jsx)("div",{children:(0,r.jsx)(s.ql,{children:(0,r.jsx)("title",{children:"Kapusta"})})})})}}}]);
-//# sourceMappingURL=680.e7e3879c.chunk.js.map
