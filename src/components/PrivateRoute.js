@@ -1,13 +1,10 @@
-import { selectIsLoggedIn } from '../redux/Auth/selectors';
+import { Navigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import { Navigate } from 'react-router';
+import { selectIsLoggedIn } from '../redux/Auth/selectors';
 
 export const PrivateRoute = ({ component: Component }) => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
 
-  if (isLoggedIn) {
-    return <Navigate to="/expenses" replace />;
-  }
-
-  return <Navigate to="/login" replace />;
+  // Jeśli użytkownik jest zalogowany, zezwól na dostęp do komponentu, w przeciwnym razie przekieruj go do /login
+  return isLoggedIn ? <Component /> : <Navigate to="/login" />;
 };
