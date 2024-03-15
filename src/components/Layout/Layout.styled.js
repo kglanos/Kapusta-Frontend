@@ -10,7 +10,7 @@ export const Container = styled.div`
 
 export const Header = styled.header`
   position: fixed;
-
+  z-index: 100;
   display: flex;
   align-items: center;
   justify-content: flex-start;
