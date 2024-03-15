@@ -24,3 +24,10 @@ export const StyledParagraph = styled.p`
   text-align: left;
   margin: 0 20%;
 `;
+export const StyledDollar = styled.span`
+  display: inline-block;
+  font-size: 0.9em;
+  vertical-align: middle;
+  transform: scaleY(0.8) translateY(-0.05em);
+  transform-origin: 50%;
+`;
