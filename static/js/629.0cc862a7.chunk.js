@@ -1,1 +1,0 @@
-(self.webpackChunkkapusta_frontend=self.webpackChunkkapusta_frontend||[]).push([[629],{8629:function(){}}]);
