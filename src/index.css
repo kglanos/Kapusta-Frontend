@@ -2,6 +2,7 @@
 @import './styles/vars.scss';
 
 body {
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 0;
