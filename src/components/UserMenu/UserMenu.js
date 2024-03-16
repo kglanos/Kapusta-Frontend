@@ -1,6 +1,12 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { logout } from '../../redux/Auth/operations';
-import { Container, UserArea, LogoutButton } from './UserMenu.styled';
+import {
+  Container,
+  UserArea,
+  LogoutButton,
+  Avatar,
+  Name,
+} from './UserMenu.styled';
 import { selectUserEmail } from '../../redux/Auth/selectors';
 
 export const UserMenu = () => {
@@ -14,11 +20,9 @@ export const UserMenu = () => {
   return (
     <Container>
       <UserArea>
-        <span>{firstLetter}</span> <span>{userEmail}</span>
+        <Avatar>{firstLetter}</Avatar> <Name>{userEmail}</Name>
       </UserArea>
-      <LogoutButton onClick={handleLogout}>
-        <span>Exit</span>
-      </LogoutButton>
+      <LogoutButton onClick={handleLogout}>Exit</LogoutButton>
     </Container>
   );
 };

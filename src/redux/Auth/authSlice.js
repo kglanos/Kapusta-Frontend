@@ -14,12 +14,14 @@ const authSlice = createSlice({
   extraReducers: builder => {
     builder.addCase(register.fulfilled, (state, action) => {
       state.isLoggedIn = true;
+      state.user.name = action.payload.user.name;
       state.user.email = action.payload.user.email;
       state.token = action.payload.token;
     });
 
     builder.addCase(login.fulfilled, (state, action) => {
       state.isLoggedIn = true;
+      state.user.name = action.payload.user.name;
       state.user.email = action.payload.user.email;
       state.token = action.payload.token;
     });
@@ -31,6 +33,7 @@ const authSlice = createSlice({
 
     builder.addCase(currentUser.fulfilled, (state, action) => {
       state.isLoggedIn = true;
+      state.user.name = action.payload.user.name;
       state.user.email = action.payload.email;
       state.isRefreshing = false;
     });
