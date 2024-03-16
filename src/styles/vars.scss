@@ -1,3 +1,23 @@
+/*main variables*/
+
+$mainColor: #ffffff;
+$secondaryColor: #f2f5fc;
+$accentColor: #ff751d;
+$accentShadyColor: rgba(251, 124, 47, 0.2);
+$textColor: #000000;
+$secondaryTextColor: #52555f;
+$expenceColor: #e7192e;
+$modalBackground: #1d346a;
+$primary-font-style: 'Roboto', sans-serif;
+
+/*breakpoints*/
+
+$breakpoint-mobile: 767.98px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1280px;
+
+/*ALL COLORS*/
+
 $bg-grey-color: #f5f6fb;
 $bg-white-color: #fff;
 $bg-white-color-tab: #fefefe;
@@ -6,12 +26,16 @@ $bg-input-color: #f6f7fb;
 $bg-avatar-color: #f5f6fa;
 $bg-stripe-color: #e0e5eb;
 $box-shadow-color: rgba(170, 178, 197, 0.2);
+
 /*renderowanie logo*/
+
 $logo-primary-color: #fb7c2f;
 $logo-secondary-color: rgba(251, 124, 47, 0.2);
 $logo-picture-color: #dfe2eb; /*obrazek z kapustą */
 $logo-picture-shadow: #f5f6fb; /* cień kapusty*/
+
 /*przyciski*/
+
 $btn-orange-bg-color: #ff751d;
 $btn-orange-text-color: #fff;
 $btn-orange-box-shadow: rgba(255, 107, 8, 0.35);
@@ -24,6 +48,7 @@ $btn-grey-border-color: #fff;
 $btn-white-border-color: #f6f7fc;
 
 /*Kolory podstawowe tekstu*/
+
 $text-color-primary: rgba(82, 85, 95, 0.7);
 $text-color-secondary: #52555f; /*Tekst w nagłówku i raportach*/
 $text-color-placeholders: #c7ccdc;
@@ -31,15 +56,18 @@ $text-active-tab: #ff751d;
 $text-inactive-tab: #000000;
 
 /*wydatki i dochody*/
+
 $expenses-text-color: #e53935;
 $profits-text-color: #407946;
 $line-bg-color: #e0e5eb;
 
 /*wykresy*/
 /*Aktywne kategorie*/
+
 $active-product-category-img: #ff751d;
 $active-product-category-bg: #ffdac0;
 
 /*Nieaktywne kategorie*/
+
 $non-active-product-category-img: #071f41;
 $non-active-product-category-bg: #f5f6fb;
