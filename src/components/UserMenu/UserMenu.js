@@ -1,3 +1,4 @@
+import { useScreenSize } from '../../hooks/useScreenSize';
 import { useDispatch, useSelector } from 'react-redux';
 import { logout } from '../../redux/Auth/operations';
 import {
@@ -6,7 +7,9 @@ import {
   LogoutButton,
   Avatar,
   Name,
+  LogoutIcon,
 } from './UserMenu.styled';
+import logoutSvg from '../../icons/logOut.svg';
 import { selectUserEmail } from '../../redux/Auth/selectors';
 
 export const UserMenu = () => {
@@ -17,12 +20,32 @@ export const UserMenu = () => {
 
   const handleLogout = () => dispatch(logout());
 
+  const { mobileScreen } = useScreenSize();
+
   return (
     <Container>
       <UserArea>
-        <Avatar>{firstLetter}</Avatar> <Name>{userEmail}</Name>
-      </UserArea>
-      <LogoutButton onClick={handleLogout}>Exit</LogoutButton>
+        {mobileScreen ? (
+          <Avatar>{firstLetter}</Avatar>
+        ) : (
+          <>
+            <Avatar>{firstLetter}</Avatar> <Name>{userEmail}</Name>
+          </>
+        )}
+      </UserArea>{' '}
+      {mobileScreen ? (
+        <>
+          <LogoutButton onClick={handleLogout}>
+            <LogoutIcon>
+              <image href={logoutSvg} />
+            </LogoutIcon>
+          </LogoutButton>
+        </>
+      ) : (
+        <>
+          <LogoutButton onClick={handleLogout}>Exit</LogoutButton>
+        </>
+      )}
     </Container>
   );
 };
