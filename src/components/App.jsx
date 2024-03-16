@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, Navigate } from 'react-router-dom';
 import { lazy, useEffect } from 'react';
 import { currentUser } from '../redux/Auth/operations';
 import Layout from './Layout/Layout';
@@ -8,7 +8,7 @@ import { selectIsRefreshing } from '../redux/Auth/selectors';
 import { RestrictedRoute } from './RestrictedRoute';
 import { PrivateRoute } from './PrivateRoute';
 
-const HomePage = lazy(() => import('../pages/HomePage/HomePage'));
+// const HomePage = lazy(() => import('../pages/HomePage/HomePage'));
 const RegisterPage = lazy(() => import('../pages/RegisterPage/RegisterPage'));
 const LoginPage = lazy(() => import('../pages/LoginPage/LoginPage'));
 const ExpensesPage = lazy(() => import('../pages/ExpensesPage/ExpensesPage'));
@@ -31,7 +31,7 @@ const App = () => {
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
-        <Route index element={<HomePage />} />
+        <Route index element={<Navigate to="/login" />} />
         <Route
           path="/register"
           element={<RestrictedRoute component={RegisterPage} />}
