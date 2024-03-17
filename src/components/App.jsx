@@ -42,7 +42,8 @@ const App = () => {
         />
         <Route
           path="/expenses"
-          element={<PrivateRoute component={ExpensesPage} />}
+          // element={<PrivateRoute component={ExpensesPage} />}
+          element={<RestrictedRoute component={ExpensesPage} />}
         />
         <Route
           path="/income"
