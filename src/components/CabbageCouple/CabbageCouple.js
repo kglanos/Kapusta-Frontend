@@ -1,4 +1,4 @@
-import cabbageCoupleImage from '../../images/desktop/kapusta2.png';
+import cabbageCoupleImage from '../../images/desktop/cabbageCoupleDesktop.png';
 import { StyledContainer, StyledImage } from './CabbageCouple.styled';
 
 export const CabbageCouple = () => {

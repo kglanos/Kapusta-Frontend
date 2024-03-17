@@ -1,8 +1,7 @@
 @import-normalize; /* bring in normalize.css styles */
-@import './styles/vars.scss';
+@import './styles/vars.css';
 
 body {
-
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 0;
