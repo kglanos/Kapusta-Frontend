@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkkapusta_frontend=self.webpackChunkkapusta_frontend||[]).push([[629],{8629:function(e,n,s){s.r(n);var t=s(3050),r=s(184);n.default=function(){return(0,r.jsx)(t.B6,{children:(0,r.jsx)("div",{children:(0,r.jsx)(t.ql,{children:(0,r.jsx)("title",{children:"Expenses"})})})})}}}]);
-//# sourceMappingURL=629.12009b50.chunk.js.map
