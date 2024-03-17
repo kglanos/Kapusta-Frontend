@@ -50,7 +50,7 @@ const App = () => {
         />
         <Route
           path="/reports"
-          element={<PrivateRoute component={ReportsPage} />}
+          element={<RestrictedRoute component={ReportsPage} />}
         />
         <Route path="*" element={<NotFoundPage />} />
       </Route>

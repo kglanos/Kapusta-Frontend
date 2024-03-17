@@ -1,21 +1,18 @@
-@import '../../sass/utils/_shared.scss';
-@import '../../sass/utils/_breakpoints.scss';
-
 * {
   margin: 0;
   padding: 0;
   list-style: none;
   text-align: center;
-  font-family: $primary-font-style;
-  color: $textColor;
+  font-family: var(--primary-font-style);
+  color: var(--textColor);
 }
 h3 {
   font-size: 12px;
   letter-spacing: 0.2px;
   font-weight: 500;
-  color: $text-color-primary;
+  color: var(--text-color-primary);
 }
-.ExpensesPageContainer {
+.ReportsPageContainer {
   width: 320px;
   height: auto;
   margin: 56px auto;
@@ -25,25 +22,25 @@ h3 {
   align-items: center;
   padding: 16px 20px 52px 20px;
 
-  @media screen and (min-width: $breakpoint-tablet) {
+  @media screen and (min-width: 768px) {
     min-width: 768px;
   }
-  @media screen and (min-width: $breakpoint-desktop) {
+  @media screen and (min-width: 1280px) {
     min-width: 1280px;
   }
 }
-.ExpensesBalanceWrapper {
+.ReportsBalanceWrapper {
   width: auto;
   position: relative;
   z-index: 0;
 }
-.ExpensesBalanceWrapperTabletDesk {
-  @media screen and (min-width: $breakpoint-tablet) {
+.ReportsBalanceWrapperTabletDesk {
+  @media screen and (min-width: 768px) {
     width: 704px;
     display: flex;
     justify-content: space-between;
   }
-  @media screen and (min-width: $breakpoint-desktop) {
+  @media screen and (min-width: 1280px) {
     width: 1034px;
   }
 }
@@ -51,13 +48,13 @@ h3 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  @media screen and (min-width: $breakpoint-tablet) {
+  @media screen and (min-width: 768px) {
     display: flex;
     flex-direction: row-reverse;
     justify-content: flex-end;
     gap: 130px;
   }
-  @media screen and (min-width: $breakpoint-desktop) {
+  @media screen and (min-width: 1280px) {
     gap: 250px;
   }
 }
@@ -65,7 +62,7 @@ h3 {
   position: absolute;
   top: 16px;
   left: 20px;
-  @media screen and (min-width: $breakpoint-tablet) {
+  @media screen and (min-width: 768px) {
     position: static;
     display: flex;
     justify-content: center;
@@ -74,11 +71,11 @@ h3 {
 }
 .ArrowBackDesk {
   display: none;
-  @media screen and (min-width: $breakpoint-tablet) {
+  @media screen and (min-width: 768px) {
     display: block;
     font-size: 12px;
     font-weight: 400;
-    color: $text-color-primary;
+    color: var(--text-color-primary);
     width: 80px;
     text-align: right;
   }
@@ -91,7 +88,7 @@ h3 {
   align-items: center;
   gap: 5px;
   padding-top: 56px;
-  @media screen and (min-width: $breakpoint-tablet) {
+  @media screen and (min-width: 768px) {
     padding-top: 0px;
   }
 }
@@ -107,7 +104,7 @@ h3 {
   align-items: center;
   justify-content: center;
   margin-bottom: 32px;
-  @media screen and (min-width: $breakpoint-tablet) {
+  @media screen and (min-width: 768px) {
     margin-bottom: 0;
   }
 }
@@ -118,17 +115,17 @@ h3 {
   align-items: center;
   gap: 8px;
   padding-bottom: 32px;
-  @media screen and (min-width: $breakpoint-tablet) {
+  @media screen and (min-width: 768px) {
     flex-direction: row;
     padding-bottom: 0px;
   }
 }
 .Balance {
-  border: 2px solid $bg-white-color;
+  border: 2px solid var(--bg-white-color);
   border-radius: 22px;
   padding: 15px 10px;
   min-width: 183px;
-  @media screen and (min-width: $breakpoint-tablet) {
+  @media screen and (min-width: 768px) {
     min-width: 125px;
   }
 }
@@ -145,10 +142,10 @@ h3 {
 }
 .ConfirmWrapper {
   display: none;
-  border: 2px solid $bg-white-color;
+  border: 2px solid var(--bg-white-color);
   border-radius: 22px;
   padding: 17px 30px;
-  @media screen and (min-width: $breakpoint-desktop) {
+  @media screen and (min-width: 1280px) {
     display: block;
   }
 }
@@ -159,18 +156,18 @@ h3 {
 .BalanceSummaryWrapper {
   min-width: 280px;
   height: auto;
-  border: 1px solid $line-bg-color;
+  border: 1px solid var--(line-bg-color);
   border-radius: 20px;
   padding: 5px 10px;
-  box-shadow: 5px 10px 20px 0px $box-shadow-color;
+  box-shadow: 5px 10px 20px 0px var(--box-shadow-color);
   margin-bottom: 32px;
-  background-color: $bg-white-color;
-  @media screen and (min-width: $breakpoint-tablet) {
+  background-color: var(--bg-white-color);
+  @media screen and (min-width: 768px) {
     margin: 32px auto;
     width: 704px;
-    padding: 0;
+    padding: 7px 0px;
   }
-  @media screen and (min-width: $breakpoint-desktop) {
+  @media screen and (min-width: 1280px) {
     width: 1034px;
   }
 }
@@ -180,7 +177,7 @@ h3 {
   justify-content: space-around;
   align-items: center;
   padding: 0 10px;
-  @media screen and (min-width: $breakpoint-tablet) {
+  @media screen and (min-width: 768px) {
     justify-content: center;
     gap: 20px;
   }
@@ -189,7 +186,7 @@ h3 {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  @media screen and (min-width: $breakpoint-tablet) {
+  @media screen and (min-width: 768px) {
     flex-direction: row;
     align-items: center;
     gap: 15px;
@@ -198,37 +195,34 @@ h3 {
 .BalanceSummaryListItem {
   font-size: 14px;
   font-weight: 700;
-  color: $text-color-secondary;
+  color: var(--text-color-secondary);
 }
 .BalanceSummaryListItem p {
-  color: $text-color-secondary;
+  color: var(--text-color-secondary);
 }
 .BalanceSummaryExpenses span {
-  color: $expenses-text-color;
+  color: var(--expenses-text-color);
   text-transform: uppercase;
-
 }
 .BalanceSummaryIncome span {
-  color: $profits-text-color;
+  color: var(--profits-text-color);
   text-transform: uppercase;
 }
 .Vector {
-  width: 2px;
   height: 70px;
   padding: 7px 3px;
-
-  @media screen and (min-width: $breakpoint-tablet) {
+  @media screen and (min-width: 768px) {
     height: 36px;
   }
 }
 .ExpensesWrapper {
-  @media screen and (min-width: $breakpoint-tablet) {
+  @media screen and (min-width: 768px) {
     width: 704px;
     border-radius: 30px;
-    background-color: $bg-white-color;
+    background-color: var(--bg-white-color);
     padding: 20px 0 0 0;
   }
-  @media screen and (min-width: $breakpoint-desktop) {
+  @media screen and (min-width: 1280px) {
     width: 1034px;
   }
 }
@@ -244,27 +238,28 @@ h3 {
   letter-spacing: 0.2px;
   text-align: center;
   text-transform: uppercase;
-  @media screen and (min-width: $breakpoint-tablet) {
+  @media screen and (min-width: 768px) {
     font-size: 20px;
   }
 }
 
 .CategoriesList {
+  width: 300px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-  gap: 10px;
+  align-items: first baseline;
   row-gap: 40px;
-  padding: 20px 0;
-  border-bottom: 1px solid $line-bg-color;
-  @media screen and (min-width: $breakpoint-tablet) {
+  padding: 20px 0px;
+  border-bottom: 1px solid var(--line-bg-color);
+  @media screen and (min-width: 768px) {
     border-bottom: 0;
-    padding: 20px 20px;
+    padding: 20px 3px;
+    width: auto;
   }
-  @media screen and (min-width: $breakpoint-desktop) {
-    padding: 20px 150px;
+  @media screen and (min-width: 1280px) {
+    padding: 20px 170px;
   }
 }
 
@@ -275,8 +270,6 @@ h3 {
   align-items: center;
   gap: 5px;
   width: 100px;
-  @media screen and (min-width: $breakpoint-tablet) {
-  }
 }
 .CategoriesListItem p {
   font-size: 14px;
@@ -291,4 +284,3 @@ h3 {
 
 /* #FF751D
 #FFDAC0 */
-

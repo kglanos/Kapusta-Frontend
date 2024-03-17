@@ -3,18 +3,18 @@ import css from './Reports.module.scss';
 import Back from '../../icons/back.svg';
 import ArrowL from '../../icons/arrow-l.svg';
 import ArrowR from '../../icons/arrow-r.svg';
-import Products from '../../icons/Group 62.svg';
-import Alcohol from '../../icons/cocktail 1.svg';
-import Entertaiment from '../../icons/kite 1.svg';
-import Healt from '../../icons/hands-holding-heart 1.svg';
-import Car from '../../icons/car 1.svg';
-import Housing from '../../icons/couch 1.svg';
-import Technique from '../../icons/tools 1.svg';
-import Communication from '../../icons/invoice 1.svg';
-import SportsHobbies from '../../icons/clay 1.svg';
-import Education from '../../icons/book 1.svg';
-import Other from '../../icons/ufo 1.svg';
 import Vector from '../../icons/Vector 1.png';
+import { ReactComponent as Products } from  '../../icons/Group 62.svg';
+import { ReactComponent as Alcohol } from '../../icons/cocktail 1.svg';
+import { ReactComponent as Entertaiment } from '../../icons/kite 1.svg';
+import { ReactComponent as Healt } from '../../icons/hands-holding-heart 1.svg';
+import { ReactComponent as Car } from '../../icons/car 1.svg';
+import { ReactComponent as Housing } from '../../icons/couch 1.svg';
+import { ReactComponent as Technique } from '../../icons/tools 1.svg';
+import { ReactComponent as Communication } from '../../icons/invoice 1.svg';
+import { ReactComponent as SportsHobbies } from '../../icons/clay 1.svg';
+import { ReactComponent as Education } from '../../icons/book 1.svg';
+import { ReactComponent as Other } from '../../icons/ufo 1.svg';
 
 export const ReportsPage = () => {
   const [categories, setCategories] = useState([]);
@@ -55,9 +55,9 @@ export const ReportsPage = () => {
   // Przychód
   const income = calculateIncome();
   return (
-    <div className={css.ExpensesPageContainer}>
-      <div className={css.ExpensesBalanceWrapper}>
-        <div className={css.ExpensesBalanceWrapperTabletDesk}>
+    <div className={css.ReportsPageContainer}>
+      <div className={css.ReportsBalanceWrapper}>
+        <div className={css.ReportsBalanceWrapperTabletDesk}>
           <div className={css.ArrowBack}>
             <img src={Back} alt="arrow" />
             <p className={css.ArrowBackDesk}>Main Page</p>
@@ -119,11 +119,12 @@ export const ReportsPage = () => {
             {categories.map((category, index) => (
               <li key={index} className={css.CategoriesListItem}>
                 <p>{category.value}</p>
-                <img
+                <category.icon className={css.CategoriesListIcon}/>
+                {/* <img
                   src={category.icon}
                   className={css.CategoriesListIcon}
                   alt="icon"
-                />
+                /> */}
                 <p>{category.name}</p>
               </li>
             ))}
