@@ -1,3 +1,5 @@
+import { ReportsLink } from '../../components/ReportsLink/ReportsLink';
+import { ToTransactionButton } from '../../components/ToTransactionButton/ToTransactionButton';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 const Expenses = () => {
@@ -7,6 +9,8 @@ const Expenses = () => {
         <Helmet>
           <title>Expenses</title>
         </Helmet>
+        <ToTransactionButton />
+        <ReportsLink />
       </div>
     </HelmetProvider>
   );
