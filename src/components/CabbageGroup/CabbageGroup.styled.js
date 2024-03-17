@@ -5,7 +5,7 @@ import cabbageGroupTablet from '../../images/tablet/cabbageGroupTablet.png';
 
 export const StyledContainer = styled.div``;
 
-export const StyledImage = styled.img`
+export const StyledImage = styled.image`
   position: absolute;
   top: 104px;
   right: 0;
