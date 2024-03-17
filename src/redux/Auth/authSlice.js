@@ -3,7 +3,7 @@ import { register, login, logout, currentUser } from './operations';
 
 const initialState = {
   isLoggedIn: false,
-  user: { email: null },
+  user: { email: null, name: null },
   token: null,
   isRefreshing: false,
 };
@@ -14,8 +14,10 @@ const authSlice = createSlice({
   extraReducers: builder => {
     builder.addCase(register.fulfilled, (state, action) => {
       state.isLoggedIn = true;
-      state.user.name = action.payload.user.name;
-      state.user.email = action.payload.user.email;
+      if (action.payload && action.payload.user) {
+        state.user.name = action.payload.user.name;
+        state.user.email = action.payload.user.email;
+      }
       state.token = action.payload.token;
     });
 

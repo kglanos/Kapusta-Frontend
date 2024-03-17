@@ -35,7 +35,7 @@ export const RegistrationForm = () => {
         />
         <span className={css.form__googleText}>Google</span>
       </button>
-      <p className={css.form_second}>
+      <p className={css.form__second}>
         Or log in using an email and password, after registering:
       </p>
       <form className={css.form__form} onSubmit={handleRegistration}>
@@ -103,19 +103,15 @@ export const RegistrationForm = () => {
 //   FormButtons,
 //   FormButton
 // } from '../RegistrationForm/RegistrationForm.styled';
-
 // export const RegistrationForm = () => {
 //   const dispatch = useDispatch();
 //   const navigate = useNavigate();
-
 //   const handleRegistration = event => {
 //     event.preventDefault();
-
 //     const form = event.target;
 //     const name = form.elements.name.value;
 //     const email = form.elements.email.value;
 //     const password = form.elements.password.value;
-
 //     dispatch(register({ name, email, password }));
 //     form.reset();
 //   };
@@ -167,7 +163,7 @@ export const RegistrationForm = () => {
 //           placeholder="enter password"
 //         />
 //         <FormButtons>
-//           <FormButton type="button" onClick={handleLoginClick}> 
+//           <FormButton type="button" onClick={handleLoginClick}>
 //             LOG IN
 //           </FormButton>{' '}
 //           <FormButton type="submit">
@@ -178,5 +174,3 @@ export const RegistrationForm = () => {
 //     </FormContainer>
 //   );
 // };
-
-
