@@ -7,7 +7,7 @@ export const HomeContainer = styled.div`
   @media screen and (min-width: 768px) {
     max-width: 426px;
     margin-left: 141px;
-     position: relative
+    position: relative
   }
   
   @media screen and (min-width: 1280px) {
@@ -20,19 +20,17 @@ export const TextGroup = styled.div`
   margin-top: 142px;
 
   @media screen and (min-width: 768px) {
-    margin-top: 136px;
-   
+    margin-top: 136px; 
   }
 
   @media screen and (min-width: 1280px) {
     margin-top: 364.5px;
-   
   }
 
   & > svg {
     width: 183px;
     height: 46.34px;
-    color: #000000;
+    color: var(--textColor);
    
 
     @media screen and (min-width: 768px) {
@@ -51,7 +49,7 @@ export const TextGroup = styled.div`
     line-height: 1.15;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    color: #52555F;
+    color: var(--text-color-secondary);
     
 
     @media screen and (min-width: 768px) {

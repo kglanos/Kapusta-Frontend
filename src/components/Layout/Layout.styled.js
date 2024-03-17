@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
+
 export const Container = styled.div`
   max-width: 100vw;
   overflow-x: auto;
@@ -12,7 +13,7 @@ export const Header = styled.header`
   position: fixed;
   z-index: 100;
   display: flex;
-  background-color: #ffffff;
+  background-color: var(--bg-white-color);
   width: 100vw;
 `;
 export const Nav = styled.div`
