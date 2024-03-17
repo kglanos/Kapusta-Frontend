@@ -42,16 +42,18 @@ const App = () => {
         />
         <Route
           path="/expenses"
-          // element={<PrivateRoute component={ExpensesPage} />}
-          element={<RestrictedRoute component={ExpensesPage} />}
+          element={<PrivateRoute component={ExpensesPage} />}
         />
         <Route
           path="/income"
           element={<PrivateRoute component={IncomePage} />}
+
         />
         <Route
           path="/reports"
-          element={<PrivateRoute component={ReportsPage} />}
+          // element={<PrivateRoute component={ReportsPage} />}
+          element={<RestrictedRoute component={ReportsPage} />}
+
         />
         <Route path="*" element={<NotFoundPage />} />
       </Route>
