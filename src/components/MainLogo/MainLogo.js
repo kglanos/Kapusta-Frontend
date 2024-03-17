@@ -1,17 +1,23 @@
 import {
-  StyledContainer,
-  StyledHeading,
-  StyledParagraph,
-  StyledDollar,
+  HomeContainer,
+  TextGroup,
 } from './MainLogo.styled';
 
+import Icon from 'images/sprite.svg';
+
 export const MainLogo = () => {
-  return (
-    <StyledContainer>
-      <StyledHeading>
-        Kapu<StyledDollar>$</StyledDollar>ta
-      </StyledHeading>
-      <StyledParagraph>SMART FINANCE</StyledParagraph>
-    </StyledContainer>
+return (
+    <>
+      <HomeContainer>
+          <TextGroup>
+            <svg alt="icon-kapusta">
+              <use href={`${Icon}#icon-kapusta`}></use>
+            </svg>
+            <p>Smart Finance</p>
+          </TextGroup>
+      </HomeContainer>
+    
+    </>
   );
 };
+

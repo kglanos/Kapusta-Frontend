@@ -71,8 +71,6 @@ export const LoginForm = () => {
   );
 };
 
-
-
 // import { useDispatch } from 'react-redux';
 // import googleIcon from '../../icons/Google.png';
 // import { login } from '../../redux/Auth/operations';

@@ -1,33 +1,66 @@
 import styled from 'styled-components';
 
-export const StyledContainer = styled.div`
-  position: absolute;
-  bottom: 42%;
-  left: 20%;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-`;
-export const StyledHeading = styled.h1`
-  font-size: 102px;
-  font-weight: 900;
-  text-align: left;
-  margin: 0;
+export const HomeContainer = styled.div`
+  max-width: 183px;
+  margin: auto 0;
+
+  @media screen and (min-width: 768px) {
+    max-width: 426px;
+    margin-left: 141px;
+     position: relative
+  }
+  
+  @media screen and (min-width: 1280px) {
+   margin: 229px
+   
+  }
 `;
 
-export const StyledParagraph = styled.p`
-  color: rgba(82, 85, 95, 1);
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 1.17;
-  letter-spacing: 0.18em;
-  text-align: left;
-  margin: 0 20%;
+export const TextGroup = styled.div`
+  margin-top: 142px;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 136px;
+   
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin-top: 364.5px;
+   
+  }
+
+  & > svg {
+    width: 183px;
+    height: 46.34px;
+    color: #000000;
+   
+
+    @media screen and (min-width: 768px) {
+      width: 306.52px;
+      height: 77.69px;
+    }
+     @media screen and (min-width: 1280px) {
+      width: 377px;
+      height: 120px;
+    }
+  }
+  & > p {
+    padding: 0 30px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1.15;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #52555F;
+    
+
+    @media screen and (min-width: 768px) {
+      padding: 0 70px;
+      font-size: 16px;
+      line-height: 1.19;
+      letter-spacing: 0.18em;
+    }
+  }
 `;
-export const StyledDollar = styled.span`
-  display: inline-block;
-  font-size: 0.9em;
-  vertical-align: middle;
-  transform: scaleY(0.8) translateY(-0.05em);
-  transform-origin: 50%;
-`;
+
+
