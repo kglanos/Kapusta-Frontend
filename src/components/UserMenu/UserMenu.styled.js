@@ -16,15 +16,15 @@ export const Avatar = styled.span`
   font-size: 12px;
   font-weight: 700;
   margin-right: 12px;
-  color: rgba(82, 85, 95, 1);
+  color: var(--btn-grey-text-color);
   letter-spacing: 0.04em;
   text-align: center;
-  background-color: rgba(245, 246, 250, 1);
+  background-color: var(--bg-avatar-color);
   border-radius: 50px;
 `;
 export const Name = styled.span`
   padding: 9px 20px 9px 0px;
-  color: rgba(82, 85, 95, 1);
+  color: var(--secondaryTextColor);
   font-weight: 400;
   font-size: 12px;
   letter-spacing: 0.04em;
@@ -32,13 +32,13 @@ export const Name = styled.span`
 export const LogoutButton = styled.button`
   font-size: 12px;
   font-weight: 400;
-  color: rgba(82, 85, 95, 1);
+  color: rvar(--btn-grey-text-color);
   letter-spacing: 0.04em;
   border: none;
   background: none;
   text-decoration: underline;
   cursor: pointer;
-  border-left: 1px solid rgba(224, 229, 235, 1);
+  border-left: 1px solid var(--bg-stripe-color);
   padding: 11px 20px;
 `;
 export const LogoutIcon = styled.svg`
