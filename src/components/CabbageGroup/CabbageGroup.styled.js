@@ -1,33 +1,26 @@
 import styled from 'styled-components';
 
+import cabbageGroupMobile from '../../images/mobile/cabbageGroupMobile.png';
+import cabbageGroupTablet from '../../images/tablet/cabbageGroupTablet.png';
+
+export const StyledContainer = styled.div``;
+
 export const StyledImage = styled.img`
-  width: 100%;
-  height: auto;
-`;
-
-export const StyledContainer = styled.div`
   position: absolute;
-  top: 10%;
+  top: 104px;
+  right: 0;
+  width: 49px;
+  height: 89px;
+  background-image: url(${cabbageGroupMobile});
+  background-repeat: no-repeat;
+  border: none;
+
+  @media screen and (min-width: 768px) {
+    top: 84px;
+    right: 0;
+    background-image: url(${cabbageGroupTablet});
+    background-repeat: repeat;
+    width: 100%;
+    height: 232px;
+  }
 `;
-
-// import styled from 'styled-components';
-
-// export const StyledImage = styled.img`
-//   max-width: 100%;
-//   height: auto;
-// `;
-
-// export const StyledContainer = styled.div`
-//   position: absolute;
-//   top: 10%;
-//   overflow: hidden;
-
-//   @media screen and (min-width: 768px) {
-//     overflow: hidden;
-//   }
-
-//   @media screen and (min-width: 1280px) {
-//     position: absolute;
-//     top: 10%;
-//   }
-// `;
