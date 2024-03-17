@@ -1,5 +1,5 @@
 import css from './NotFoundPage.module.css';
-import kapusta from '../../images/desktop/kapusta.png';
+import kapusta from '../../images/desktop/cabbageGroupDesktop.png';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 const NotFound = () => {
