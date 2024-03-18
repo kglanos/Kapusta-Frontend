@@ -3,7 +3,9 @@ import styled from 'styled-components';
 export const FormContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 53px auto 105px auto;
+  top: 255px;
+  margin-inline: auto;
+  margin-block: 50px 105px;
   width: 280px;
   padding: 40px 20px;
   background-color: var(--bg-white-color);
@@ -11,7 +13,7 @@ export const FormContainer = styled.div`
   box-shadow: 0px 10px 60px 0px var(--box-shadow-color);
 
   @media screen and (min-width: 768px) {
-    margin: 80px auto 155px auto;  
+    margin: 80px auto 155px auto;
     padding: 56px 83px;
     width: 426px;
   }
@@ -70,8 +72,8 @@ export const GoogleButton = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: auto; 
-  margin-right: auto; 
+  margin-left: auto;
+  margin-right: auto;
   column-gap: 9.5px;
   border: none;
   padding: 10px 19px;
@@ -136,7 +138,7 @@ export const FormButtons = styled.div`
 `;
 
 export const FormButton = styled.button`
-  display: flex; 
+  display: flex;
   justify-content: center;
   font-size: 12px;
   font-weight: 700;
@@ -149,7 +151,7 @@ export const FormButton = styled.button`
   padding: 12px 31px;
   background-color: var(--btn-grey-bg-color);
   box-shadow: 1px 3px 5px 0px var(--btn-grey-drop-shadow-color);
-  width: 50%; 
+  width: 50%;
 
   &:hover,
   &:focus {
