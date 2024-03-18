@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-import cabbageGroupMobile from '../../images/mobile/cabbageGroupMobile.png';
-import cabbageGroupTablet from '../../images/tablet/cabbageGroupTablet.png';
+import cabbageGroupMobile from '../../../../images/mobile/cabbageGroupMobile.png';
+import cabbageGroupTablet from '../../../../images/tablet/cabbageGroupTablet.png';
 
 export const StyledImage = styled.div`
   position: absolute;
