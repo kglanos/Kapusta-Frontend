@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
-
 export const Container = styled.div`
   max-width: 100vw;
   overflow-x: auto;
@@ -21,7 +20,7 @@ export const Nav = styled.div`
   width: 100vw;
   align-items: center;
   justify-content: space-between;
-  padding: 12px 16px 13px 16px;
+  padding: 12px 16px 12px 16px;
 `;
 export const LogoContainer = styled.div`
   display: flex;

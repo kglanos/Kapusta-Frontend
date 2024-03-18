@@ -1,9 +1,9 @@
-import { StyledContainer, StyledImage } from './CabbageGroup.styled';
+import { StyledImage } from './CabbageGroup.styled';
 
 export const CabbageGroup = () => {
   return (
-    <StyledContainer>
+    <div>
       <StyledImage />
-    </StyledContainer>
+    </div>
   );
 };
