@@ -1,9 +1,9 @@
 {
   "files": {
-    "main.css": "/Kapusta-Frontend/static/css/main.ded93c09.css",
-    "main.js": "/Kapusta-Frontend/static/js/main.88b219b3.js",
-    "static/js/47.3a7d4e44.chunk.js": "/Kapusta-Frontend/static/js/47.3a7d4e44.chunk.js",
-    "static/js/528.320d4a54.chunk.js": "/Kapusta-Frontend/static/js/528.320d4a54.chunk.js",
+    "main.css": "/Kapusta-Frontend/static/css/main.cb2ff277.css",
+    "main.js": "/Kapusta-Frontend/static/js/main.b3a32df9.js",
+    "static/js/47.942d1a03.chunk.js": "/Kapusta-Frontend/static/js/47.942d1a03.chunk.js",
+    "static/js/528.4ac042c2.chunk.js": "/Kapusta-Frontend/static/js/528.4ac042c2.chunk.js",
     "static/js/696.2f3ab44c.chunk.js": "/Kapusta-Frontend/static/js/696.2f3ab44c.chunk.js",
     "static/js/182.ff599ca5.chunk.js": "/Kapusta-Frontend/static/js/182.ff599ca5.chunk.js",
     "static/css/588.7a5ad1e5.chunk.css": "/Kapusta-Frontend/static/css/588.7a5ad1e5.chunk.css",
@@ -11,11 +11,10 @@
     "static/css/520.b8e022da.chunk.css": "/Kapusta-Frontend/static/css/520.b8e022da.chunk.css",
     "static/js/520.736c776e.chunk.js": "/Kapusta-Frontend/static/js/520.736c776e.chunk.js",
     "static/js/367.8b2b3240.chunk.js": "/Kapusta-Frontend/static/js/367.8b2b3240.chunk.js",
-    "static/js/683.36f0baca.chunk.js": "/Kapusta-Frontend/static/js/683.36f0baca.chunk.js",
+    "static/js/290.b4417867.chunk.js": "/Kapusta-Frontend/static/js/290.b4417867.chunk.js",
     "static/media/sprite.svg": "/Kapusta-Frontend/static/media/sprite.6a88062b39dce553fb1bca4c452baf8c.svg",
     "static/media/cabbageGroupDesktop.png": "/Kapusta-Frontend/static/media/cabbageGroupDesktop.121d6511689a4736d283.png",
     "static/media/cabbageGroupTablet.png": "/Kapusta-Frontend/static/media/cabbageGroupTablet.b251567a3cc3863b9a0d.png",
-    "static/media/cabbageCoupleDesktop.png": "/Kapusta-Frontend/static/media/cabbageCoupleDesktop.d88452e072aec514f22e.png",
     "static/media/Group 62.svg": "/Kapusta-Frontend/static/media/Group 62.8e29bb5c00dfcf0c2a388dcdf36e0e0d.svg",
     "static/media/clay 1.svg": "/Kapusta-Frontend/static/media/clay 1.4523d0084c6b6ca2ead224a94b57e3f7.svg",
     "static/media/cocktail 1.svg": "/Kapusta-Frontend/static/media/cocktail 1.99e12c94ab55ce5a3d6359e9318546f8.svg",
@@ -34,10 +33,10 @@
     "static/media/back.svg": "/Kapusta-Frontend/static/media/back.9664e65f9a1dc54628f2daa48391bf72.svg",
     "static/media/arrow-l.svg": "/Kapusta-Frontend/static/media/arrow-l.ed65ae738f78a2df12fa63ecf435fb95.svg",
     "static/media/arrow-r.svg": "/Kapusta-Frontend/static/media/arrow-r.4a8e7df3679a8f6d1fe7582d50a53944.svg",
-    "main.ded93c09.css.map": "/Kapusta-Frontend/static/css/main.ded93c09.css.map",
-    "main.88b219b3.js.map": "/Kapusta-Frontend/static/js/main.88b219b3.js.map",
-    "47.3a7d4e44.chunk.js.map": "/Kapusta-Frontend/static/js/47.3a7d4e44.chunk.js.map",
-    "528.320d4a54.chunk.js.map": "/Kapusta-Frontend/static/js/528.320d4a54.chunk.js.map",
+    "main.cb2ff277.css.map": "/Kapusta-Frontend/static/css/main.cb2ff277.css.map",
+    "main.b3a32df9.js.map": "/Kapusta-Frontend/static/js/main.b3a32df9.js.map",
+    "47.942d1a03.chunk.js.map": "/Kapusta-Frontend/static/js/47.942d1a03.chunk.js.map",
+    "528.4ac042c2.chunk.js.map": "/Kapusta-Frontend/static/js/528.4ac042c2.chunk.js.map",
     "696.2f3ab44c.chunk.js.map": "/Kapusta-Frontend/static/js/696.2f3ab44c.chunk.js.map",
     "182.ff599ca5.chunk.js.map": "/Kapusta-Frontend/static/js/182.ff599ca5.chunk.js.map",
     "588.7a5ad1e5.chunk.css.map": "/Kapusta-Frontend/static/css/588.7a5ad1e5.chunk.css.map",
@@ -45,10 +44,10 @@
     "520.b8e022da.chunk.css.map": "/Kapusta-Frontend/static/css/520.b8e022da.chunk.css.map",
     "520.736c776e.chunk.js.map": "/Kapusta-Frontend/static/js/520.736c776e.chunk.js.map",
     "367.8b2b3240.chunk.js.map": "/Kapusta-Frontend/static/js/367.8b2b3240.chunk.js.map",
-    "683.36f0baca.chunk.js.map": "/Kapusta-Frontend/static/js/683.36f0baca.chunk.js.map"
+    "290.b4417867.chunk.js.map": "/Kapusta-Frontend/static/js/290.b4417867.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ded93c09.css",
-    "static/js/main.88b219b3.js"
+    "static/css/main.cb2ff277.css",
+    "static/js/main.b3a32df9.js"
   ]
 }
