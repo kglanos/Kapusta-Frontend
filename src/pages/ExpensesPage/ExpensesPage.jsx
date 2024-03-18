@@ -1,3 +1,4 @@
+import { ModalConfirm } from 'components/ModalConfirm/ModalConfirm';
 import { ReportsLink } from '../../components/ReportsLink/ReportsLink';
 import { ToTransactionButton } from '../../components/ToTransactionButton/ToTransactionButton';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
@@ -12,6 +13,7 @@ const Expenses = () => {
         </Helmet>
         <ToTransactionButton />
         <ReportsLink />
+        <ModalConfirm />
       </div>
     </HelmetProvider>
   );
