@@ -6,7 +6,6 @@ import {
   selectIsRefreshing,
   selectIncomeSummary,
   selectExpensesSummary,
-  selectUserEmail,
 } from 'redux/Auth/selectors';
 
 export const useAuth = () => {
