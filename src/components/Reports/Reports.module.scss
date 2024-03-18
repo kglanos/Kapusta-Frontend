@@ -202,18 +202,24 @@ h3 {
 }
 .BalanceSummaryExpenses span {
   color: var(--expenses-text-color);
-  text-transform: uppercase;
 }
 .BalanceSummaryIncome span {
   color: var(--profits-text-color);
-  text-transform: uppercase;
 }
-.Vector {
-  height: 70px;
-  padding: 7px 3px;
-  @media screen and (min-width: 768px) {
-    height: 36px;
-  }
+.BalanceSummaryIncomeMinus span {
+  color: var(--expenses-text-color);
+}
+.LineVertical {  
+  padding: 7px 1px;
+  background-color: var(--line-bg-color);
+  border-radius: 1px;
+}
+.BalanceSummaryExpenses > span.Currency,
+.BalanceSummaryIncome > span.Currency,
+.BalanceSummaryIncomeMinus > span.Currency {
+  inherits: initial;
+  text-transform: uppercase;
+  color: var(--textColor);
 }
 .ExpensesWrapper {
   @media screen and (min-width: 768px) {
