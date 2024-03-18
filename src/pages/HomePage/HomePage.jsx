@@ -1,7 +1,7 @@
 import { LoginForm } from '../../components/LoginForm/LoginForm';
-import { CabbageGroup } from '../../components/CabbageGroup/CabbageGroup';
+import { CabbagesTop } from '../../components/Background/Unauthorized/CabbagesTop/CabbagesTop';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
-import { CabbageCouple } from '../../components/CabbageCouple/CabbageCouple';
+import { CabbagesBottom } from '../../components/Background/Unauthorized/CabbagesBottom/CabbagesBottom';
 import { MainLogo } from '../../components/MainLogo/MainLogo';
 
 const Home = () => {
@@ -11,10 +11,10 @@ const Home = () => {
         <Helmet>
           <title>Kapusta</title>
         </Helmet>
-        <CabbageGroup />
+        <CabbagesTop />
         <MainLogo />
         <LoginForm />
-        <CabbageCouple />
+        <CabbagesBottom />
       </div>
     </HelmetProvider>
   );
