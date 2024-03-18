@@ -49,7 +49,7 @@ export const currentUser = createAsyncThunk(
   '/users/current',
   async (_, thunkAPI) => {
     const state = thunkAPI.getState();
-    const token = state.user.token;
+    const token = state.token;
     if (token) {
       setAuthHeader(token);
       try {
