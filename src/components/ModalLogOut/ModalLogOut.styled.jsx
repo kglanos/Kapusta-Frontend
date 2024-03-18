@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const StyledModalWindow = styled.div`
+export const Modal = styled.div`
   position: absolute;
   top: 50%;
   left: 50%;
@@ -11,11 +11,11 @@ export const StyledModalWindow = styled.div`
   color: #52555f;
 `;
 
-export const StyledContentDiv = styled.div`
+export const ModalContent = styled.div`
   padding: 50px 58px 60px;
 `;
 
-export const StyledText = styled.p`
+export const Title = styled.p`
   margin-bottom: 20px;
   text-align: center;
   font-weight: 500;
@@ -24,12 +24,12 @@ export const StyledText = styled.p`
   letter-spacing: 0.02em;
 `;
 
-export const StyledDivWithButtons = styled.div`
+export const ButtonsBox = styled.div`
   display: flex;
   gap: 15px;
 `;
 
-export const StyledCloseButton = styled.button`
+export const CloseButton = styled.button`
   border: none;
   position: absolute;
   top: 20px;
@@ -37,7 +37,7 @@ export const StyledCloseButton = styled.button`
   cursor: pointer;
 `;
 
-export const StyledModalBackdrop = styled.div`
+export const Backdrop = styled.div`
   position: absolute;
   top: 0;
   left: 0;

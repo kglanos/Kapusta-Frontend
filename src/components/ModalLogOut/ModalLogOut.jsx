@@ -2,21 +2,21 @@ import { useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import PropTypes from 'prop-types';
 import {
-  StyledModalWindow,
-  StyledContentDiv,
-  StyledText,
-  StyledDivWithButtons,
-  StyledCloseButton,
-  StyledModalBackdrop,
-} from './ModalConfirm.styled';
-import { OrangeButton } from '../Buttons/OrangeButton';
-import { WhiteButton } from '../Buttons/WhiteButton';
+  Backdrop,
+  ModalContent,
+  Title,
+  ButtonsBox,
+  CloseButton,
+  Modal,
+} from './ModalLogOut.styled';
 import close from '../../icons/close.svg';
+import { OrangeButton } from './../Buttons/OrangeButton';
+import { WhiteButton } from './../Buttons/WhiteButton';
 
 const modalRoot = document.getElementById('modal-root');
 const body = document.querySelector('body');
 
-export const ModalConfirm = ({ closeModal, dispatch, changeBalance, text }) => {
+export const ModalLogOut = ({ closeModal, dispatch, changeBalance, text }) => {
   const handleBackdropClose = event => {
     if (event.target === event.currentTarget) {
       closeModal();
@@ -39,35 +39,31 @@ export const ModalConfirm = ({ closeModal, dispatch, changeBalance, text }) => {
   }, [closeModal]);
 
   return createPortal(
-    <StyledModalBackdrop
-      className="modal-backdrop"
-      onClick={handleBackdropClose}
-    >
-      <StyledModalWindow>
-        <StyledCloseButton onClick={closeModal}>
+    <Backdrop className="modal-backdrop" onClick={handleBackdropClose}>
+      <Modal>
+        <CloseButton onClick={closeModal}>
           <img src={close} alt="close" />
-        </StyledCloseButton>
-        <StyledContentDiv>
-          <StyledText>{text ? text : 'Are you sure?'}</StyledText>
-          <StyledDivWithButtons>
+        </CloseButton>
+        <ModalContent>
+          <Title>{text ? text : 'Do you really want to leave?'}</Title>
+          <ButtonsBox>
             <OrangeButton
               dispatch={dispatch}
               closeModal={closeModal}
               changeBalance={changeBalance}
-              type="submit"
             >
               {text ? text : 'YES'}
             </OrangeButton>
             <WhiteButton closeModal={closeModal}>NO</WhiteButton>
-          </StyledDivWithButtons>
-        </StyledContentDiv>
-      </StyledModalWindow>
-    </StyledModalBackdrop>,
+          </ButtonsBox>
+        </ModalContent>
+      </Modal>
+    </Backdrop>,
     modalRoot
   );
 };
 
-ModalConfirm.propTypes = {
+ModalLogOut.propTypes = {
   closeModal: PropTypes.func.isRequired,
   dispatch: PropTypes.func.isRequired,
   changeBalance: PropTypes.func,
