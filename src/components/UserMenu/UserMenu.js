@@ -10,11 +10,11 @@ import {
   LogoutIcon,
 } from './UserMenu.styled';
 import logoutSvg from '../../icons/logOut.svg';
-import { selectUserEmail } from '../../redux/Auth/selectors';
+import { selectUserName } from '../../redux/Auth/selectors';
 
 export const UserMenu = () => {
-  const userEmail = useSelector(selectUserEmail);
-  const firstLetter = userEmail ? userEmail.charAt(0).toUpperCase() : '';
+  const userName = useSelector(selectUserName);
+  const firstLetter = userName ? userName.charAt(0).toUpperCase() : '';
 
   const dispatch = useDispatch();
 
@@ -29,7 +29,7 @@ export const UserMenu = () => {
           <Avatar>{firstLetter}</Avatar>
         ) : (
           <>
-            <Avatar>{firstLetter}</Avatar> <Name>{userEmail}</Name>
+            <Avatar>{firstLetter}</Avatar> <Name>{userName}</Name>
           </>
         )}
       </UserArea>{' '}
