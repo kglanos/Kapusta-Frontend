@@ -45,9 +45,9 @@ export const categoriesData = [
     name: 'Entertainment',
     icon: Entertaiment,
     items: [
-      { name: 'Concerts', value: 1 },
-      { name: 'Movies', value: 1 },
-      { name: 'Games', value: 1 },
+      { name: 'Concerts', value: 0 },
+      { name: 'Movies', value: 0 },
+      { name: 'Games', value: 0 },
     ],
   },
   {
@@ -141,6 +141,6 @@ export const categoriesData = [
   {
     name: 'Other',
     icon: Other,
-    items: [{ name: 'Other', value: 1 }],
+    items: [{ name: 'Other', value: 0 }],
   },
 ];

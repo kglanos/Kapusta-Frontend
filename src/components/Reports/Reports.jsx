@@ -4,9 +4,8 @@ import css from './Reports.module.scss';
 import Back from '../../icons/back.svg';
 import ArrowL from '../../icons/arrow-l.svg';
 import ArrowR from '../../icons/arrow-r.svg';
-import { ReportsChart } from './ReportsChart';
-
-
+import { Link } from 'react-router-dom';
+// import { ReportsChart } from './ReportsChart';
 
 export const ReportsPage = () => {
   const { categories, totalValue, income, balance, currency } = ReportsLogic();
@@ -16,10 +15,12 @@ export const ReportsPage = () => {
       <div className={css.ReportsPageContainer}>
         <div className={css.ReportsBalanceWrapper}>
           <div className={css.ReportsBalanceWrapperTabletDesk}>
-            <div className={css.ArrowBack}>
-              <img src={Back} alt="arrow" />
-              <p className={css.ArrowBackDesk}>Main Page</p>
-            </div>
+            <Link to="/expenses">
+              <div className={css.ArrowBack}>
+                <img src={Back} alt="arrow" />
+                <p className={css.ArrowBackDesk}>Main Page</p>
+              </div>
+            </Link>
             <div className={css.DateBalanceWrapper}>
               <div className={css.DateSelectWrapper}>
                 <h3>Current period:</h3>
@@ -75,28 +76,29 @@ export const ReportsPage = () => {
           </div>
         </div>
         <div className={css.ExpensesWrapper}>
-          <div className={css.ExpensesTitle}>
+          <Link to="/income" className={css.LinkIncome}>
             <img src={ArrowL} alt="arrow" />
-            <h2>Expenses</h2>
+            <h2 className={css.Title}>Expenses</h2>
             <img src={ArrowR} alt="arrow" />
-          </div>
+          </Link>
           <div className={css.Categories}>
             <ul className={css.CategoriesList}>
-              {categories.map((category, index) => (
-                <li key={index} className={css.CategoriesListItem}>
-                  <p>{category.value}</p>
-                  <category.icon className={css.CategoriesListIcon} />
-                  <p>{category.name}</p>
-                </li>
-              ))}
+              {categories.map(
+                (category, index) =>
+                  category.value !== 0 && (
+                    <li key={index} className={css.CategoriesListItem}>
+                      <p>{category.value}</p>
+                      <category.icon className={css.CategoriesListIcon} />
+                      <p>{category.name}</p>
+                    </li>
+                  )
+              )}
               <li className={css.LineBottom}></li>
             </ul>
           </div>
         </div>
       </div>
-      <div>
-        <ReportsChart />
-      </div>
+      <div>{/* <ReportsChart /> */}</div>
     </div>
   );
 };
