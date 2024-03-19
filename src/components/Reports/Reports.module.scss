@@ -209,11 +209,11 @@ h3 {
 .BalanceSummaryIncomeMinus span {
   color: var(--expenses-text-color);
 }
-.LineVertical {  
-  padding:27px 0.5px;
+.LineVertical {
+  padding: 27px 0.5px;
   background-color: var(--line-bg-color);
   @media screen and (min-width: 768px) {
-  padding: 11px 0.5px;
+    padding: 11px 0.5px;
   }
 }
 .BalanceCurrency,
@@ -281,7 +281,9 @@ h3 {
   gap: 5px;
   width: 100px;
   cursor: pointer;
+  transition: 0.25s ease-in-out;
 }
+
 .CategoriesListItem p {
   font-size: 14px;
   text-transform: uppercase;
@@ -290,25 +292,27 @@ h3 {
 
 .CategoriesListIcon {
   width: 56px;
-  height: 56px; 
+  height: 56px;
 }
 .LineBottom {
   border-bottom: 1px solid var(--line-bg-color);
   width: 280px;
   @media screen and (min-width: 768px) {
-  display: none;
+    display: none;
   }
 }
 // style for icons
-.CategoriesListItem:hover .CategoriesListIcon path {
-  fill: var(--active-product-category-img);
-}
-.CategoriesListItem:hover .CategoriesListIcon rect {
-  fill: var(--active-product-category-bg);
-}
+
+.CategoriesListItem:hover .CategoriesListIcon path,
 .CategoriesListItem:active .CategoriesListIcon path {
   fill: var(--active-product-category-img);
+  transform: scale(1.03);
 }
+.CategoriesListItem:hover .CategoriesListIcon rect,
 .CategoriesListItem:active .CategoriesListIcon rect {
   fill: var(--active-product-category-bg);
+}
+.CategoriesListIcon path,
+.CategoriesListIcon rect {
+  transition: 0.25s ease-in-out;
 }
