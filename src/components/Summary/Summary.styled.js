@@ -17,9 +17,9 @@
 //   }
 
 //   @media screen and (min-width: 1280px) {
-//    margin-top: 0px;
-//    min-width: 213px;
-//    min-height: 280px;
+//     margin-top: 0px;
+//     min-width: 213px;
+//     min-height: 280px;
 //   }
 // `;
 

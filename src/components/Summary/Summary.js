@@ -1,6 +1,6 @@
 // import { useSelector } from 'react-redux';
 // import { useLocation } from 'react-router';
-// import { monthNameOrkToEng } from 'hooks/useMonthTranslate';
+// import { monthNamePlToEng } from 'hooks/useMonthTranslate';
 // import {
 //   selectIncomeSummary,
 //   selectExpensesSummary,
@@ -15,10 +15,9 @@
 // } from './Summary.styled';
 
 // export const Summary = () => {
-
 //   const location = useLocation();
- 
-//   const isLoading  = useSelector(selectIsLoggedIn);
+
+//   const isLoading = useSelector(selectIsLoggedIn);
 //   const incomeData = useSelector(selectIncomeSummary);
 //   const expensesData = useSelector(selectExpensesSummary);
 //   let data;
@@ -40,7 +39,7 @@
 //           } else {
 //             return (
 //               <StyledRow key={`${el[0]}${el[1]}`}>
-//                 <StyledMonth>{monthNameOrkToEng(el[0])}</StyledMonth>
+//                 <StyledMonth>{monthNamePlToEng(el[0])}</StyledMonth>
 //                 <StyledValue>{el[1]}.00</StyledValue>
 //               </StyledRow>
 //             );
