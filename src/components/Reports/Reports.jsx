@@ -4,9 +4,13 @@ import css from './Reports.module.scss';
 import Back from '../../icons/back.svg';
 import ArrowL from '../../icons/arrow-l.svg';
 import ArrowR from '../../icons/arrow-r.svg';
+import { ReportsChart } from './ReportsChart';
+
+
 
 export const ReportsPage = () => {
   const { categories, totalValue, income, balance, currency } = ReportsLogic();
+
   return (
     <div className={css.ReportsPageContainer}>
       <div className={css.ReportsPageContainer}>
@@ -85,10 +89,13 @@ export const ReportsPage = () => {
                   <p>{category.name}</p>
                 </li>
               ))}
-              <p className={css.LineBottom}></p>
+              <li className={css.LineBottom}></li>
             </ul>
           </div>
         </div>
+      </div>
+      <div>
+        <ReportsChart />
       </div>
     </div>
   );
