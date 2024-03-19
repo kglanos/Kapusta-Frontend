@@ -85,6 +85,7 @@ export const ReportsPage = () => {
                   <p>{category.name}</p>
                 </li>
               ))}
+              <p className={css.LineBottom}></p>
             </ul>
           </div>
         </div>

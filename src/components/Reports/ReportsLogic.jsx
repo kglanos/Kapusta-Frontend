@@ -14,7 +14,7 @@ import { ReactComponent as Other } from '../../icons/ufo 1.svg';
 export const ReportsLogic = () => {
   const [categories, setCategories] = useState([]);
   const [balance] = useState(10000);
-  const [currency] = useState('.usd');
+  const [currency] = useState('usd');
 
   useEffect(() => {
     const categoriesData = [
