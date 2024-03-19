@@ -1,6 +1,7 @@
 import { ReportsLink } from '../../components/ReportsLink/ReportsLink';
 import { ToTransactionButton } from '../../components/ToTransactionButton/ToTransactionButton';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
+import Form from 'components/Expenses/Form';
 // import { ModalConfirm } from 'components/ModalConfirm/ModalConfirm';
 // import { ModalLogOut } from 'components/ModalLogOut/ModalLogOut';
 // import { Summary } from '../../components/Summary/Summary';
@@ -15,6 +16,7 @@ const Expenses = () => {
         </Helmet>
         <ToTransactionButton />
         <ReportsLink />
+        <Form />
         {/* <ModalConfirm /> */}
         {/* <ModalLogOut /> */}
         <CabbagesBottom />

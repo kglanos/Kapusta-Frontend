@@ -62,3 +62,8 @@ export const currentUser = createAsyncThunk(
     return thunkAPI.rejectWithValue('no token');
   }
 );
+
+export const getUserInfo = async () => {
+  const { data } = await axios.get('user');
+  return data;
+};
