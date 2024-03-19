@@ -16,7 +16,13 @@ import { WhiteButton } from './../Buttons/WhiteButton';
 const modalRoot = document.getElementById('modal-root');
 const body = document.querySelector('body');
 
-export const ModalLogOut = ({ closeModal, dispatch, changeBalance, text }) => {
+export const ModalLogOut = ({
+  children,
+  closeModal,
+  dispatch,
+  changeBalance,
+  text,
+}) => {
   const handleBackdropClose = event => {
     if (event.target === event.currentTarget) {
       closeModal();
@@ -45,7 +51,7 @@ export const ModalLogOut = ({ closeModal, dispatch, changeBalance, text }) => {
           <img src={close} alt="close" />
         </CloseButton>
         <ModalContent>
-          <Title>{text ? text : 'Do you really want to leave?'}</Title>
+          <Title>{children}</Title>
           <ButtonsBox>
             <OrangeButton
               dispatch={dispatch}
@@ -64,6 +70,7 @@ export const ModalLogOut = ({ closeModal, dispatch, changeBalance, text }) => {
 };
 
 ModalLogOut.propTypes = {
+  children: PropTypes.string.isRequired,
   closeModal: PropTypes.func.isRequired,
   dispatch: PropTypes.func.isRequired,
   changeBalance: PropTypes.func,

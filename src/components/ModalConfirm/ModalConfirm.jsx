@@ -16,7 +16,13 @@ import close from '../../icons/close.svg';
 const modalRoot = document.getElementById('modal-root');
 const body = document.querySelector('body');
 
-export const ModalConfirm = ({ closeModal, dispatch, changeBalance, text }) => {
+export const ModalConfirm = ({
+  children,
+  closeModal,
+  dispatch,
+  changeBalance,
+  text,
+}) => {
   const handleBackdropClose = event => {
     if (event.target === event.currentTarget) {
       closeModal();
@@ -48,7 +54,7 @@ export const ModalConfirm = ({ closeModal, dispatch, changeBalance, text }) => {
           <img src={close} alt="close" />
         </StyledCloseButton>
         <StyledContentDiv>
-          <StyledText>{text ? text : 'Are you sure?'}</StyledText>
+          <StyledText>{children}</StyledText>
           <StyledDivWithButtons>
             <OrangeButton
               dispatch={dispatch}
@@ -68,6 +74,7 @@ export const ModalConfirm = ({ closeModal, dispatch, changeBalance, text }) => {
 };
 
 ModalConfirm.propTypes = {
+  children: PropTypes.string.isRequired,
   closeModal: PropTypes.func.isRequired,
   dispatch: PropTypes.func.isRequired,
   changeBalance: PropTypes.func,
