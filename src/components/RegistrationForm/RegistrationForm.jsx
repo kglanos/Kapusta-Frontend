@@ -24,11 +24,19 @@ export const RegistrationForm = () => {
     const email = form.elements.email.value;
     const password = form.elements.password.value;
     dispatch(register({ name, email, password }));
+    
     form.reset();
+    navigate('/login');
   };
   const handleLoginClick = () => {
     navigate('/login');
   };
+
+  // const handleNavigationToLogin = () => {
+  //   navigate('/login');
+  // };
+
+
   return (
     <FormContainer>
       <FormAdvice>You can log in with your Google Account:</FormAdvice>
@@ -66,7 +74,7 @@ export const RegistrationForm = () => {
           <FormButton type="button" onClick={handleLoginClick}>
             LOG IN
           </FormButton>{' '}
-          <FormButton type="submit">REGISTRATION</FormButton>
+          <FormButton type="submit"  >REGISTRATION</FormButton>
         </FormButtons>
       </FormForm>
     </FormContainer>

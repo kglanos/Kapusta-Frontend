@@ -11,17 +11,21 @@ import {
 } from './UserMenu.styled';
 import logoutSvg from '../../icons/logOut.svg';
 import { selectUserName } from '../../redux/Auth/selectors';
-
+import { ModalLogOut } from 'components/ModalLogOut/ModalLogOut';
+import { useState } from 'react';
 export const UserMenu = () => {
+  const [modalOpen, setModalOpen] = useState(false);
   const userName = useSelector(selectUserName);
   const firstLetter = userName ? userName.charAt(0).toUpperCase() : '';
-
   const dispatch = useDispatch();
-
   const handleLogout = () => dispatch(logout());
-
+  const handleModalOpen = () => {
+    setModalOpen(true);
+  };
+  const handleModalClose = () => {
+    setModalOpen(false);
+  };
   const { mobileScreen } = useScreenSize();
-
   return (
     <Container>
       <UserArea>
@@ -35,7 +39,7 @@ export const UserMenu = () => {
       </UserArea>{' '}
       {mobileScreen ? (
         <>
-          <LogoutButton onClick={handleLogout}>
+          <LogoutButton onClick={handleModalOpen}>
             <LogoutIcon>
               <image href={logoutSvg} />
             </LogoutIcon>
@@ -43,9 +47,13 @@ export const UserMenu = () => {
         </>
       ) : (
         <>
-          <LogoutButton onClick={handleLogout}>Exit</LogoutButton>
+          <LogoutButton onClick={handleModalOpen}>Exit</LogoutButton>
         </>
       )}
-    </Container>
-  );
+      {modalOpen && (
+          <ModalLogOut closeModal={handleModalClose} dispatch={handleLogout}>
+            Do you really want to leave?
+          </ModalLogOut>
+       )} </Container>
+    );
 };
