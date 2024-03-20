@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import ModalBalance from '../../components/ModalStartBalance//ModalStartBalance';
+import ModalBalance from '../../components/ModalStartBalance/ModalStartBalance';
 import selectBalance from '../../redux/Balance/selectBalance';
 import setUserBalance from '../../redux/Balance/operations';
 import {
@@ -15,13 +15,15 @@ import {
 
 const BalanceForm = () => {
   const currentBalance = useSelector(selectBalance);
-
-  const [value, setValue] = useState(currentBalance ?? 0);
-  const [promptClose, setPromptClose] = useState(true);
   const dispatch = useDispatch();
 
+  const [value, setValue] = useState(currentBalance || '');
+  const [promptClose, setPromptClose] = useState(true);
+
   useEffect(() => {
-    setValue(currentBalance.toFixed(2));
+    if (currentBalance !== undefined) {
+      setValue(currentBalance.toFixed(2));
+    }
   }, [currentBalance]);
 
   const toggleWindow = () => {
@@ -31,14 +33,18 @@ const BalanceForm = () => {
   const onSubmit = e => {
     e.preventDefault();
     const data = e.target.elements.balance.value;
-    const balance = Number(data);
+    const balance = parseFloat(data);
 
-    const sevedBalance = {
-      newBalance: balance,
-    };
-    dispatch(setUserBalance(sevedBalance));
-    if (currentBalance) {
-      setPromptClose(prev => !prev);
+    if (!isNaN(balance)) {
+      const savedBalance = {
+        newBalance: balance,
+      };
+      dispatch(setUserBalance(savedBalance));
+      if (currentBalance !== undefined) {
+        setPromptClose(prev => !prev);
+      }
+    } else {
+      console.error('Invalid balance input');
     }
   };
 
@@ -47,32 +53,27 @@ const BalanceForm = () => {
   };
 
   return (
-    <>
-      <WrapperForm>
-        <Title>Balance:</Title>
-        <Form onSubmit={onSubmit}>
-          <InputContainer>
-            <Input
-              type="number"
-              readOnly={currentBalance}
-              name="balance"
-              pattern="[0-9, .UAH]*"
-              value={value}
-              onChange={onChange}
-            />
-            <Label>UAH</Label>
-          </InputContainer>
-          {promptClose && currentBalance <= 0 && (
-            <ModalBalance onClose={toggleWindow} />
-          )}
-          {
-            <Button type="submit" disabled={currentBalance}>
-              CONFIRM
-            </Button>
-          }
-        </Form>
-      </WrapperForm>
-    </>
+    <WrapperForm>
+      <Title>Balance:</Title>
+      <Form onSubmit={onSubmit}>
+        <InputContainer>
+          <Input
+            type="number"
+            step="0.01"
+            name="balance"
+            value={value}
+            onChange={onChange}
+          />
+          <Label>UAH</Label>
+        </InputContainer>
+        {promptClose && currentBalance <= 0 && (
+          <ModalBalance onClose={toggleWindow} />
+        )}
+        <Button type="submit" disabled={currentBalance !== undefined}>
+          CONFIRM
+        </Button>
+      </Form>
+    </WrapperForm>
   );
 };
 
