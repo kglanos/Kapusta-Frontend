@@ -59,7 +59,7 @@ export const currentUser = createAsyncThunk(
         return thunkAPI.rejectWithValue(error.message);
       }
     }
-    return thunkAPI.rejectWithValue('no token');
+    return thunkAPI.rejectWithValue('No token');
   }
 );
 
