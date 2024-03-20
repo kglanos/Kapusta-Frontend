@@ -11,7 +11,7 @@ import {
 import { Loader } from 'components/Loader/Loader';
 import logoKapusta from '../../icons/logoKapusta.svg';
 import { useSelector } from 'react-redux';
-import { selectIsLoggedIn } from '../../redux/Auth/selectors';
+import { selectIsLoggedIn } from '../../redux/selectors';
 import { UserMenu } from 'components/UserMenu/UserMenu';
 
 const Layout = () => {

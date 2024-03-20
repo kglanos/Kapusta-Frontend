@@ -1,6 +1,6 @@
 import { Navigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import { selectIsLoggedIn } from '../redux/Auth/selectors';
+import { selectIsLoggedIn } from '../redux/selectors';
 
 export const PrivateRoute = ({ component: Component }) => {
   const isLoggedIn = useSelector(selectIsLoggedIn);

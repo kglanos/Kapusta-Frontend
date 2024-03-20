@@ -10,7 +10,7 @@ import {
   LogoutIcon,
 } from './UserMenu.styled';
 import logoutSvg from '../../icons/logOut.svg';
-import { selectUserName } from '../../redux/Auth/selectors';
+import { selectUserName } from '../../redux/selectors';
 import { ModalLogOut } from 'components/ModalLogOut/ModalLogOut';
 import { useState } from 'react';
 export const UserMenu = () => {
@@ -51,9 +51,10 @@ export const UserMenu = () => {
         </>
       )}
       {modalOpen && (
-          <ModalLogOut closeModal={handleModalClose} dispatch={handleLogout}>
-            Do you really want to leave?
-          </ModalLogOut>
-       )} </Container>
-    );
+        <ModalLogOut closeModal={handleModalClose} dispatch={handleLogout}>
+          Do you really want to leave?
+        </ModalLogOut>
+      )}{' '}
+    </Container>
+  );
 };

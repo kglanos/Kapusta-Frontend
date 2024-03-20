@@ -11,13 +11,13 @@ export const getIncomeTransactions = async () => {
 };
 
 export const addExpenseTransaction = async info => {
-  const { data } = await axios.post('/transaction/expense', info);
+  const { data } = await axios.post('/transaction/expenses', info);
 
   return data;
 };
 
 export const getExpenseTransactions = async () => {
-  const { data } = await axios.get('/transaction/expense');
+  const { data } = await axios.get('/transaction/expenses');
   return data;
 };
 
