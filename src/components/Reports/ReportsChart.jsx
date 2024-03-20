@@ -1,7 +1,7 @@
 import React from 'react';
 import { categoriesData } from './CategoriesData';
 import { Bar } from 'react-chartjs-2';
-import styles from './CategoriesData.module.scss';
+import styles from './ReportsChart.module.scss';
 
 export const ReportsChart = () => {
   const chartData = {
@@ -21,9 +21,14 @@ export const ReportsChart = () => {
 
   return (
     <div className={styles.chartContainer}>
-           <Bar
+      <Bar
         data={chartData}
         options={{
+          scales: {
+            x: {
+              type: 'category',
+            },
+          },
           legend: {
             display: true,
             position: 'right',
@@ -31,20 +36,16 @@ export const ReportsChart = () => {
         }}
       />
       <ul className={styles.legend}>
-        {' '}
-        {/* Użyj klasy z modułu CSS */}
         <li className={styles.legendItem}>
-          {' '}
-          {/* Użyj klasy z modułu CSS */}
           <span
             className={styles.legendColor}
             style={{ backgroundColor: 'rgba(75,192,192,1)' }}
-          ></span>{' '}
-          {/* Użyj klasy z modułu CSS */}
+          ></span>
           <span>Value</span>
         </li>
       </ul>
     </div>
   );
 };
+
 //  #ff751d
