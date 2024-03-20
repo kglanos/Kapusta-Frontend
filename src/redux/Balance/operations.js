@@ -10,7 +10,7 @@ const updateBalance = async request => {
   return data;
 };
 
-export const setUserBalance = createAsyncThunk(
+const setUserBalance = createAsyncThunk(
   'balance/setBalance',
 
   async (request, { rejectWithValue }) => {
@@ -27,3 +27,4 @@ export const setUserBalance = createAsyncThunk(
     }
   }
 );
+export default setUserBalance;

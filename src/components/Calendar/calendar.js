@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import Calendar from 'react-datepicker';
-import 'react-datepicker/dist/react-datepicker.css';
 import pl from 'date-fns/locale/pl';
-
+import { DatePickerStyled, imgStyled } from './Calendar.styled';
+import 'react-datepicker/dist/react-datepicker.css';
 import { useDispatch } from 'react-redux';
 import { initDate } from '../../redux/ExtraData/ExtraDataReducer';
+import calendar from '../../icons/calendar.svg';
 
 export function DatePicker({ className }) {
   const [value, onChange] = useState(new Date(), 'yyyy-MM-dd');
@@ -24,13 +25,16 @@ export function DatePicker({ className }) {
   }, []);
 
   return (
-    <Calendar
-      locale={pl}
-      dateFormat="dd.MM.yyyy"
-      maxDate={new Date()}
-      selected={value}
-      onChange={handleDateChange}
-      className={className}
-    />
+    <div>
+      <img src={calendar} alt="calendar" />
+      <DatePickerStyled
+        locale={pl}
+        dateFormat="dd.MM.yyyy"
+        maxDate={new Date()}
+        selected={value}
+        onChange={handleDateChange}
+        className={className}
+      />
+    </div>
   );
 }

@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import ModalBalance from '../../components/ModalStartBalance//ModalStartBalance';
-import { selectBalance } from 'redux/Balance/selectBalance';
-import { setUserBalance } from 'redux/Balance/operations';
+import selectBalance from 'redux/Balance/selectBalance';
+import setUserBalance from 'redux/Balance/operations';
 import {
   Form,
   Title,
@@ -13,7 +13,7 @@ import {
   WrapperForm,
 } from './BalanceForm.styled';
 
-export const BalanceForm = () => {
+const BalanceForm = () => {
   const currentBalance = useSelector(selectBalance);
 
   const [value, setValue] = useState(currentBalance ?? 0);
@@ -75,3 +75,5 @@ export const BalanceForm = () => {
     </>
   );
 };
+
+export default BalanceForm;
