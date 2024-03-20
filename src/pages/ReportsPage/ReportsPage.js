@@ -1,6 +1,6 @@
 import { HelmetProvider, Helmet } from 'react-helmet-async';
 import { ReportsPage } from '../../components/Reports/Reports';
-// import { BalanceForm } from '../../components/BalanceForm/BalanceForm';
+import { BalanceForm } from '../../components/BalanceForm/BalanceForm';
 
 const Reports = () => {
   return (
@@ -9,7 +9,7 @@ const Reports = () => {
         <title>Reports</title>
       </Helmet>
       <ReportsPage />
-      {/* <BalanceForm /> */}
+      <BalanceForm />
     </HelmetProvider>
   );
 };

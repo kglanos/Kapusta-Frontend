@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import Calendar from 'react-datepicker';
+// import Calendar from 'react-datepicker';
 import pl from 'date-fns/locale/pl';
-import { DatePickerStyled, imgStyled } from './Calendar.styled';
+import { DatePickerStyled } from './Calendar.styled';
 import 'react-datepicker/dist/react-datepicker.css';
 import { useDispatch } from 'react-redux';
 import { initDate } from '../../redux/ExtraData/ExtraDataReducer';
