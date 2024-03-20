@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
-import { selectIsLoading } from '../../redux/Auth/selectors';
+import { selectIsLoading } from '../../redux/selectors';
 import { deleteTransaction } from '../../redux/Transactions/operations';
 import { ReactComponent as DeleteIcon } from './deleteIcon.svg';
 import { StyledTransactionTable } from './TransactionListDesktop.styled';
