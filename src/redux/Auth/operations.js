@@ -67,3 +67,22 @@ export const getUserInfo = async () => {
   const { data } = await axios.get('user');
   return data;
 };
+
+export const refreshUser = createAsyncThunk(
+  'auth/refreshUser',
+  async (_, thunkAPI) => {
+    const state = thunkAPI.getState();
+    const persistedToken = state.auth.token;
+
+    setAuthHeader(persistedToken);
+    if (!persistedToken) {
+      return thunkAPI.rejectWithValue('No token');
+    }
+    try {
+      const { data } = await getUserInfo();
+      return data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.message);
+    }
+  }
+);

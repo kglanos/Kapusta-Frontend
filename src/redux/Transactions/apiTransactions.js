@@ -41,6 +41,11 @@ export const getPeriodData = async date => {
   return data;
 };
 
+export const getUserInfo = async () => {
+  const { data } = await axios.get('user');
+  return data;
+};
+
 export const updateUserBalance = async value => {
   const { data } = await axios.patch('/user/balance', value);
   return data;

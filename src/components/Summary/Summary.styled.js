@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const StyledTable = styled.ul`
+export const StyledSummaryTable = styled.ul`
   display: none;
 
   @media screen and (min-width: 768px) {
@@ -23,14 +23,14 @@ export const StyledTable = styled.ul`
   }
 `;
 
-export const StyledTableHead = styled.li`
+export const StyledSummaryTableHead = styled.li`
   font-weight: 400;
   letter-spacing: 0.02em;
   padding: 12px 0px;
   color: #00000;
 `;
 
-export const StyledRow = styled.li`
+export const StyledSummaryRow = styled.li`
   display: flex;
   align-items: center;
   gap: 22px;
@@ -42,7 +42,7 @@ export const StyledRow = styled.li`
   }
 `;
 
-export const StyledMonth = styled.p`
+export const StyledSummaryMonth = styled.p`
   width: 84px;
   text-transform: uppercase;
   font-size: 12px;
@@ -51,7 +51,7 @@ export const StyledMonth = styled.p`
   text-align: left;
 `;
 
-export const StyledValue = styled.p`
+export const StyledSummaryValue = styled.p`
   width: 84px;
   text-transform: uppercase;
   font-size: 12px;
