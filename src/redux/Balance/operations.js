@@ -1,14 +1,14 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import axios from 'axios';
+// import axios from 'axios';
 
-const Url = axios.create({
-  baseURL: 'https://kapusta-a0a137454a45.herokuapp.com/',
-});
-const updateBalance = async request => {
-  const { data } = await Url.patch('/user/balance', request);
+// const Url = axios.create({
+//   baseURL: 'https://kapusta-a0a137454a45.herokuapp.com/',
+// });
+// const updateBalance = async request => {
+//   const { data } = await Url.patch('/user/balance', request);
 
-  return data;
-};
+//   return data;
+// };
 
 const setUserBalance = createAsyncThunk(
   'balance/setBalance',
