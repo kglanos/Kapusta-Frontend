@@ -14,6 +14,7 @@ export const StyledOrangeButton = styled.button`
   letter-spacing: 0.02em;
   font-size: 12px;
   line-height: 1.17;
+  cursor: pointer;
 `;
 
 export const StyledWhiteButton = styled.button`
@@ -29,6 +30,7 @@ export const StyledWhiteButton = styled.button`
   text-align: center;
   letter-spacing: 0.02em;
   line-height: 1.17;
+  cursor: pointer;
 `;
 
 export const ButtonBack = styled(Link)`

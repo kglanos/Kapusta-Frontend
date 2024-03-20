@@ -4,9 +4,9 @@ import 'react-datepicker/dist/react-datepicker.css';
 import pl from 'date-fns/locale/pl';
 
 import { useDispatch } from 'react-redux';
-import { initDate } from 'redux/extraData/extraDataReducer';
+import { initDate } from '../../redux/ExtraData/ExtraDataReducer';
 
-function DatePicker({ className }) {
+export function DatePicker({ className }) {
   const [value, onChange] = useState(new Date(), 'yyyy-MM-dd');
   const dispatch = useDispatch();
 
@@ -34,5 +34,3 @@ function DatePicker({ className }) {
     />
   );
 }
-
-export default DatePicker;
