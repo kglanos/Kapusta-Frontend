@@ -2,10 +2,10 @@ import { ReportsLink } from '../../components/ReportsLink/ReportsLink';
 import { ToTransactionButton } from '../../components/ToTransactionButton/ToTransactionButton';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import Form from 'components/Expenses/Form';
-// import { ModalConfirm } from 'components/ModalConfirm/ModalConfirm';
+import { ModalConfirm } from 'components/ModalConfirm/ModalConfirm';
 // import { Summary } from '../../components/Summary/Summary';
-// import { DatePicker } from '../../components/Calendar/calendar';
-// import BalanceForm from '../../components/BalanceForm/BalanceForm';
+import { DatePicker } from '../../components/Calendar/calendar';
+import BalanceForm from '../../components/BalanceForm/BalanceForm';
 import { CabbagesBottom } from '../../components/Background/Authorized/CabbagesBottom';
 import { BalanceConfirm } from '../../components/BalanceConfirm/BalanceConfirm';
 
@@ -19,11 +19,11 @@ const Expenses = () => {
         <ToTransactionButton />
         <ReportsLink />
         <BalanceConfirm/>
-        {/* <Form /> */}
-        {/* <ModalConfirm /> */}
+        <Form />
+        <ModalConfirm />
         <CabbagesBottom />
-        {/* <DatePicker /> */}
-        {/* <BalanceForm /> */}
+        <DatePicker />
+        <BalanceForm />
       </div>
     </HelmetProvider>
   );
