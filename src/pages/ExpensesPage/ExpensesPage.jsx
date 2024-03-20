@@ -4,7 +4,7 @@ import { Helmet, HelmetProvider } from 'react-helmet-async';
 // import { ModalConfirm } from 'components/ModalConfirm/ModalConfirm';
 import Form from '../../components/Expenses/Form';
 import { Summary } from '../../components/Summary/Summary';
-import { DatePicker } from '../../components/Calendar/calendar';
+// import { DatePicker } from '../../components/Calendar/calendar';
 // import BalanceForm from '../../components/BalanceForm/BalanceForm';
 import { CabbagesBottom } from '../../components/Background/Authorized/CabbagesBottom';
 import { BalanceConfirm } from '../../components/BalanceConfirm/BalanceConfirm';
@@ -22,7 +22,7 @@ const Expenses = () => {
         <Form />
         {/* <ModalConfirm /> */}
         <CabbagesBottom />
-        <DatePicker />
+        {/* <DatePicker /> */}
         {/* <BalanceForm /> */}
         <Summary />
       </div>
