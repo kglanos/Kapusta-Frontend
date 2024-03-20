@@ -1,80 +1,29 @@
 import React from 'react';
+import { HelmetProvider } from 'react-helmet-async';
 import { ReportsLogic } from './ReportsLogic';
 import css from './Reports.module.scss';
-import Back from '../../icons/back.svg';
 import ArrowL from '../../icons/arrow-l.svg';
 import ArrowR from '../../icons/arrow-r.svg';
 import { Link } from 'react-router-dom';
+import { BalanceConfirm } from '../BalanceConfirm/BalanceConfirm';
+import { Date } from '../../components/Date/Date';
+import { Summary } from '../SummaryComponent/SummaryComponent';
+import { ButtonToHome } from '../ButtonToHome/ButtonToHome'
+
 // import { ReportsChart } from './ReportsChart';
 
 export const ReportsPage = () => {
-  const { categories, totalValue, income, balance, currency } = ReportsLogic();
+  const { categories } = ReportsLogic();
 
   return (
-    <div className={css.ReportsPageContainer}>
+    <HelmetProvider>
       <div className={css.ReportsPageContainer}>
-        <div className={css.ReportsBalanceWrapper}>
-          <div className={css.ReportsBalanceWrapperTabletDesk}>
-            <Link to="/expenses">
-              <div className={css.ArrowBack}>
-                <img src={Back} alt="arrow" />
-                <p className={css.ArrowBackDesk}>Main Page</p>
-              </div>
-            </Link>
-            <div className={css.DateBalanceWrapper}>
-              <div className={css.DateSelectWrapper}>
-                <h3>Current period:</h3>
-                <div className={css.DateSelect}>
-                  <img src={ArrowL} alt="arrow" />
-                  <h2>miesiac rok</h2>
-                  <img src={ArrowR} alt="arrow" />
-                </div>
-              </div>
-              <div className={css.BalanceConfirmWrapperDesk}>
-                <div className={css.BalanceWrapper}>
-                  <h3>Balance:</h3>
-                  <p className={css.Balance}>
-                    <span>{balance}</span>
-                    <span>{currency}</span>
-                  </p>
-                </div>
-                <div className={css.ConfirmWrapper}>
-                  <h3>Confirm</h3>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className={css.BalanceSummaryWrapper}>
-            <ul className={css.BalanceSummaryList}>
-              <li className={css.BalanceSummaryListItem}>
-                <p>Expenses:</p>
-                <span className={css.BalanceSummaryExpenses}>
-                  <span>-</span>
-                  <span>{totalValue}</span>
-                  <span className={css.Currency}>{currency}</span>
-                </span>
-              </li>
-              <li>
-                <span className={css.LineVertical}></span>
-              </li>
-              <li className={css.BalanceSummaryListItem}>
-                <p>Income:</p>
-                {income >= 0 ? (
-                  <span className={css.BalanceSummaryIncome}>
-                    <span>+</span>
-                    <span>{income}</span>
-                    <span className={css.Currency}>{currency}</span>
-                  </span>
-                ) : (
-                  <span className={css.BalanceSummaryIncomeMinus}>
-                    <span>{income}</span>
-                    <span className={css.Currency}>{currency}</span>
-                  </span>
-                )}
-              </li>
-            </ul>
-          </div>
-        </div>
+        <ButtonToHome/>
+        <BalanceConfirm />
+        <Date />
+        <Summary />
+
+        <div className={css.ReportsBalanceWrapper}></div>
         <div className={css.ExpensesWrapper}>
           <Link to="/income" className={css.LinkIncome}>
             <img src={ArrowL} alt="arrow" />
@@ -99,6 +48,6 @@ export const ReportsPage = () => {
         </div>
       </div>
       <div>{/* <ReportsChart /> */}</div>
-    </div>
+    </HelmetProvider>
   );
 };

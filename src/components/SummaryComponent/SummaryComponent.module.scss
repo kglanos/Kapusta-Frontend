@@ -1,0 +1,56 @@
+.BalanceSummaryWrapper {
+    min-width: 280px;
+    height: auto;
+    border: 1px solid var--(line-bg-color);
+    border-radius: 20px;
+    padding: 21px 10px;
+    box-shadow: 5px 10px 20px 0px var(--box-shadow-color);
+    margin-bottom: 32px;
+    background-color: var(--bg-white-color);
+    @media screen and (min-width: 768px) {
+      margin: 32px auto;
+      width: 704px;
+      padding: 17px 0px;
+    }
+    @media screen and (min-width: 1280px) {
+      width: 1034px;
+    }
+  }
+  .BalanceSummaryList {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 10px;
+    @media screen and (min-width: 768px) {
+      justify-content: center;
+      gap: 20px;
+    }
+  }
+  .BalanceSummaryListItem {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
+      align-items: center;
+      gap: 15px;
+    }
+  }
+  .BalanceSummaryListItem {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text-color-secondary);
+  }
+  .BalanceSummaryListItem p {
+    color: var(--text-color-secondary);
+  }
+  .BalanceSummaryExpenses span {
+    color: var(--expenses-text-color);
+  }
+  .BalanceSummaryIncome span {
+    color: var(--profits-text-color);
+  }
+  .BalanceSummaryIncomeMinus span {
+    color: var(--expenses-text-color);
+  }
