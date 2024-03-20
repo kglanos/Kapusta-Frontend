@@ -62,6 +62,9 @@ h3 {
   position: absolute;
   top: 16px;
   left: 20px;
+  cursor: pointer;
+  transition: 0.25s ease-in-out;
+
   @media screen and (min-width: 768px) {
     position: static;
     display: flex;
@@ -69,6 +72,14 @@ h3 {
     align-items: center;
   }
 }
+.ArrowBack img {
+  transition: 0.25s ease-in-out;
+}
+
+.ArrowBack:hover > :first-child {
+  transform: translateX(-5px);
+}
+
 .ArrowBackDesk {
   display: none;
   @media screen and (min-width: 768px) {
@@ -78,7 +89,11 @@ h3 {
     color: var(--text-color-primary);
     width: 80px;
     text-align: right;
+    transition: 0.25s ease-in-out;
   }
+}
+.ArrowBack:hover > :last-child {
+  color: var(--active-product-category-img);
 }
 
 .DateSelectWrapper {
@@ -236,13 +251,20 @@ h3 {
     width: 1034px;
   }
 }
-.ExpensesTitle {
+.LinkIncome {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 15px;
+  transition: 0.25s ease-in-out;
+  @media screen and (min-width: 768px) {
+  }
+}
+.LinkIncome:hover {
   gap: 20px;
 }
-.ExpensesTitle h2 {
+
+.Title {
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 0.2px;
