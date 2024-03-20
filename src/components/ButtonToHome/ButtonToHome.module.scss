@@ -1,0 +1,38 @@
+.ArrowBack {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.25s ease-in-out;
+    position: relative;
+    top: 25px;
+    left: -120px;
+    z-index: 10;
+    @media screen and (min-width: 768px) {
+      top: 36px;
+      left: -295px;
+    }
+    @media screen and (min-width: 1280px) {
+      left: -460px;
+    }
+  }
+  .ArrowBack img {
+    transition: 0.25s ease-in-out;
+  }
+  .ArrowBack:hover > :first-child {
+    transform: translateX(-5px);
+  }
+  .ArrowBackDesk {
+    display: none;
+    @media screen and (min-width: 768px) {
+      display: block;
+      font-size: 12px;
+      font-weight: 400;
+      color: var(--text-color-primary);
+      width: 80px;
+      text-align: right;
+      transition: 0.25s ease-in-out;
+    }
+  }
+  .ArrowBack:hover > :last-child {
+    color: var(--active-product-category-img);
+  }
