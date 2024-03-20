@@ -17,11 +17,11 @@ const TRANSITION = {
 };
 
 export const WrapperForm = styled.div`
-  @media ${DEVICE.tablet} {
-    display: flex;
-    align-items: center;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
+
 export const Title = styled.h2`
   display: flex;
   align-items: center;
@@ -33,9 +33,11 @@ export const Title = styled.h2`
   line-height: 1.6;
   letter-spacing: 0.02em;
   color: rgba(82, 85, 95, 0.7);
+
   @media ${DEVICE.tablet} {
     margin: 0 21px 0 10px;
   }
+
   @media ${DEVICE.laptop} {
     margin: 0 20px 0;
   }
@@ -46,6 +48,7 @@ export const Form = styled.form`
   display: flex;
   align-items: center;
   justify-content: center;
+
   @media ${DEVICE.tablet} {
     position: relative;
     align-items: center;
@@ -69,6 +72,7 @@ export const Input = styled.input`
   border-radius: 22px 0 0 22px;
   background-color: transparent;
   outline: none;
+
   ::-webkit-outer-spin-button,
   ::-webkit-inner-spin-button {
     -webkit-appearance: none;
@@ -81,6 +85,7 @@ export const Input = styled.input`
   ::-ms-inner-spin-button {
     -ms-appearance: none;
   }
+
   @media ${DEVICE.tablet} {
     margin-right: 15px;
     border-radius: 16px;
@@ -123,18 +128,21 @@ export const Button = styled.button`
     background-color ${TRANSITION.duration} ${TRANSITION.timing}
       ${TRANSITION.delay},
     border-color ${TRANSITION.duration} ${TRANSITION.timing} ${TRANSITION.delay};
+
   &:focus,
   &:hover {
     color: #ffffff;
     background-color: #ff751d;
     border-color: #ff751d;
   }
+
   &:disabled {
     background-color: transparent;
     cursor: default;
     border-color: #ffffff;
     color: rgba(82, 85, 95, 0.7);
   }
+
   @media ${DEVICE.tablet} {
     width: 125px;
     border-radius: 16px;
@@ -143,6 +151,7 @@ export const Button = styled.button`
     padding: 0;
   }
 `;
+
 export const Label = styled.label`
   position: absolute;
   top: 16px;
@@ -153,10 +162,12 @@ export const Label = styled.label`
   line-height: 14px;
   text-transform: none;
   color: #000000;
+
   @media ${DEVICE.tablet} {
     margin-right: 14px;
   }
 `;
+
 export const InputContainer = styled.div`
   display: flex;
   align-items: baseline;
