@@ -1,4 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
+import { updateBalance } from '../../redux/Transactions/operations';
 
 const setUserBalance = createAsyncThunk(
   'balance/setBalance',
