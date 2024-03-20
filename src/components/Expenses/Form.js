@@ -33,14 +33,11 @@ export default function Form() {
 
   // Check location for submit incomes or expenses
 
-  if (location.pathname === '/home/income' || location.pathname === '/income') {
+  if (location.pathname === '/income') {
     categoryArray = ['Salary', 'Additional income'];
     functionToDispatch = addIncome;
   }
-  if (
-    location.pathname === '/home/expenses' ||
-    location.pathname === '/expenses'
-  ) {
+  if (location.pathname === '/expenses') {
     categoryArray = [
       'Transport',
       'Products',
