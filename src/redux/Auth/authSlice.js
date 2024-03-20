@@ -7,6 +7,7 @@ const initialState = {
   user: { email: null, name: null },
   token: null,
   isRefreshing: false,
+  isLoadingCurrentUser: false,
 };
 
 const authSlice = createSlice({
@@ -40,7 +41,7 @@ const authSlice = createSlice({
       state.user.email = action.payload.email;
       state.isRefreshing = false;
     });
-    builder.addCase(currentUser.rejected, (state) => {
+    builder.addCase(currentUser.rejected, state => {
       state.isRefreshing = false;
     });
   },
