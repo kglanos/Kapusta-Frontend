@@ -25,3 +25,7 @@ const getDate = state => state.extraData.date;
 export const extraDataSelectors = {
   getDate,
 };
+
+
+export const selectAllTransactions = store =>
+  store.transactions.allTransactions;
