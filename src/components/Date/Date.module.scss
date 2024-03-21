@@ -5,6 +5,7 @@
     align-items: center;
     gap: 5px;
     margin: 56px  0 32px 0;
+    z-index: 10;
     @media screen and (min-width: 768px) {
       position: relative;
       top: 75px;
@@ -30,4 +31,14 @@
     @media screen and (min-width: 768px) {
       margin-bottom: 0;
     }
+  }
+  .DateSelect img {
+    cursor: pointer;
+      transition: 0.25s ease-in-out;
+  }
+  .DateSelectPrev:hover {
+    transform: translateX(-2px);
+  }
+   .DateSelectNext:hover {
+    transform: translateX(2px);
   }
