@@ -4,9 +4,15 @@
     justify-content: center;
     align-items: center;
     gap: 5px;
-    padding-top: 56px;
+    margin: 56px  0 32px 0;
     @media screen and (min-width: 768px) {
-      padding-top: 0px;
+      position: relative;
+      top: 75px;
+      right: -280px;
+      @media screen and (min-width: 1280px) { 
+        right: -450px;
+        
+      }
     }
   }
   .DateSelect h2 {
