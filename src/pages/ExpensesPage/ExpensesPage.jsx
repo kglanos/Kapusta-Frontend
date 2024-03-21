@@ -6,7 +6,6 @@ import { Summary } from '../../components/Summary/Summary';
 // import { DatePicker } from '../../components/Calendar/calendar';
 import BalanceForm from '../../components/BalanceForm/BalanceForm';
 import { CabbagesBottom } from '../../components/Background/Authorized/CabbagesBottom';
-import { BalanceConfirm } from '../../components/BalanceConfirm/BalanceConfirm';
 import { TransactionListDesktop } from 'components/TransactionListDesktop/TransactionListDesktop';
 
 import { useSelector } from 'react-redux';
@@ -28,7 +27,6 @@ const Expenses = () => {
         </Helmet>
         <ToTransactionButton />
         <ReportsLink />
-        <BalanceConfirm />
         <BalanceForm />
         <FrameContainer>
           <Form />
