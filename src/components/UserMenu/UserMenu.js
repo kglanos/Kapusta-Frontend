@@ -51,6 +51,12 @@ export const UserMenu = () => {
         </>
       )}
       {modalOpen && (
+        <ModalLogOut closeModal={handleModalClose} dispatch={handleLogout}>
+          Do you really want to leave?
+        </ModalLogOut>
+      )}{' '}
+    </Container>
+  );
         <Confirm closeModal={handleModalClose} dispatch={handleLogout}>
           Do you really want to leave?
         </Confirm>

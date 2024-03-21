@@ -124,7 +124,7 @@ export const transactionsSlice = createSlice({
 
       .addCase(login.pending, handlePending)
       .addCase(login.fulfilled, (state, action) => {
-        state.newBalance = action.payload.userData.balance;
+        state.newBalance = action.payload.balance;
       })
       .addCase(login.rejected, handleRejected);
   },

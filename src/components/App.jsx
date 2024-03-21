@@ -4,7 +4,7 @@ import { currentUser } from '../redux/Auth/operations';
 import Layout from './Layout/Layout';
 import { useDispatch, useSelector } from 'react-redux';
 import { Loader } from './Loader/Loader';
-import { selectIsRefreshing } from '../redux/Auth/selectors';
+import { selectIsRefreshing } from '../redux/selectors';
 import { RestrictedRoute } from './RestrictedRoute';
 import { PrivateRoute } from './PrivateRoute';
 

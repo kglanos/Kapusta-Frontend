@@ -4,7 +4,7 @@ import {
   selectIncomeSummary,
   selectExpensesSummary,
   selectIsLoading,
-} from '../../redux/Auth/selectors';
+} from '../../redux/selectors';
 import {
   StyledSummaryTable,
   StyledSummaryRow,
