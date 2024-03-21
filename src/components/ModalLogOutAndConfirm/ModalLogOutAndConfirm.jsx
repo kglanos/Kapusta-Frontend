@@ -8,7 +8,7 @@ import {
   ButtonsBox,
   CloseButton,
   Modal,
-} from './ModalLogOut.styled';
+} from './ModalLogOutAndConfirm.styled';
 import close from '../../icons/close.svg';
 import { OrangeButton } from './../Buttons/OrangeButton';
 import { WhiteButton } from './../Buttons/WhiteButton';
@@ -16,7 +16,7 @@ import { WhiteButton } from './../Buttons/WhiteButton';
 const modalRoot = document.getElementById('modal-root');
 const body = document.querySelector('body');
 
-export const ModalLogOut = ({
+export const Confirm = ({
   children,
   closeModal,
   dispatch,
@@ -69,7 +69,7 @@ export const ModalLogOut = ({
   );
 };
 
-ModalLogOut.propTypes = {
+Confirm.propTypes = {
   children: PropTypes.string.isRequired,
   closeModal: PropTypes.func.isRequired,
   dispatch: PropTypes.func.isRequired,

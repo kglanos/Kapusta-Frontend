@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import ModalBalance from '../../components/ModalStartBalance//ModalStartBalance';
-import selectBalance from 'redux/Balance/selectBalance';
-import setUserBalance from 'redux/Balance/operations';
+import ModalBalance from '../../components/ModalStartBalance/ModalStartBalance';
+import { selectBalance } from '../../redux/selectors';
+import setUserBalance from '../../redux/Balance/operations';
 import {
   Form,
   Title,
