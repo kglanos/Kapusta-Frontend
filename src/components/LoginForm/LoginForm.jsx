@@ -17,7 +17,7 @@ import {
   ErrorMessage,
   ErrorStar,
 } from '../LoginForm/LoginForm.styled';
-
+import Swal from 'sweetalert2';
 export const LoginForm = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -25,7 +25,7 @@ export const LoginForm = () => {
   const [emptyEmailField, setEmptyEmailField] = useState(false);
   const [emptyPasswordField, setEmptyPasswordField] = useState(false);
 
-  const handleLogin = event => {
+  const handleLogin = async event => {
     event.preventDefault();
 
     const form = event.target;
@@ -43,9 +43,26 @@ export const LoginForm = () => {
     } else {
       setEmptyPasswordField(false);
     }
+
     if (email !== '' && password !== '') {
-      dispatch(login({ email, password }));
-      form.reset();
+      try {
+        await dispatch(login({ email, password }));
+        form.reset();
+
+        Swal.fire({
+          icon: 'success',
+          title: 'Success',
+          text: 'Logged in successfully!',
+        });
+      } catch (error) {
+        if (error.response && error.response.data.code === 401) {
+          Swal.fire({
+            icon: 'error',
+            title: 'Unauthorized',
+            text: 'Invalid email or password.',
+          });
+        }
+      }
     }
   };
 
