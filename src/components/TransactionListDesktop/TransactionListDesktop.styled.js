@@ -4,7 +4,7 @@ export const StyledTransactionTable = styled.table`
   /* margin-top: 48px; */
   position: relative;
   border-collapse: collapse;
-  display: flex;
+  display: table;
   flex-direction: column;
   max-width: 746px;
 

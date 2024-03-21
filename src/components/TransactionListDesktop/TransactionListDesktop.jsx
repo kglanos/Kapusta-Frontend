@@ -10,25 +10,23 @@ export const TransactionListDesktop = ({ children }) => {
 
   const isLoading = useSelector(selectIsLoading);
 
-  // Green if INCOME and red if EXPENSES
-  const color = children[1];
-  let minus = '-';
+  // Sprawdzenie, czy dzieci (children) mają odpowiednią strukturę
+  const color =
+    Array.isArray(children) && children.length >= 2 ? children[1] : '';
+  const transactions =
+    Array.isArray(children) && children.length >= 1 ? children[0] : [];
 
-  if (color === 'green') {
-    minus = false;
-  }
+  // Zmiana minusa na pusty string jeśli kolor to 'green'
+  const minus = color === 'green' ? '' : '-';
 
   const handleDelete = event => {
     dispatch(deleteTransaction(event.currentTarget.id));
   };
 
-  const sortedTransactions = children[0].slice().sort((a, b) => {
+  const sortedTransactions = transactions.slice().sort((a, b) => {
     const first = new Date(a.date).getTime();
     const second = new Date(b.date).getTime();
-    if (first - second === 0) {
-      return first;
-    }
-    return second - first;
+    return second - first; // Sortowanie malejąco po dacie
   });
 
   const headers = ['DATE', 'DESCRIPTION', 'CATEGORY', 'SUM'];
