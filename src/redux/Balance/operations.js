@@ -1,7 +1,9 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { updateBalance } from '../../redux/Transactions/operations';
+import axios from 'axios';
+const userBalance = '/users/balance ';
 
-const setUserBalance = createAsyncThunk(
+export const setUserBalance = createAsyncThunk(
   'balance/setBalance',
 
   async (request, { rejectWithValue }) => {
@@ -18,4 +20,25 @@ const setUserBalance = createAsyncThunk(
     }
   }
 );
-export default setUserBalance;
+
+export const userPutBalance = createAsyncThunk(
+  'users/balance',
+  async (ballance, { rejectWithValue, getState }) => {
+    const state = getState();
+    if (state.auth.token) {
+      try {
+        const data = await axios.put(userBalance, {
+          id: state.auth.id,
+          balance: ballance,
+        });
+        return data.data;
+      } catch (error) {
+        return rejectWithValue({
+          error: error.message,
+        });
+      }
+    }
+  }
+);
+
+// export default { setUserBalance, userPutBalance };
