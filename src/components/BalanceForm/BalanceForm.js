@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import ModalBalance from '../../components/ModalStartBalance/ModalStartBalance';
+import { Confirm } from 'components/ModalLogOutAndConfirm/ModalLogOutAndConfirm';
 import { selectBalance } from '../../redux/selectors';
 import setUserBalance from '../../redux/Balance/operations';
 import {
@@ -14,10 +15,12 @@ import {
 } from './BalanceForm.styled';
 
 const BalanceForm = () => {
+  const [modalOpen, setModalOpen] = useState(false);
   const currentBalance = useSelector(selectBalance);
 
   const [value, setValue] = useState(currentBalance ?? 0);
   const [promptClose, setPromptClose] = useState(true);
+  const form = useRef();
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -27,6 +30,7 @@ const BalanceForm = () => {
   const toggleWindow = () => {
     setPromptClose(prev => !prev);
   };
+  const [number, setNumber] = useState('');
 
   const onSubmit = e => {
     e.preventDefault();
@@ -43,7 +47,25 @@ const BalanceForm = () => {
   };
 
   const onChange = e => {
-    setValue(e.target.value);
+    // setValue(e.target.value);
+    const { name, value } = e.target;
+    switch (name) {
+      case 'number':
+        setNumber(value);
+        break;
+      default:
+        break;
+    }
+  };
+  const handleModalOpen = () => {
+    setModalOpen(true);
+  };
+  const handleModalClose = () => {
+    setModalOpen(false);
+  };
+  const handleClick = () => {
+    dispatch(selectBalance({ newBalance: Number(number.replace(/\s+/g, '')) }));
+    form.current.reset();
   };
 
   return (
@@ -66,10 +88,23 @@ const BalanceForm = () => {
             <ModalBalance onClose={toggleWindow} />
           )}
           {
-            <Button type="submit" disabled={currentBalance}>
+            <Button
+              type="submit"
+              onClick={handleModalOpen}
+              disabled={currentBalance}
+            >
               CONFIRM
             </Button>
           }
+          {modalOpen && (
+            <Confirm
+              closeModal={handleModalClose}
+              dispatch={handleClick}
+              balance={selectBalance}
+            >
+              Are you sure?
+            </Confirm>
+          )}
         </Form>
       </WrapperForm>
     </>
