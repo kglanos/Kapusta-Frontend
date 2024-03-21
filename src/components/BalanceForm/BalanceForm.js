@@ -140,7 +140,9 @@ const BalanceForm = () => {
   const balanceQuery = useSelector(state => state.auth.balance);
   const rebalancing = useSelector(state => state.auth.rebalancing);
   const [balance, setBalance] = useState('');
-  const handleModalOpen = () => {
+
+  const handleModalOpen = e => {
+    e.preventDefault();
     setModalOpen(true);
   };
   const handleModalClose = () => {

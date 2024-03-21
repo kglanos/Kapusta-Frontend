@@ -19,10 +19,9 @@ const Expenses = () => {
         <ReportsLink />
         <BalanceConfirm />
         <Form />
-        {/* <ModalConfirm /> */}
         <CabbagesBottom />
-        {/* <DatePicker /> */}
         <BalanceForm />
+        {/* <DatePicker /> */}
         <Summary />
       </div>
     </HelmetProvider>
