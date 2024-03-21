@@ -7,6 +7,7 @@ import { Summary } from '../../components/Summary/Summary';
 import BalanceForm from '../../components/BalanceForm/BalanceForm';
 import { CabbagesBottom } from '../../components/Background/Authorized/CabbagesBottom';
 import { BalanceConfirm } from '../../components/BalanceConfirm/BalanceConfirm';
+import { TransactionListDesktop } from 'components/TransactionListDesktop/TransactionListDesktop';
 
 const Expenses = () => {
   return (
@@ -24,6 +25,7 @@ const Expenses = () => {
         {/* <DatePicker /> */}
         <BalanceForm />
         <Summary />
+        <TransactionListDesktop />
       </div>
     </HelmetProvider>
   );
