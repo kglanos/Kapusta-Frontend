@@ -23,8 +23,13 @@ const BalanceForm = () => {
   const form = useRef();
   const dispatch = useDispatch();
 
+  // useEffect(() => {
+  //   setValue(currentBalance.toFixed(2));
+  // }, [currentBalance]);
   useEffect(() => {
-    setValue(currentBalance.toFixed(2));
+    if (currentBalance !== undefined && currentBalance !== null) {
+      setValue(currentBalance.toFixed(2));
+    }
   }, [currentBalance]);
 
   const toggleWindow = () => {
