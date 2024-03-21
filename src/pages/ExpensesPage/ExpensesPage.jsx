@@ -9,7 +9,17 @@ import { CabbagesBottom } from '../../components/Background/Authorized/CabbagesB
 import { BalanceConfirm } from '../../components/BalanceConfirm/BalanceConfirm';
 import { TransactionListDesktop } from 'components/TransactionListDesktop/TransactionListDesktop';
 
+import { useSelector } from 'react-redux';
+import { selectExpenseTransactions } from '../../redux/selectors';
+import {
+  FrameContainer,
+  TableAndSummaryContainer,
+} from './ExpensesPage.styled';
+
 const Expenses = () => {
+  const allExpenses = useSelector(selectExpenseTransactions);
+  const color = 'red';
+
   return (
     <HelmetProvider>
       <div>
@@ -19,12 +29,20 @@ const Expenses = () => {
         <ToTransactionButton />
         <ReportsLink />
         <BalanceConfirm />
-        <Form />
-        <CabbagesBottom />
         <BalanceForm />
+        <FrameContainer>
+          <Form />
+          <TableAndSummaryContainer>
+            <TransactionListDesktop>
+              {allExpenses}
+              {color}
+            </TransactionListDesktop>
+            <Summary />
+          </TableAndSummaryContainer>
+        </FrameContainer>
+        ;
+        <CabbagesBottom />
         {/* <DatePicker /> */}
-        <Summary />
-        <TransactionListDesktop />
       </div>
     </HelmetProvider>
   );
@@ -40,9 +58,7 @@ export default Expenses;
 // import Form from '../../components/Expenses/Form';
 // import { Summary } from '../../components/Summary/Summary';
 // import { TransactionListDesktop } from 'components/TransactionListDesktop/TransactionListDesktop';
-// // import selectBalance from '../../redux/Balance/selectBalance';
-// import { selectExpenseTransactions } from '../../redux/Transactions/selectors';
-// import { selectIsLoggedIn } from '../../redux/Auth/selectors';
+// import { selectBalance, selectExpenseTransactions, selectIsLoggedIn } from '../../redux/selectors';
 // import { getExpenses } from '../../redux/Transactions/operations';
 // import {
 //   BackgroundContainer,
