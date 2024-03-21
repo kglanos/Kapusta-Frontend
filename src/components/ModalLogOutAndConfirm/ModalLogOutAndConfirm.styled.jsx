@@ -4,6 +4,7 @@ export const Modal = styled.div`
   position: absolute;
   top: 50%;
   left: 50%;
+  z-index: 5;
   transform: translate(-50%, -50%);
   background-color: #fff;
   border-radius: 30px;
