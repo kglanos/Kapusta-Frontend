@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import googleIcon from '../../icons/Google.png';
 import { register } from '../../redux/Auth/operations';
@@ -13,29 +14,51 @@ import {
   FormInput,
   FormButtons,
   FormButton,
+  ErrorMessage,
+  ErrorStar,
 } from '../RegistrationForm/RegistrationForm.styled';
 export const RegistrationForm = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
+  const [emptyNameField, setEmptyNameField] = useState(false);
+  const [emptyEmailField, setEmptyEmailField] = useState(false);
+  const [emptyPasswordField, setEmptyPasswordField] = useState(false);
+
   const handleRegistration = event => {
     event.preventDefault();
+
     const form = event.target;
     const name = form.elements.name.value;
     const email = form.elements.email.value;
     const password = form.elements.password.value;
-    dispatch(register({ name, email, password }));
-    
-    form.reset();
-    navigate('/login');
+
+    if (name === '') {
+      setEmptyNameField(true);
+    } else {
+      setEmptyNameField(false);
+    }
+
+    if (email === '') {
+      setEmptyEmailField(true);
+    } else {
+      setEmptyEmailField(false);
+    }
+
+    if (password === '') {
+      setEmptyPasswordField(true);
+    } else {
+      setEmptyPasswordField(false);
+    }
+    if (name !== '' && email !== '' && password !== '') {
+      dispatch(register({ name, email, password }));
+      form.reset();
+      navigate('/login');
+    }
   };
   const handleLoginClick = () => {
     navigate('/login');
   };
-
-  // const handleNavigationToLogin = () => {
-  //   navigate('/login');
-  // };
-
 
   return (
     <FormContainer>
@@ -48,33 +71,47 @@ export const RegistrationForm = () => {
         Or log in using an email and password, after registering:
       </FormAdviceSecond>
       <FormForm onSubmit={handleRegistration}>
-        <FormLabel htmlFor="registrationUsername">Name: </FormLabel>
+        <FormLabel htmlFor="registrationUsername">
+          {' '}
+          {emptyNameField && <ErrorStar>*</ErrorStar>}Name:{' '}
+        </FormLabel>
         <FormInput
           id="registrationUsername"
           name="name"
           placeholder="Enter your name"
           autoComplete="name"
-        />
-        <FormLabel htmlFor="registrationEmail">Email: </FormLabel>
+        />{' '}
+        {emptyNameField && <ErrorMessage>This is required field</ErrorMessage>}
+        <FormLabel htmlFor="registrationEmail">
+          {' '}
+          {emptyEmailField && <ErrorStar>*</ErrorStar>}Email:{' '}
+        </FormLabel>
         <FormInput
           id="registrationEmail"
           name="email"
           type="email"
           placeholder="your@email.com"
           autoComplete="email"
-        />
-        <FormLabel htmlFor="registrationPassword">Password:</FormLabel>
+        />{' '}
+        {emptyEmailField && <ErrorMessage>This is required field</ErrorMessage>}
+        <FormLabel htmlFor="registrationPassword">
+          {' '}
+          {emptyPasswordField && <ErrorStar>*</ErrorStar>}Password:
+        </FormLabel>
         <FormInput
           id="registrationPassword"
           name="password"
           type="password"
           placeholder="enter password"
         />
+        {emptyPasswordField && (
+          <ErrorMessage>This is required field</ErrorMessage>
+        )}
         <FormButtons>
           <FormButton type="button" onClick={handleLoginClick}>
             LOG IN
           </FormButton>{' '}
-          <FormButton type="submit"  >REGISTRATION</FormButton>
+          <FormButton type="submit">REGISTRATION</FormButton>
         </FormButtons>
       </FormForm>
     </FormContainer>
