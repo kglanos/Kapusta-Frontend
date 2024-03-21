@@ -1,13 +1,15 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import css from './ButtonToHome.module.scss';
-import Back from '../../icons/back.svg';
+import iconBack from '../../icons/back.svg';
 
 export const ButtonToHome = () => {
+  const location = useLocation();
+  const redirectTo = location.state?.from ?? '/expenses';
   return (
-    <Link to="/expenses">
+    <Link to={redirectTo}>
       <div className={css.ArrowBack}>
-        <img src={Back} alt="arrow" />
+        <img src={iconBack} alt="arrow" />
         <p className={css.ArrowBackDesk}>Main Page</p>
       </div>
     </Link>
