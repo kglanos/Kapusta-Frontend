@@ -11,7 +11,7 @@ import {
 } from './UserMenu.styled';
 import logoutSvg from '../../icons/logOut.svg';
 import { selectUserName } from '../../redux/selectors';
-import { ModalLogOut } from 'components/ModalLogOut/ModalLogOut';
+import { Confirm } from 'components/ModalLogOutAndConfirm/ModalLogOutAndConfirm';
 import { useState } from 'react';
 export const UserMenu = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -54,6 +54,12 @@ export const UserMenu = () => {
         <ModalLogOut closeModal={handleModalClose} dispatch={handleLogout}>
           Do you really want to leave?
         </ModalLogOut>
+      )}{' '}
+    </Container>
+  );
+        <Confirm closeModal={handleModalClose} dispatch={handleLogout}>
+          Do you really want to leave?
+        </Confirm>
       )}{' '}
     </Container>
   );
