@@ -7,6 +7,7 @@ const initialState = {
   token: null,
   isRefreshing: false,
   isLoadingCurrentUser: false,
+  error: null,
 };
 
 const authSlice = createSlice({
@@ -27,6 +28,11 @@ const authSlice = createSlice({
       state.user.email = action.payload.user.email;
       state.token = action.payload.token;
     });
+    builder.addCase(login.rejected, (state, action) => {
+      state.isLoading = false;
+      state.error = action.payload;
+    });
+
     builder.addCase(logout.fulfilled, () => initialState);
 
     builder.addCase(currentUser.pending, state => {

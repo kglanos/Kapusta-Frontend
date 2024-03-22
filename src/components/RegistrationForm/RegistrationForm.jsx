@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import googleIcon from '../../icons/Google.png';
 import { register } from '../../redux/Auth/operations';
 import { useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2';
 import {
   FormContainer,
   FormForm,
@@ -51,9 +52,25 @@ export const RegistrationForm = () => {
       setEmptyPasswordField(false);
     }
     if (name !== '' && email !== '' && password !== '') {
-      dispatch(register({ name, email, password }));
-      form.reset();
-      navigate('/login');
+      dispatch(register({ name, email, password }))
+        .unwrap()
+        .then(response => {
+          form.reset();
+          Swal.fire({
+            icon: 'success',
+            title: 'Success',
+            text: 'Registered successfully!',
+          });
+          form.reset();
+          navigate('/login');
+        })
+        .catch(error => {
+          Swal.fire({
+            icon: 'error',
+            title: 'Registration Error',
+            text: `${email} is already used`,
+          });
+        });
     }
   };
   const handleLoginClick = () => {
