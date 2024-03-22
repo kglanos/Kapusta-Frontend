@@ -9,6 +9,7 @@ export const StyledNavMobile = styled.div`
 `;
 export const StyledNavDesktop = styled.div`
   display: flex;
+  padding-left: 100px;
   gap: 4px;
 `;
 export const Link = styled(NavLink)`

@@ -1,30 +1,26 @@
 import styled from 'styled-components';
 
 export const StyledHomePage = styled.div`
-  margin-top: 100px;
+  margin-top: 14px;
+
+   @media screen and (min-width: 768px) {
+      margin-top: 96px;
+     }
 `;
 
 export const ReportsAndBalanceContainer = styled.div`
-    // @media screen and (min-width: 768px) {
-    //   display: flex;
-    //   align-items: baseline;
-    //   justify-content: space-between;
-    //   margin-bottom: 60px;
-    // }
-    // @media screen and (min-width: 1280px) {
-    //   position: relative;
-    //   margin-bottom: 8px;
-    // }
 
     @media screen and (min-width: 769px) {
       display: flex;
       justify-content: space-between;
       align-items: center;
       margin: 0 auto;
-      padding: 20px;
+      margin-bottom: 60px;
+  
     }
     @media screen and (min-width: 1280px) {
       max-width: 1098px;
+      margin-bottom: 8px;
     }
   }
 `;
