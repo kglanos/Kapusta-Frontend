@@ -53,6 +53,12 @@ export const StyledTransactionTable = styled.table`
     border-top: none;
     border-bottom: 2px solid #f5f6fb;
 
+    background-image: repeating-linear-gradient(
+      #ffffff 0px,
+      #ffffff 38px,
+      #f5f6fb 40px
+    );
+
     @media screen and (min-width: 768px) {
       min-height: 344px;
       max-height: 480px;
