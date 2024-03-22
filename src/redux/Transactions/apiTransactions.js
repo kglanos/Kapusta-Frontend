@@ -1,6 +1,6 @@
 import axios from 'axios';
-
-axios.defaults.baseURL = 'http://localhost:4000'
+axios.defaults.baseURL = 'https://kapusta-a0a137454a45.herokuapp.com/';
+// axios.defaults.baseURL = 'http://localhost:4000'
 
 export const addExpenseTransaction = async info => {
   const { data } = await axios.post('/transaction/expenses', info);
@@ -24,8 +24,6 @@ export const getIncomeTransactions = async () => {
   const { data } = await axios.get('/transaction/income');
   return data;
 };
-
-
 
 export const deleteTransactionById = async id => {
   const { data } = await axios.delete(`/transaction/${id}`);
