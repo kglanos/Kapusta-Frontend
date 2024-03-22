@@ -6,7 +6,7 @@ export const ReportsLink = () => {
   return (
     <Link to="/reports">
       <ReportsContainer>
-        <Text>REPORTS</Text>
+        <Text>Reports</Text>
         <Logo />
       </ReportsContainer>
     </Link>

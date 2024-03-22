@@ -23,7 +23,6 @@ export const WrapperForm = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  justify-content: center; 
    
   }
 
@@ -37,7 +36,7 @@ export const Title = styled.h2`
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
-  margin: 0 0 8px;
+  
   font-weight: 500;
   font-size: 12px;
   line-height: 1.6;

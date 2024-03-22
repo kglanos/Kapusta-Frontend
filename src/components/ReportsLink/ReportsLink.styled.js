@@ -7,14 +7,15 @@ display: flex;
   column-gap: 15px;
   justify-content: center;
   margin-top: 20px;
+  margin-bottom: 35px;
 
  @media screen and (min-width: 769px) {
   display: flex;
   align-items: center;
-  margin-top: 14px;
   column-gap: 15px;
   justify-content: center;
    margin-top: auto;
+   margin-bottom: 0;
   }
 
 `;
