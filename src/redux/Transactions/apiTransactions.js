@@ -1,14 +1,6 @@
 import axios from 'axios';
 
-export const addIncomeTransaction = async info => {
-  const { data } = await axios.post('/transaction/income', info);
-  return data;
-};
-
-export const getIncomeTransactions = async () => {
-  const { data } = await axios.get('/transaction/income');
-  return data;
-};
+axios.defaults.baseURL = 'http://localhost:4000'
 
 export const addExpenseTransaction = async info => {
   const { data } = await axios.post('/transaction/expenses', info);
@@ -20,6 +12,20 @@ export const getExpenseTransactions = async () => {
   const { data } = await axios.get('/transaction/expenses');
   return data;
 };
+
+// --- dwa pierwsze działaja
+
+export const addIncomeTransaction = async info => {
+  const { data } = await axios.post('/transaction/income', info);
+  return data;
+};
+
+export const getIncomeTransactions = async () => {
+  const { data } = await axios.get('/transaction/income');
+  return data;
+};
+
+
 
 export const deleteTransactionById = async id => {
   const { data } = await axios.delete(`/transaction/${id}`);
