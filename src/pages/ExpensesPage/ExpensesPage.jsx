@@ -2,12 +2,13 @@ import { ReportsLink } from '../../components/ReportsLink/ReportsLink';
 import { ToTransactionButton } from '../../components/ToTransactionButton/ToTransactionButton';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import Form from '../../components/Expenses/Form';
-import { Summary } from '../../components/Summary/Summary';
+// import { Summary } from '../../components/Summary/Summary';
 // import { DatePicker } from '../../components/Calendar/calendar';
 import BalanceForm from '../../components/BalanceForm/BalanceForm';
 import { CabbagesBottom } from '../../components/Background/Authorized/CabbagesBottom';
-import { BalanceConfirm } from '../../components/BalanceConfirm/BalanceConfirm';
+// import { BalanceConfirm } from '../../components/BalanceConfirm/BalanceConfirm';
 import { TransactionListDesktop } from 'components/TransactionListDesktop/TransactionListDesktop';
+import { Summary } from 'components/SummaryComponent/SummaryComponent';
 
 const Expenses = () => {
   return (
@@ -18,13 +19,13 @@ const Expenses = () => {
         </Helmet>
         <ToTransactionButton />
         <ReportsLink />
-        <BalanceConfirm />
+        {/* <BalanceConfirm /> */}
         <Form />
         {/* <ModalConfirm /> */}
         <CabbagesBottom />
         {/* <DatePicker /> */}
         <BalanceForm />
-        <Summary />
+        <Summary/> {/* Summary od Sebastiana */}
         <TransactionListDesktop />
       </div>
     </HelmetProvider>
