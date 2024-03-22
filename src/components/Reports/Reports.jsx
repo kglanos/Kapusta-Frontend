@@ -1,24 +1,21 @@
 import React from 'react';
-import { HelmetProvider } from 'react-helmet-async';
-import css from './Reports.module.scss';
-import { BalanceConfirm } from '../BalanceConfirm/BalanceConfirm';
-import { DateComponent } from '../../components/Date/Date';
-import { Summary } from '../SummaryComponent/SummaryComponent';
+import { ReportsPageContainer } from './Reports.styled'
+import  BalanceForm  from '../BalanceForm/BalanceForm';
+import { DateComponent } from '../DateComponent/DateComponent';
+import { ReportsSummary } from '../ReportsSummary/ReportsSummary';
 import { ButtonToHome } from '../ButtonToHome/ButtonToHome';
 import { CategoriesListIcon } from '../CategoriesIconsList/CategoriesIconsList';
 // import { ReportsChart } from './ReportsChart';
 
 export const ReportsPage = () => {
   return (
-    <HelmetProvider>
-      <div className={css.ReportsPageContainer}>
-        <ButtonToHome />
-        <DateComponent />
-        <BalanceConfirm />
-        <Summary />
-        <CategoriesListIcon />
-        {/* <ReportsChart /> */}
-      </div>
-    </HelmetProvider>
+    <ReportsPageContainer>
+      <ButtonToHome />
+      <DateComponent />
+      <BalanceForm />
+      <ReportsSummary />
+      <CategoriesListIcon />
+      {/* <ReportsChart /> */}
+    </ReportsPageContainer>
   );
 };
