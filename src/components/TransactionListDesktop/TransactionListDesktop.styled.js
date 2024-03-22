@@ -65,15 +65,15 @@ export const StyledTransactionTable = styled.table`
       height: auto;
     }
 
-    ::-webkit-scrollbar {
-      width: 7px;
+    &::-webkit-scrollbar {
+      width: 6.26px;
     }
-    ::-webkit-scrollbar-track {
-      background-color: #f5f6fb;
+    &::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 10px #f5f6fb;
     }
-    ::-webkit-scrollbar-thumb {
-      background-color: #ff751d;
-      border-radius: 8px;
+    &::-webkit-scrollbar-thumb {
+      background: #ff751d;
+      border-radius: 2px;
     }
 
     tr {
