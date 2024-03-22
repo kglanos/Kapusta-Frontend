@@ -1,13 +1,6 @@
-* {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  text-align: center;
-  font-family: var(--primary-font-style);
-  color: var(--textColor);
-}
+import styled from 'styled-components';
 
-.ReportsPageContainer {
+export const ReportsPageContainer = styled.div`
   width: 320px;
   height: auto;
   margin: 65px auto;
@@ -15,11 +8,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   @media screen and (min-width: 768px) {
     min-width: 768px;
-    margin: 0px auto;
+    margin: 0 auto;
   }
+
   @media screen and (min-width: 1280px) {
     min-width: 1280px;
   }
-}
+`;
