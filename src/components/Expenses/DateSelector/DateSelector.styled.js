@@ -20,6 +20,7 @@ export const StyledDatePicker = styled.div`
     outline: none;
     border: none;
     cursor: pointer;
+    background-color: transparent;
 
     :hover,
     :focus {
