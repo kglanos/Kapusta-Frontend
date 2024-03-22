@@ -70,7 +70,7 @@ const Expenses = () => {
         {mobileScreen && <TransactionsList />}
       </StyledHomePage>
       <FrameContainer>
-        {!mobileScreen && <Form />}
+        <Form />
         <TableAndSummaryContainer>
           <TransactionListDesktop>
             {allExpenses}

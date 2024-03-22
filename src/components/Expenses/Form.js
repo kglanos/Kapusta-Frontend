@@ -100,12 +100,12 @@ export default function Form() {
   return (
     <>
       <FormWrapper>
-        {!mobileScreen && (
+        
           <div className="tabletDatepicker">
             <DateSelector startDate={startDate} setStartDate={setStartDate} />
           </div>
-        )}
-        <StyledForm onSubmit={handleSubmit} ref={form}>
+        
+          {!mobileScreen && <StyledForm onSubmit={handleSubmit} ref={form}>
           <StyledInputsContainer>
             <ProductInput
               placeholder="Product description"
@@ -124,7 +124,7 @@ export default function Form() {
               CLEAR
             </StyledWhiteButton>
           </ButtonWrapper>
-        </StyledForm>
+        </StyledForm>}
       </FormWrapper>
     </>
   );

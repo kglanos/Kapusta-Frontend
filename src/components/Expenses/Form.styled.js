@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const FormWrapper = styled.div`
   display: flex;
   justify-content: center;
+  margin-top: 40px;
   @media screen and (min-width: 768px) {
     align-items: flex-start;
     justify-content: space-between;
