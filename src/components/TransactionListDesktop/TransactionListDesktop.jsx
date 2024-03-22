@@ -42,6 +42,7 @@ export const TransactionListDesktop = ({ children }) => {
               <th key={header}>{header.toUpperCase()}</th>
             ))}
           </tr>
+          <tr></tr>
         </thead>
 
         <tbody>
