@@ -134,17 +134,27 @@ import {
 } from './BalanceForm.styled';
 
 const BalanceForm = () => {
-  const [handleModalOpen, setModalOpen] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
 
   const dispatch = useDispatch();
   const balanceQuery = useSelector(state => state.auth.balance);
   const rebalancing = useSelector(state => state.auth.rebalancing);
   const [balance, setBalance] = useState('');
+
+  const handleModalOpen = e => {
+    e.preventDefault();
+    setModalOpen(true);
+  };
+  const handleModalClose = () => {
+    setModalOpen(false);
+  };
+
   useEffect(() => {
     if (rebalancing) {
       return setBalance(balanceQuery);
     }
   }, [balanceQuery, rebalancing]);
+
   const handleChange = e => {
     if (!rebalancing) {
       if (!Number.isNaN(e.target.value)) {
@@ -152,9 +162,7 @@ const BalanceForm = () => {
       }
     }
   };
-  const handleModalClose = () => {
-    setModalOpen(false);
-  };
+
   const handleClick = e => {
     e.preventDefault();
     if (!rebalancing & (balance !== '')) {
@@ -180,7 +188,7 @@ const BalanceForm = () => {
             CONFIRM
           </Button>
           {balance === '' && <ModalBalance />}
-          {handleModalOpen && (
+          {modalOpen && (
             <Confirm closeModal={handleModalClose} dispatch={handleClick}>
               Are you sure?
             </Confirm>

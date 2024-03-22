@@ -164,3 +164,22 @@ export const FormButton = styled.button`
     padding: 12px 34px;
   }
 `;
+export const ErrorMessage = styled.p`
+  color: red;
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  text-align: left;
+
+  margin-top: -20px;
+  margin-bottom: 20px;
+  @media screen and (min-width: 768px) {
+    margin-top: -32px;
+  }
+`;
+export const ErrorStar = styled.span`
+  color: red;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-align: left;
+`;

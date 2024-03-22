@@ -4,7 +4,7 @@ export const BackgroundContainer = styled.div`
   position: absolute;
   z-index: -1;
   top: 56px;
-  margin: 0 auto;
+  margin: 500px auto;
   width: 320px;
   height: 258px;
   background-color: #f5f6fb;

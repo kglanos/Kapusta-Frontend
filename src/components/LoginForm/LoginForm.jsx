@@ -2,6 +2,7 @@ import { useDispatch } from 'react-redux';
 import googleIcon from '../../icons/Google.png';
 import { login } from '../../redux/Auth/operations';
 import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 import {
   FormContainer,
   FormForm,
@@ -13,21 +14,56 @@ import {
   FormInput,
   FormButtons,
   FormButton,
+  ErrorMessage,
+  ErrorStar,
 } from '../LoginForm/LoginForm.styled';
-
+import Swal from 'sweetalert2';
 export const LoginForm = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const handleLogin = event => {
+  const [emptyEmailField, setEmptyEmailField] = useState(false);
+  const [emptyPasswordField, setEmptyPasswordField] = useState(false);
+
+  const handleLogin = async event => {
     event.preventDefault();
 
     const form = event.target;
     const email = form.elements.email.value;
     const password = form.elements.password.value;
 
-    dispatch(login({ email, password }));
-    form.reset();
+    if (email === '') {
+      setEmptyEmailField(true);
+    } else {
+      setEmptyEmailField(false);
+    }
+
+    if (password === '') {
+      setEmptyPasswordField(true);
+    } else {
+      setEmptyPasswordField(false);
+    }
+
+    if (email !== '' && password !== '') {
+      try {
+        await dispatch(login({ email, password }));
+        form.reset();
+
+        Swal.fire({
+          icon: 'success',
+          title: 'Success',
+          text: 'Logged in successfully!',
+        });
+      } catch (error) {
+        if (error.response && error.response.data.code === 401) {
+          Swal.fire({
+            icon: 'error',
+            title: 'Unauthorized',
+            text: 'Invalid email or password.',
+          });
+        }
+      }
+    }
   };
 
   const handleRegistrationClick = () => {
@@ -45,7 +81,9 @@ export const LoginForm = () => {
         Or log in using an email and password, after registering:
       </FormAdviceSecond>
       <FormForm onSubmit={handleLogin}>
-        <FormLabel htmlFor="loginEmail">Email: </FormLabel>
+        <FormLabel htmlFor="loginEmail">
+          {emptyEmailField && <ErrorStar>*</ErrorStar>}Email:{' '}
+        </FormLabel>
         <FormInput
           id="loginEmail"
           name="email"
@@ -53,15 +91,22 @@ export const LoginForm = () => {
           placeholder="your@email.com"
           autoComplete="email"
         />
-        <FormLabel htmlFor="loginPassword">Password:</FormLabel>
+        {emptyEmailField && <ErrorMessage>This is required field</ErrorMessage>}
+
+        <FormLabel htmlFor="loginPassword">
+          {emptyPasswordField && <ErrorStar>*</ErrorStar>}Password:
+        </FormLabel>
         <FormInput
           id="loginPassword"
           name="password"
           type="password"
           placeholder="enter password"
         />
+        {emptyPasswordField && (
+          <ErrorMessage>This is required field</ErrorMessage>
+        )}
         <FormButtons>
-          <FormButton type="submit">LOG IN</FormButton>{' '}
+          <FormButton type="submit">LOG IN</FormButton>
           <FormButton type="button" onClick={handleRegistrationClick}>
             REGISTRATION
           </FormButton>
