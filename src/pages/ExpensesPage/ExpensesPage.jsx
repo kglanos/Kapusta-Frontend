@@ -33,6 +33,7 @@ import {
   TableAndSummaryContainer,
 } from './ExpensesPage.styled';
 import { CabbagesBottom } from '../../components/Background/Authorized/CabbagesBottom';
+import { Summary } from 'components/SummaryComponent/SummaryComponent';
 
 const Expenses = () => {
   const dispatch = useDispatch();
@@ -70,6 +71,7 @@ const Expenses = () => {
           {!mobileScreen && (
             <ReportsLink to="/reports" state={{ from: location }} />
           )}
+          <Summary/> {/* Summary od Sebastiana */}
         </ReportsAndBalanceContainer>
         {mobileScreen && (
           <MobileDatePickerWrapper>
@@ -91,6 +93,7 @@ const Expenses = () => {
         </TableAndSummaryContainer>
       </FrameContainer>
       {tabletScreen && <Summary />}
+      
     </HelmetProvider>
   );
 };
