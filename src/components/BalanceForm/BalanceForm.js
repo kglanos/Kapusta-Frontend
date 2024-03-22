@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { updateUserBalance } from '../../redux/Transactions/apiTransactions';
+// import { updateUserBalance } from '../../redux/Transactions/apiTransactions';
+import { updateBalance } from '../../redux/Transactions/operations';
 import ModalBalance from '../../components/ModalStartBalance/ModalStartBalance';
 import { Confirm } from 'components/ModalLogOutAndConfirm/ModalLogOutAndConfirm';
 import {
@@ -44,9 +45,9 @@ const BalanceForm = () => {
   };
 
   const handleClick = e => {
-    e.preventDefault();
+    // e.preventDefault();
     if (!rebalancing & (balance !== '')) {
-      dispatch(updateUserBalance(balance));
+      dispatch(updateBalance(balance));
     }
   };
   return (
