@@ -1,16 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { useLocation } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { useScreenSize } from 'hooks/useScreenSize';
 import { ReportsLink } from 'components/ReportsLink/ReportsLink';
 import BalanceForm from 'components/BalanceForm/BalanceForm';
-import { DatePicker } from 'components/Calendar/calendar';
-import {
-  StyledHomePage,
-  ReportsAndBalanceContainer,
-  MobileDatePickerWrapper,
-} from './Home.styled';
+import { StyledHomePage, ReportsAndBalanceContainer } from './Home.styled';
 import { TransactionsList } from '../../components/Expenses/TransactionsList/TransactionsList';
 import {
   TransactionNavMobile,
@@ -28,7 +23,6 @@ import {
 } from '../../redux/selectors';
 import { getExpenses } from '../../redux/Transactions/operations';
 import {
-  BackgroundContainer,
   FrameContainer,
   TableAndSummaryContainer,
 } from './ExpensesPage.styled';
@@ -45,7 +39,6 @@ const Expenses = () => {
   const { mobileScreen, tabletScreen, desktopScreen } = useScreenSize();
 
   const location = useLocation();
-  const [startDate, setStartDate] = useState(new Date());
 
   useEffect(() => {
     if (user) {
@@ -59,7 +52,7 @@ const Expenses = () => {
         <title>Expenses</title>
       </Helmet>
       <CabbagesBottom />
-      {mobileScreen && <BackgroundContainer />}
+      {/* {mobileScreen && <BackgroundContainer />} */}
       {mobileScreen && <ToTransactionButton />}
       <StyledHomePage>
         <ReportsAndBalanceContainer>
@@ -71,17 +64,12 @@ const Expenses = () => {
             <ReportsLink to="/reports" state={{ from: location }} />
           )}
         </ReportsAndBalanceContainer>
-        {mobileScreen && (
-          <MobileDatePickerWrapper>
-            <DatePicker startDate={startDate} setStartDate={setStartDate} />
-          </MobileDatePickerWrapper>
-        )}
         {mobileScreen && <TransactionNavMobile />}
         {!mobileScreen && <TransactionNavDesktop />}
         {mobileScreen && <TransactionsList />}
       </StyledHomePage>
       <FrameContainer>
-        <Form />
+        {!mobileScreen && <Form />}
         <TableAndSummaryContainer>
           <TransactionListDesktop>
             {allExpenses}

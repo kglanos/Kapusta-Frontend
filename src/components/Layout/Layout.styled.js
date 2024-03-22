@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 export const Container = styled.div`
   max-width: 100vw;
   overflow-x: auto;
+  height: 100vh;
   margin: 0 auto;
   padding: 0;
 `;
