@@ -16,14 +16,14 @@ export default function AmountInput() {
     <>
       {mobileScreen ? (
         <MobileNumber>
-          <InputMobile type="number" placeholder="00.00 UAH" name="sum" />
+          <InputMobile type="number" placeholder="00.00 USD" name="sum" />
           <Span>
             <img src={calculator} alt="calculator" />
           </Span>
         </MobileNumber>
       ) : (
         <Number>
-          <InputNumber type="number" placeholder="0,00 UAH" name="sum" />
+          <InputNumber type="number" placeholder="0,00 USD" name="sum" />
           <Image src={calculator} alt="calculator" />
         </Number>
       )}
