@@ -5,15 +5,15 @@ export const StyledNavMobile = styled.div`
   position: fixed;
   bottom: 0;
   display: flex;
-  gap: 4px;
   background-color: #ffffff;
 `;
 export const StyledNavDesktop = styled.div`
   display: flex;
+  gap: 4px;
 `;
 export const Link = styled(NavLink)`
   display: block;
-  width: 158px;
+  width: 50vw;
   padding: 20px 0;
   text-decoration: none;
   text-transform: uppercase;
