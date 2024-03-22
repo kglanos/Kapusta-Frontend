@@ -34,35 +34,36 @@ export const LoginForm = () => {
 
     if (email === '') {
       setEmptyEmailField(true);
+      return;
     } else {
       setEmptyEmailField(false);
     }
 
     if (password === '') {
       setEmptyPasswordField(true);
+      return;
     } else {
       setEmptyPasswordField(false);
     }
 
     if (email !== '' && password !== '') {
-      try {
-        await dispatch(login({ email, password }));
-        form.reset();
-
-        Swal.fire({
-          icon: 'success',
-          title: 'Success',
-          text: 'Logged in successfully!',
-        });
-      } catch (error) {
-        if (error.response && error.response.data.code === 401) {
+      dispatch(login({ email, password }))
+        .unwrap()
+        .then(response => {
+          form.reset();
+          Swal.fire({
+            icon: 'success',
+            title: 'Success',
+            text: 'Logged in successfully!',
+          });
+        })
+        .catch(error => {
           Swal.fire({
             icon: 'error',
             title: 'Unauthorized',
             text: 'Invalid email or password.',
           });
-        }
-      }
+        });
     }
   };
 
