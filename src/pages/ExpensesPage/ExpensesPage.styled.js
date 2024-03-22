@@ -28,7 +28,15 @@ export const FrameContainer = styled.div`
 `;
 
 export const TableAndSummaryContainer = styled.div`
+  @media screen and (min-width: 769px) {
   display: flex;
   justify-content: space-between;
-  margin-top: 60px;
+  align-items: center;
+  margin: 0 auto;
+  padding: 20px
+  }
+
+   @media screen and (min-width: 1280px) {
+max-width: 1098px;
+  }
 `;

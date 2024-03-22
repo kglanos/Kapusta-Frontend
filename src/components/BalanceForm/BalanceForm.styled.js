@@ -17,9 +17,19 @@ const TRANSITION = {
 };
 
 export const WrapperForm = styled.div`
+
+
+  @media ${DEVICE.tablet} {
   display: flex;
   align-items: center;
   justify-content: center;
+  justify-content: center; 
+   
+  }
+
+    @media ${DEVICE.laptop} {
+  margin: auto;
+  }
 `;
 
 export const Title = styled.h2`
@@ -154,7 +164,7 @@ export const Button = styled.button`
 
 export const Label = styled.label`
   position: absolute;
-  top: 16px;
+  top: 15px;
   right: 15px;
   font-weight: 700;
   font-style: normal;
@@ -164,7 +174,7 @@ export const Label = styled.label`
   color: #000000;
 
   @media ${DEVICE.tablet} {
-    margin-right: 14px;
+    margin-right: 15px;
   }
 `;
 
