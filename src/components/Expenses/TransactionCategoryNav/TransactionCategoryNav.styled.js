@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 export const StyledNavMobile = styled.div`
   position: fixed;
+  gap: 2px;
   bottom: 0;
   display: flex;
   background-color: #ffffff;
@@ -10,7 +11,6 @@ export const StyledNavMobile = styled.div`
 export const StyledNavDesktop = styled.div`
   display: flex;
   padding-left: 100px;
-  gap: 4px;
 `;
 export const Link = styled(NavLink)`
   display: block;

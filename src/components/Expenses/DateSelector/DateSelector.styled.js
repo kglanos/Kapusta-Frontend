@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const StyledDatePicker = styled.div`
   .calendarIcon {
-    width: 18px;
+    width: 20px;
     height: 20px;
     fill: #52555f;
   }
@@ -21,6 +21,7 @@ export const StyledDatePicker = styled.div`
     border: none;
     cursor: pointer;
     background-color: transparent;
+    // padding-inline: 0;
 
     :hover,
     :focus {

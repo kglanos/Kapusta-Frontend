@@ -12,19 +12,27 @@ export const StyledSummaryTable = styled.ul`
     text-align: center;
     border-radius: 16px;
     border-bottom-left-radius: 0px;
-    margin-top: 20px;
+    margin-top: 40px;
+    margin-left: 32px;
   }
 
   @media screen and (min-width: 1280px) {
     margin-top: 0px;
-    min-width: 213px;
+    max-width: 213px;
     min-height: 280px;
     align-self: flex-start;
+    margin-left: 75px;
   }
+
+  background-image: repeating-linear-gradient(
+    #f5f6fb 0px,
+    #f5f6fb 37px,
+    #ffffff 40px
+  );
 `;
 
 export const StyledSummaryTableHead = styled.li`
-  font-weight: 400;
+  font-weight: 700;
   letter-spacing: 0.02em;
   padding: 12px 0px;
   color: #00000;

@@ -108,3 +108,8 @@ input {
     max-width: 1160px;
   }
 }
+.delete-icon {
+  justify-content: center; /* Wycentrowanie ikony w poziomie */
+  align-items: center; /* Wycentrowanie ikony w pionie */
+  margin-right: 27px;
+}

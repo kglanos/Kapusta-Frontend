@@ -17,17 +17,14 @@ const TRANSITION = {
 };
 
 export const WrapperForm = styled.div`
-
-
   @media ${DEVICE.tablet} {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-   
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
-    @media ${DEVICE.laptop} {
-  margin: auto;
+  @media ${DEVICE.laptop} {
+    margin: auto;
   }
 `;
 
@@ -36,15 +33,15 @@ export const Title = styled.h2`
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
-  
-  font-weight: 500;
+  margin-bottom: 8px;
+  font-weight: 700;
   font-size: 12px;
-  line-height: 1.6;
+  line-height: 14.06px;
   letter-spacing: 0.02em;
   color: rgba(82, 85, 95, 0.7);
 
   @media ${DEVICE.tablet} {
-    margin: 0 21px 0 10px;
+    margin: 0 21px 0 72px;
   }
 
   @media ${DEVICE.laptop} {

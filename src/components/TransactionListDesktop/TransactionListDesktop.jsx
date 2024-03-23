@@ -62,7 +62,7 @@ export const TransactionListDesktop = ({ children }) => {
                     onClick={handleDelete}
                     style={{ cursor: 'pointer' }}
                   >
-                    <DeleteIcon />
+                    <DeleteIcon className="delete-icon" />
                   </span>
                 </td>
               </tr>
