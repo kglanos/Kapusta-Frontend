@@ -99,6 +99,7 @@ export const StyledTransactionTable = styled.table`
     );
 
     @media screen and (min-width: 768px) {
+      min-height: 344px;
       max-height: 344px;
       // max-height: 480px;
       height: auto;
