@@ -63,10 +63,12 @@ const Income = () => {
           )}
         </ReportsAndBalanceContainer>
         {mobileScreen && <TransactionNavMobile />}
-        {!mobileScreen && <TransactionNavDesktop />}
+
         {mobileScreen && <TransactionsList />}
       </StyledHomePage>
       <FrameContainer>
+        {' '}
+        {!mobileScreen && <TransactionNavDesktop />}
         <Form />
         <TableAndSummaryContainer>
           <TransactionListDesktop>
