@@ -22,7 +22,7 @@ import {
   selectExpenseTransactions,
   selectIsLoggedIn,
 } from '../../redux/selectors';
-import { getExpenses } from '../../redux/Transactions/operations';
+import { getIncome } from '../../redux/Transactions/operations';
 import { FrameContainer, TableAndSummaryContainer } from './IncomePage.styled';
 import { CabbagesBottom } from '../../components/Background/Authorized/CabbagesBottom';
 
@@ -40,7 +40,7 @@ const Income = () => {
 
   useEffect(() => {
     if (user) {
-      dispatch(getExpenses());
+      dispatch(getIncome());
     }
   }, [dispatch, user, balance]);
 
