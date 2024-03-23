@@ -49,7 +49,7 @@ export const transactionsSlice = createSlice({
       .addCase(addIncome.pending, handlePending)
       .addCase(addIncome.fulfilled, (state, action) => {
         state.newBalance = action.payload.newBalance;
-        state.incomes.incomeTransactions.push(action.payload.transaction);
+        state.incomes.incomeTransactions.push(action.payload.data);
         state.allTransactions.push(action.payload.transaction);
         state.isLoading = false;
       })
@@ -57,7 +57,7 @@ export const transactionsSlice = createSlice({
 
       .addCase(getIncome.pending, handlePending)
       .addCase(getIncome.fulfilled, (state, action) => {
-        state.incomes.incomeTransactions = action.payload.incomes;
+        state.incomes.incomeTransactions = action.payload;
         state.incomes.monthsStats = action.payload.monthsStats;
         state.isLoading = false;
       })

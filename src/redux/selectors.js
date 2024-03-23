@@ -20,12 +20,15 @@ export const selectIsLoading = store => store.transactions.isLoading;
 export const selectBalance = store => store.transactions.newBalance;
 export const selectExpenseTransactions = store =>
   store.transactions.expences.expenseTransactions;
+
+export const selectIncomeTransactions = store =>
+  store.transactions.incomes.incomeTransactions;
+
 const getDate = state => state.extraData.date;
 
 export const extraDataSelectors = {
   getDate,
 };
-
 
 export const selectAllTransactions = store =>
   store.transactions.allTransactions;
