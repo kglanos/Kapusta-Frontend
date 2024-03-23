@@ -9,7 +9,7 @@ export const StyledDatePicker = styled.div`
 
   .datePicker {
     display: flex;
-    gap: 8px;
+    gap: 10px;
     align-items: center;
     height: 20px;
     font-size: 12px;

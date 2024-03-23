@@ -11,15 +11,12 @@ const DateSelector = ({ startDate, setStartDate }) => {
   };
 
   const CustomDateInput = React.forwardRef(({ value, onClick }, ref) => (
-    <button
-      className="custom-date-input datePicker"
-      onClick={onClick}
-      ref={ref}
-    >
+    <button className="datePicker" onClick={onClick} ref={ref}>
       <Calendar className="calendarIcon" />
       {value}
     </button>
   ));
+
   return (
     <StyledDatePicker onClick={handleClick}>
       <DatePicker

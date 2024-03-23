@@ -5,11 +5,9 @@ export const FormWrapper = styled.div`
   justify-content: center;
   margin-top: 40px;
   @media screen and (min-width: 768px) {
+    margin-top: 0;
     align-items: flex-start;
     justify-content: space-between;
-  }
-  @media screen and (min-width: 1280px) {
-    margin-top: 0;
   }
 
   .tabletDatepicker {
@@ -92,18 +90,4 @@ export const ButtonWrapper = styled.div`
     margin-top: 0;
     margin-left: 32px;
   }
-`;
-
-export const StyledWhiteButton = styled.button`
-  padding: 12px 34px;
-  border: 2px solid #f5f6fb;
-  background-color: #fff;
-  border-radius: 16px;
-  color: #52555f;
-  font-size: 12px;
-  font-weight: 700;
-  font-family: inherit;
-  text-align: center;
-  letter-spacing: 0.02em;
-  line-height: 1.17;
 `;
