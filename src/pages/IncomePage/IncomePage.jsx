@@ -19,7 +19,7 @@ import { TransactionListDesktop } from 'components/TransactionListDesktop/Transa
 import { ToTransactionButton } from 'components/ToTransactionButton/ToTransactionButton';
 import {
   selectBalance,
-  selectExpenseTransactions,
+  selectIncomeTransactions,
   selectIsLoggedIn,
 } from '../../redux/selectors';
 import { getIncome } from '../../redux/Transactions/operations';
@@ -29,10 +29,10 @@ import { CabbagesBottom } from '../../components/Background/Authorized/CabbagesB
 const Income = () => {
   const dispatch = useDispatch();
 
-  const allExpenses = useSelector(selectExpenseTransactions);
+  const allincomes = useSelector(selectIncomeTransactions);
   const user = useSelector(selectIsLoggedIn);
   const balance = useSelector(selectBalance);
-  const color = 'red';
+  const color = 'green';
 
   const { mobileScreen, tabletScreen, desktopScreen } = useScreenSize();
 
@@ -70,7 +70,7 @@ const Income = () => {
         <Form />
         <TableAndSummaryContainer>
           <TransactionListDesktop>
-            {allExpenses}
+            {allincomes}
             {color}
           </TransactionListDesktop>
           {desktopScreen && <Summary />}

@@ -81,6 +81,17 @@ export const StyledTransactionTable = styled.table`
     border-top: none;
     border-bottom: 2px solid #f5f6fb;
 
+    &::-webkit-scrollbar {
+      width: 6.26px;
+    }
+    &::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 10px #f5f6fb;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: #ff751d;
+      border-radius: 2px;
+    }
+
     background-image: repeating-linear-gradient(
       #ffffff 0px,
       #ffffff 38px,
@@ -92,17 +103,6 @@ export const StyledTransactionTable = styled.table`
       // max-height: 480px;
       height: auto;
       min-width: 624px;
-    }
-
-    &::-webkit-scrollbar {
-      width: 6.26px;
-    }
-    &::-webkit-scrollbar-track {
-      box-shadow: inset 0 0 10px #f5f6fb;
-    }
-    &::-webkit-scrollbar-thumb {
-      background: #ff751d;
-      border-radius: 2px;
     }
 
     tr {
