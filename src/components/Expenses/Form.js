@@ -7,13 +7,13 @@ import DateSelector from 'components/Expenses/DateSelector';
 import SelectCategory from './SelectCategory/SelectCategory';
 import AmountInput from './Calculator/Calculator';
 import { OrangeButton } from 'components/Buttons/OrangeButton';
+import { WhiteButton } from 'components/Buttons/WhiteButton';
 import {
   FormWrapper,
   StyledForm,
   StyledInputsContainer,
   ProductInput,
   ButtonWrapper,
-  StyledWhiteButton,
 } from './Form.styled';
 import { addExpense, addIncome } from '../../redux/Transactions/operations';
 
@@ -100,31 +100,32 @@ export default function Form() {
   return (
     <>
       <FormWrapper>
-        
-          <div className="tabletDatepicker">
-            <DateSelector startDate={startDate} setStartDate={setStartDate} />
-          </div>
-        
-          {!mobileScreen && <StyledForm onSubmit={handleSubmit} ref={form}>
-          <StyledInputsContainer>
-            <ProductInput
-              placeholder="Product description"
-              name="description"
-            />
-            <SelectCategory
-              categoryArray={categoryArray}
-              elementCategory={elementCategory}
-              setElementCategory={setElementCategory}
-            />
-            <AmountInput name="sum" />
-          </StyledInputsContainer>
-          <ButtonWrapper>
-            <OrangeButton type="submit">INPUT</OrangeButton>
-            <StyledWhiteButton type="button" onClick={handleReset}>
-              CLEAR
-            </StyledWhiteButton>
-          </ButtonWrapper>
-        </StyledForm>}
+        <div className="tabletDatepicker">
+          <DateSelector startDate={startDate} setStartDate={setStartDate} />
+        </div>
+
+        {!mobileScreen && (
+          <StyledForm onSubmit={handleSubmit} ref={form}>
+            <StyledInputsContainer>
+              <ProductInput
+                placeholder="Product description"
+                name="description"
+              />
+              <SelectCategory
+                categoryArray={categoryArray}
+                elementCategory={elementCategory}
+                setElementCategory={setElementCategory}
+              />
+              <AmountInput name="sum" />
+            </StyledInputsContainer>
+            <ButtonWrapper>
+              <OrangeButton type="submit">INPUT</OrangeButton>
+              <WhiteButton type="button" onClick={handleReset}>
+                CLEAR
+              </WhiteButton>
+            </ButtonWrapper>
+          </StyledForm>
+        )}
       </FormWrapper>
     </>
   );

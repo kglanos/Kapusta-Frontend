@@ -10,13 +10,14 @@ export const StyledNavMobile = styled.div`
 `;
 export const StyledNavDesktop = styled.div`
   display: flex;
-
   position: absolute;
-  top: -50px;
+  top: -40px;
   left: 0;
 `;
 export const Link = styled(NavLink)`
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 50vw;
   padding: 20px 0;
   text-decoration: none;
@@ -28,6 +29,7 @@ export const Link = styled(NavLink)`
 
   @media screen and (min-width: 768px) {
     width: 138px;
+    height: 40px;
     background-color: #fafbfd;
     border-radius: 18px 18px 0 0;
   }

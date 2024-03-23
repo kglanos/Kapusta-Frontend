@@ -101,9 +101,12 @@ export const StyledTransactionTable = styled.table`
     @media screen and (min-width: 768px) {
       min-height: 344px;
       max-height: 344px;
-      // max-height: 480px;
       height: auto;
       min-width: 624px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      min-width: 746px;
     }
 
     tr {
@@ -158,7 +161,7 @@ export const StyledTransactionTable = styled.table`
       }
     }
   }
-  @media screen and (max-width: 767px) {
-    display: none;
-  }
+  // @media screen and (max-width: 767px) {
+  //   display: none;
+  // }
 `;
