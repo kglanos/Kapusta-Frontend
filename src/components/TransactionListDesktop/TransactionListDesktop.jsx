@@ -31,7 +31,7 @@ export const TransactionListDesktop = ({ children }) => {
     return second - first;
   });
 
-  const headers = ['DATE', 'DESCRIPTION', 'CATEGORY', 'SUM'];
+  const headers = ['DATE', 'DESCRIPTION', 'CATEGORY', 'SUM', ''];
 
   return (
     !isLoading && (
