@@ -12,17 +12,17 @@ body {
   letter-spacing: 0.04em;
   line-height: 1.167;
   background-image: url('./images/mobile/mobile-bg.png');
-  background-size: 100vw 342px;
+  background-size: 100vw 60vh;
   background-position: center top;
   background-repeat: no-repeat;
 
   @media screen and (min-width: 768px) {
     background-image: url('./images/tablet/tablet-bg.png');
-    background-size: 100vw 582px;
+    background-size: 100vw 50vh;
 
     @media screen and (min-width: 1280px) {
       background-image: url('./images/desktop/desktop-bg.png');
-      background-size: 100vw 582.5px;
+      background-size: 100vw 70vh;
     }
   }
 }
