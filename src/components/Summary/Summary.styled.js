@@ -21,6 +21,11 @@ export const StyledSummaryTable = styled.ul`
     min-height: 280px;
     align-self: flex-start;
   }
+  background-image: repeating-linear-gradient(
+    #f5f6fb 0px,
+    #f5f6fb 38px,
+    #ffffff 40px
+  );
 `;
 
 export const StyledSummaryTableHead = styled.li`

@@ -44,14 +44,24 @@ export const StyledTransactionTable = styled.table`
 
   tbody {
     width: 100%;
-    display: flex;
-    flex-direction: column;
+    display: block;
     overflow-y: scroll;
     overflow-x: hidden;
-    height: 344px;
+    max-height: 344px;
     border-left: 2px solid #f5f6fb;
     border-top: none;
     border-bottom: 2px solid #f5f6fb;
+
+    &::-webkit-scrollbar {
+      width: 6.26px;
+    }
+    &::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 10px #f5f6fb;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: #ff751d;
+      border-radius: 2px;
+    }
 
     background-image: repeating-linear-gradient(
       #ffffff 0px,
@@ -63,17 +73,6 @@ export const StyledTransactionTable = styled.table`
       min-height: 344px;
       max-height: 480px;
       height: auto;
-    }
-
-    &::-webkit-scrollbar {
-      width: 6.26px;
-    }
-    &::-webkit-scrollbar-track {
-      box-shadow: inset 0 0 10px #f5f6fb;
-    }
-    &::-webkit-scrollbar-thumb {
-      background: #ff751d;
-      border-radius: 2px;
     }
 
     tr {
