@@ -1,14 +1,25 @@
 import React from 'react';
-import { ReportsLogic } from '../Reports/ReportsLogic';
+import PropTypes from 'prop-types';
+
+import { useDispatch, useSelector } from 'react-redux';
+import { selectIsLoading } from '../../redux/selectors';
+
+
+// import { ReportsLogic } from '../Reports/ReportsLogic';
 import css from './CategoriesIconsList.module.scss';
 import ArrowL from '../../icons/arrow-l.svg';
 import ArrowR from '../../icons/arrow-r.svg';
 import { Link, useLocation } from 'react-router-dom';
 
 export const CategoriesListIcon = () => {
-  const { categories } = ReportsLogic();
+  // const { categories } = ReportsLogic();
    const location = useLocation();
-   const redirectTo = location.state?.from ?? '/income';
+  const redirectTo = location.state?.from ?? '/income';
+  
+
+  const dispatch = useDispatch();
+  const isLoading = useSelector(selectIsLoading);
+
 
   return (
     <div className={css.ExpensesWrapper}>

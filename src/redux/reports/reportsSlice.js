@@ -31,3 +31,6 @@ export const reportsSlice = createSlice({
 });
 
 export const reportsReducer = reportsSlice.reducer;
+
+// Eksport selektora raportów
+export const selectReports = state => state.reports.reports;

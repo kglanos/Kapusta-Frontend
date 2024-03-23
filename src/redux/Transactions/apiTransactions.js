@@ -55,3 +55,8 @@ export const updateUserBalance = async value => {
   const { data } = await axios.patch('/user/balance', value);
   return data;
 };
+
+export const getTotalExpense = async () => {
+  const { data } = await axios.get('/transaction/total-expenses');
+  return data;
+};

@@ -7,6 +7,7 @@ import {
   getExpenseTransactions,
   updateUserBalance,
   deleteTransactionById,
+  getTotalExpense,
 } from './apiTransactions';
 
 export const addIncome = createAsyncThunk(
@@ -89,6 +90,18 @@ export const deleteTransaction = createAsyncThunk(
       return { newBalance, id };
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
+    }
+  }
+);
+
+export const fetchTotalExpense = createAsyncThunk(
+  'transactions/fetchTotalExpense',
+  async (_, thunkAPI) => {
+    try {
+      const data = await getTotalExpense(); 
+      return data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.message); 
     }
   }
 );
