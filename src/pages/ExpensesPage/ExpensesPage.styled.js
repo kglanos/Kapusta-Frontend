@@ -16,6 +16,7 @@ export const FrameContainer = styled.div`
   @media screen and (min-width: 768px) {
     margin: 0px auto;
     padding: 24px 40px 42px;
+    max-width: 704px;
     background-color: #fff;
     border-radius: 0px 30px 30px 30px;
     box-shadow: 0px 10px 60px rgba(170, 178, 197, 0.2);
@@ -28,21 +29,23 @@ export const FrameContainer = styled.div`
 `;
 
 export const TableAndSummaryContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 20px;
+
+  @media screen and (min-width: 768px) {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
-    padding: 20px;  
-  
-    @media screen and (min-width: 768px) {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 auto;
-    padding: 20px;
-    }
+    padding: 0;
+    padding-top: 48px;
+  }
 
   @media screen and (min-width: 1280px) {
     max-width: 1098px;
+    padding-top: 60px;
   }
 `;

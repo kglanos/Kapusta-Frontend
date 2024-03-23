@@ -6,7 +6,8 @@ export const StyledTransactionTable = styled.table`
   border-collapse: collapse;
   display: table;
   flex-direction: column;
-  max-width: 746px;
+  max-width: 100vw;
+  padding-left: 0;
 
   th {
     width: 100%;
@@ -36,8 +37,36 @@ export const StyledTransactionTable = styled.table`
       th {
         align-items: center;
         justify-content: center;
-        flex: 1 0 calc(100% / 5);
         display: flex;
+
+        &:nth-child(1) {
+          /* Pierwsza kolumna */
+          flex: 1 0 84px;
+          justify-content: flex-start;
+          padding-left: 20px;
+        }
+        &:nth-child(2) {
+          /* Druga kolumna */
+          flex: 1 0 168px;
+          justify-content: flex-start;
+          padding-left: 25px;
+        }
+        &:nth-child(3) {
+          /* Trzecia kolumna */
+          flex: 1 0 124px;
+          padding-left: 6.8px;
+        }
+        &:nth-child(4) {
+          /* Czwarta kolumna */
+          flex: 1 0 107px;
+          padding-left: 1.2px;
+          justify-content: flex-end;
+        }
+        &:nth-child(5) {
+          /* Piąta kolumna */
+          flex: 1 0 82px;
+          padding-right: 32px;
+        }
       }
     }
   }
@@ -70,9 +99,10 @@ export const StyledTransactionTable = styled.table`
     );
 
     @media screen and (min-width: 768px) {
-      min-height: 344px;
-      max-height: 480px;
+      max-height: 344px;
+      // max-height: 480px;
       height: auto;
+      min-width: 624px;
     }
 
     tr {
@@ -87,11 +117,43 @@ export const StyledTransactionTable = styled.table`
         align-items: center;
         justify-content: center;
         text-align: center;
-        flex: 1 0 calc(100% / 5);
         overflow-x: hidden;
         display: flex;
         height: 40px;
         overflow: hidden;
+
+        &:nth-child(1) {
+          /* Pierwsza kolumna */
+          flex: 1 0 84px;
+          justify-content: flex-start;
+          padding-left: 20px;
+        }
+        &:nth-child(2) {
+          /* Druga kolumna */
+          flex: 1 0 168px;
+          justify-content: flex-start;
+          padding-left: 25px;
+          white-space: nowrap; /* Zapobieganie zawijaniu tekstu */
+          overflow: hidden; /* Ukrywanie tekstu, który nie zmieści się w kontenerze */
+          text-overflow: ellipsis; /* Pokazywanie "..." dla tekstu, który jest zbyt długi, aby się zmieścić */
+        }
+        &:nth-child(3) {
+          /* Trzecia kolumna */
+          flex: 1 0 124px;
+          padding-left: 6.8px;
+        }
+        &:nth-child(4) {
+          /* Czwarta kolumna */
+          flex: 1 0 107px;
+          padding-left: 1.2px;
+          justify-content: flex-end;
+          font-weight: 700;
+        }
+        &:nth-child(5) {
+          /* Piąta kolumna */
+          flex: 1 0 82px;
+          padding-left: 32px;
+        }
       }
     }
   }

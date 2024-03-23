@@ -1,23 +1,21 @@
 import styled from 'styled-components';
 
 export const ReportsContainer = styled.div`
-
-display: flex;
+  display: flex;
   align-items: center;
   column-gap: 15px;
   justify-content: center;
   margin-top: 20px;
   margin-bottom: 35px;
 
- @media screen and (min-width: 769px) {
-  display: flex;
-  align-items: center;
-  column-gap: 15px;
-  justify-content: center;
-   margin-top: auto;
-   margin-bottom: 0;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+    justify-content: center;
+    margin-top: auto;
+    margin-bottom: 0;
   }
-
 `;
 
 export const Logo = styled.svg`

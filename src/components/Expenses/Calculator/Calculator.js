@@ -23,7 +23,7 @@ export default function AmountInput() {
         </MobileNumber>
       ) : (
         <Number>
-          <InputNumber type="number" placeholder="0,00 USD" name="sum" />
+          <InputNumber type="number" placeholder="0,00" name="sum" />
           <Image src={calculator} alt="calculator" />
         </Number>
       )}
