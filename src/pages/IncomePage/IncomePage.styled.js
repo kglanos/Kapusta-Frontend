@@ -16,14 +16,18 @@ export const FrameContainer = styled.div`
   @media screen and (min-width: 768px) {
     margin: 0px auto;
     padding: 24px 40px 42px;
+    max-width: 704px;
     background-color: #fff;
     border-radius: 0px 30px 30px 30px;
     box-shadow: 0px 10px 60px rgba(170, 178, 197, 0.2);
+    position: relative;
+    margin-top: 100px;
   }
 
   @media screen and (min-width: 1280px) {
     padding: 32px 32px 61px;
     max-width: 1098px;
+    margin-top: 48px;
   }
 `;
 
