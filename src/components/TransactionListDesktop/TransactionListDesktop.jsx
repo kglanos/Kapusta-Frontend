@@ -54,7 +54,7 @@ export const TransactionListDesktop = ({ children }) => {
                 <td>{description}</td>
                 <td>{category}</td>
                 <td style={{ color }}>
-                  {minus} {amount}.00 UAH
+                  {minus} {amount}.00 USD
                 </td>
                 <td>
                   <span

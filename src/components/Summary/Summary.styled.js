@@ -6,20 +6,20 @@ export const StyledSummaryTable = styled.ul`
   @media screen and (min-width: 768px) {
     min-width: 230px;
     min-height: 278px;
-    height: 100%;
     background-color: #f5f6fb;
     display: inline-flex;
     flex-direction: column;
     text-align: center;
     border-radius: 16px;
     border-bottom-left-radius: 0px;
-    margin-top: 40px;
+    margin-top: 20px;
   }
 
   @media screen and (min-width: 1280px) {
     margin-top: 0px;
     min-width: 213px;
     min-height: 280px;
+    align-self: flex-start;
   }
 `;
 
