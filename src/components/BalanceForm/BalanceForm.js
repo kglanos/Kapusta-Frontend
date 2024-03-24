@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 // import { updateUserBalance } from '../../redux/Transactions/apiTransactions';
-import { updateBalance } from '../../redux/Transactions/operations';
+import { updateBalance } from '../../redux/Auth/operations';
 import ModalBalance from '../../components/ModalStartBalance/ModalStartBalance';
 import { Confirm } from 'components/ModalLogOutAndConfirm/ModalLogOutAndConfirm';
 import {
@@ -19,7 +19,7 @@ const BalanceForm = () => {
 
   const dispatch = useDispatch();
   const balanceQuery = useSelector(state => state.auth.balance);
-  const rebalancing = useSelector(state => state.auth.rebalancing);
+
   const [balance, setBalance] = useState('');
 
   const handleModalOpen = e => {
@@ -31,22 +31,18 @@ const BalanceForm = () => {
   };
 
   useEffect(() => {
-    if (rebalancing) {
-      return setBalance(balanceQuery);
-    }
-  }, [balanceQuery, rebalancing]);
+    return setBalance(balanceQuery);
+  }, [balanceQuery]);
 
   const handleChange = e => {
-    if (!rebalancing) {
-      if (!Number.isNaN(e.target.value)) {
-        return setBalance(parseFloat(e.target.value));
-      }
+    if (!Number.isNaN(e.target.value)) {
+      return setBalance(parseFloat(e.target.value));
     }
   };
 
   const handleClick = e => {
     // e.preventDefault();
-    if (!rebalancing & (balance !== '')) {
+    if (balance !== '') {
       dispatch(updateBalance(balance));
     }
   };

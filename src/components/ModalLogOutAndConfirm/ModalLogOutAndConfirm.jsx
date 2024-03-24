@@ -57,6 +57,7 @@ export const Confirm = ({
               dispatch={dispatch}
               closeModal={closeModal}
               changeBalance={changeBalance}
+              onClick={() => dispatch()}
             >
               {text ? text : 'YES'}
             </OrangeButton>

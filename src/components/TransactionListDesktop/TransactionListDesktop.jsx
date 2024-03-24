@@ -4,11 +4,13 @@ import { selectIsLoading } from '../../redux/selectors';
 import { deleteTransaction } from '../../redux/Transactions/operations';
 import { ReactComponent as DeleteIcon } from './deleteIcon.svg';
 import { StyledTransactionTable } from './TransactionListDesktop.styled';
+import { useScreenSize } from 'hooks/useScreenSize';
 
 export const TransactionListDesktop = ({ children }) => {
   const dispatch = useDispatch();
 
   const isLoading = useSelector(selectIsLoading);
+  const { mobileScreen } = useScreenSize();
 
   // Green if INCOME and red if EXPENSES
   const color = children[1];
@@ -38,7 +40,7 @@ export const TransactionListDesktop = ({ children }) => {
       <StyledTransactionTable className="container">
         <thead>
           <tr>
-            {headers.map(header => (
+            {!mobileScreen &&headers.map(header => (
               <th key={header}>{header.toUpperCase()}</th>
             ))}
           </tr>

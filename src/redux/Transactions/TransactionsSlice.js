@@ -7,7 +7,6 @@ import {
   getExpenses,
   deleteTransaction,
   getAllTransactions,
-  updateBalance,
 } from './operations';
 
 const initialState = {
@@ -80,12 +79,12 @@ export const transactionsSlice = createSlice({
       })
       .addCase(getExpenses.rejected, handleRejected)
 
-      .addCase(updateBalance.pending, handlePending)
-      .addCase(updateBalance.fulfilled, (state, action) => {
-        state.newBalance = action.payload.newBalance;
-        state.isLoading = false;
-      })
-      .addCase(updateBalance.rejected, handleRejected)
+      // .addCase(updateBalance.pending, handlePending)
+      // .addCase(updateBalance.fulfilled, (state, action) => {
+      //   state.newBalance = action.payload.newBalance;
+      //   state.isLoading = false;
+      // })
+      // .addCase(updateBalance.rejected, handleRejected)
 
       .addCase(deleteTransaction.pending, handlePending)
       .addCase(deleteTransaction.fulfilled, (state, action) => {
