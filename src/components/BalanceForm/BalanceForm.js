@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 // import { updateUserBalance } from '../../redux/Transactions/apiTransactions';
-import { updateBalance } from '../../redux/Auth/operations';
+import { updateBalance } from '../../redux/Transactions/operations';
 import ModalBalance from '../../components/ModalStartBalance/ModalStartBalance';
 import { Confirm } from 'components/ModalLogOutAndConfirm/ModalLogOutAndConfirm';
 import {

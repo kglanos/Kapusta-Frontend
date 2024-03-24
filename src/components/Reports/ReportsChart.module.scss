@@ -1,8 +1,7 @@
 .chartContainer {
   width: 280px;
   height: auto;
-  padding-top: 32px;
-  margin: 0 auto;
+  margin: 32px auto;
   border-radius: 30px;
   @media screen and (min-width: 768px) {
     width: 704px;
@@ -41,7 +40,6 @@
 
   @media screen and (min-width: 768px) {
     width: 704px;
-    
   }
   @media screen and (min-width: 1280px) {
     width: 1034px;
@@ -72,7 +70,6 @@
   background-color: var(--bg-white-color);
   border-radius: 30px;
 
-  // border-bottom: 1px solid var(--line-bg-color);
   @media screen and (min-width: 768px) {
     border-bottom: 0;
     padding: 20px 3px;

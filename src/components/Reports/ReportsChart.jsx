@@ -73,45 +73,47 @@ export const ReportsChart = () => {
 
       <div className={css.chartContainer}>
         {categoriesData.map((category, index) => (
-          <div key={index}>
+          <div key={index} className={css.chartItem}>
             {selectedCategory === category.name && (
-              <Bar
-                data={getDataForCategory(category)}
-                options={{
-                  scales: {
-                    x: {
-                      stacked: true,
-                      gridLines: {
-                        drawBorder: false,
-                        display: false,
+              <div className={css.chartSection}>
+                <Bar
+                  data={getDataForCategory(category)}
+                  options={{
+                    scales: {
+                      x: {
+                        stacked: true,
+                        gridLines: {
+                          drawBorder: false,
+                          display: false,
+                        },
+                        ticks: {
+                          autoSkip: true,
+                          maxTicksLimit: 13,
+                        },
                       },
-                      ticks: {
-                        autoSkip: true,
-                        maxTicksLimit: 13,
+                      y: {
+                        stacked: true,
+                        gridLines: {
+                          color: '#ff751d',
+                          drawBorder: false,
+                        },
+                        ticks: {
+                          beginAtZero: true,
+                        },
                       },
                     },
-                    y: {
-                      stacked: true,
-                      gridLines: {
-                        color: '#ff751d',
-                        drawBorder: false,
-                      },
-                      ticks: {
-                        beginAtZero: true,
-                      },
+                    title: {
+                      display: true,
+                      text: `Items for ${category.name}`,
+                      fontSize: 20,
                     },
-                  },
-                  title: {
-                    display: true,
-                    text: `Items for ${category.name}`,
-                    fontSize: 20,
-                  },
-                  legend: {
-                    display: true,
-                    position: 'top',
-                  },
-                }}
-              />
+                    legend: {
+                      display: true,
+                      position: 'top',
+                    },
+                  }}
+                />
+              </div>
             )}
           </div>
         ))}
