@@ -5,7 +5,7 @@ import {
   ArrowBackIcon,
   ArrowBackDesk,
 } from './ButtonMainPage.styled';
-import iconBack from '../../icons/back.svg';
+import iconBack from '../../../icons/back.svg';
 
 export const ButtonMainPage = () => {
   const location = useLocation();

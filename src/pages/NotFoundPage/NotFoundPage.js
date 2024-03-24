@@ -1,5 +1,5 @@
 import { Helmet, HelmetProvider } from 'react-helmet-async';
-import { ButtonMainPage } from './ButtonMainPage';
+import { ButtonMainPage } from './ButtonMainPage/ButtonMainPage';
 import { NotFoundContainer } from './NotFoundPage.styled';
 import { CabbagesBottom } from '../../components/Background/Authorized/CabbagesBottom';
 
