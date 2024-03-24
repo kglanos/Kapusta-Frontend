@@ -3,7 +3,7 @@ import { categoriesData } from './CategoriesData';
 
 export const ReportsLogic = () => {
   const [categories, setCategories] = useState([]);
-  const [balance] = useState(50);
+  const [balance] = useState(50000);
   const [currency] = useState(' usd');
 
   useEffect(() => {

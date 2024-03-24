@@ -7,7 +7,7 @@ export const ReportsSummaryWrapper = styled.div`
   border-radius: 20px;
   padding: 21px 10px;
   box-shadow: 5px 10px 20px 0px var(--box-shadow-color);
-  margin-bottom: 32px;
+  margin: 32px 0;
   background-color: var(--bg-white-color);
 
   @media screen and (min-width: 768px) {
