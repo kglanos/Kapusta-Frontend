@@ -6,14 +6,15 @@ export const NotFoundContainer = styled.div`
   row-gap: 40px;
   text-align: center;
   margin-top: 100px;
-
   color: red;
   position: relative;
   padding: 0 40px;
+
   @media screen and (min-width: 768px) {
-    margin-top: 100px;
+    margin-top: 140px;
   }
 `;
+
 export const Text = styled.p`
   position: absolute;
   z-index: 1;
