@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Bar, Chart } from 'react-chartjs-2'; // Importujemy CategoryScale z chart.js
+import React, { useState, useEffect } from 'react';
+import { Bar } from 'react-chartjs-2';
 import { Chart as ChartJS } from 'chart.js/auto';
 import { categoriesData } from './CategoriesData';
 import css from './ReportsChart.module.scss';
@@ -30,6 +30,13 @@ export const ReportsChart = () => {
       categoryName === selectedCategory ? null : categoryName
     );
   };
+
+  useEffect(() => {
+    // Ustawienie opcji dla ChartJS
+    ChartJS.register({
+      // Dostosuj opcje ChartJS według potrzeb
+    });
+  }, []);
 
   return (
     <div className={css.chartContainer}>
