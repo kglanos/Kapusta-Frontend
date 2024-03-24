@@ -1,8 +1,9 @@
 import { Helmet, HelmetProvider } from 'react-helmet-async';
-import { ButtonMainPage } from './ButtonMainPage/ButtonMainPage';
-import { NotFoundContainer } from './NotFoundPage.styled';
+import { ButtonMainPage } from './ButtonMainPage';
+import { NotFoundContainer, Image, Text } from './NotFoundPage.styled';
 import { CabbagesBottom } from '../../components/Background/Authorized/CabbagesBottom';
-
+import ImageComponent from './Image';
+import errorImage from './moneylost.jpg';
 const NotFound = () => {
   return (
     <HelmetProvider>
@@ -10,7 +11,13 @@ const NotFound = () => {
         <title>Page Error</title>
       </Helmet>
       <ButtonMainPage />
-      <NotFoundContainer>Sorry, page not found ! </NotFoundContainer>
+      <NotFoundContainer>
+        <Image>
+          <Text>Sorry, page not found !</Text>
+          <ImageComponent src={errorImage} alt="Error 404" />
+        </Image>
+      </NotFoundContainer>
+
       <CabbagesBottom />
     </HelmetProvider>
   );
