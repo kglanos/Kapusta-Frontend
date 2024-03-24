@@ -7,12 +7,13 @@ import {
   Text,
   Logo2Wrapper,
 } from './ToTransactionButton.styled';
+import MobileTransactionForm from './MobileTransactionForm/MobileTransactionForm';
 
 Modal.setAppElement('#root');
 
 const customStyles = {
   overlay: {
-    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    backgroundColor: '#ffffff',
     zIndex: 15,
   },
   content: {
@@ -21,8 +22,11 @@ const customStyles = {
     right: 0,
     bottom: 0,
     border: 'none',
-    borderRadius: 0,
+    borderRadius: '0 0 0 100px',
     padding: 0,
+    backgroundColor: '#F5F6FB',
+    backgroundSize: '100% 314px',
+    maxHeight: '440px',
   },
 };
 
@@ -52,6 +56,9 @@ export const ToTransactionButton = () => {
         <Logo2Wrapper>
           <Logo2 onClick={closeModal} />
         </Logo2Wrapper>
+        <div>
+          <MobileTransactionForm />
+        </div>
       </Modal>
     </>
   );

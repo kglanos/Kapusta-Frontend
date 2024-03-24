@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const ToTransactionBtn = styled.button`
   display: flex;
   align-items: center;
-  margin-top: 76px;
+  margin-top: 75px;
   padding-left: 20px;
   border: none;
   background-color: transparent;
