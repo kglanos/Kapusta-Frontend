@@ -1,10 +1,15 @@
 import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { Bar } from 'react-chartjs-2';
 import { Chart as ChartJS } from 'chart.js/auto';
 import { categoriesData } from './CategoriesData';
 import css from './ReportsChart.module.scss';
+import ArrowL from '../../icons/arrow-l.svg';
+import ArrowR from '../../icons/arrow-r.svg';
 
 export const ReportsChart = () => {
+  const location = useLocation();
+  const redirectTo = location.state?.from ?? '/income';
   const [selectedCategory, setSelectedCategory] = useState(null);
 
   const getDataForCategory = category => {
@@ -39,7 +44,13 @@ export const ReportsChart = () => {
   }, []);
 
   return (
-    <div className={css.chartContainer}>
+    <div className={css.CategoriesWrapper}>
+      <Link to={redirectTo} className={css.LinkIncome}>
+        <img src={ArrowL} alt="arrow" />
+        <h2 className={css.Title}>Expenses</h2>
+        <img src={ArrowR} alt="arrow" />
+      </Link>
+
       <div className={css.Categories}>
         <ul className={css.CategoriesList}>
           {categoriesData.map(
@@ -60,49 +71,51 @@ export const ReportsChart = () => {
         </ul>
       </div>
 
-      {categoriesData.map((category, index) => (
-        <div key={index}>
-          {selectedCategory === category.name && (
-            <Bar
-              data={getDataForCategory(category)}
-              options={{
-                scales: {
-                  x: {
-                    stacked: true,
-                    gridLines: {
-                      drawBorder: false,
-                      display: false,
+      <div className={css.chartContainer}>
+        {categoriesData.map((category, index) => (
+          <div key={index}>
+            {selectedCategory === category.name && (
+              <Bar
+                data={getDataForCategory(category)}
+                options={{
+                  scales: {
+                    x: {
+                      stacked: true,
+                      gridLines: {
+                        drawBorder: false,
+                        display: false,
+                      },
+                      ticks: {
+                        autoSkip: true,
+                        maxTicksLimit: 13,
+                      },
                     },
-                    ticks: {
-                      autoSkip: true,
-                      maxTicksLimit: 13,
+                    y: {
+                      stacked: true,
+                      gridLines: {
+                        color: '#ff751d',
+                        drawBorder: false,
+                      },
+                      ticks: {
+                        beginAtZero: true,
+                      },
                     },
                   },
-                  y: {
-                    stacked: true,
-                    gridLines: {
-                      color: '#ff751d',
-                      drawBorder: false,
-                    },
-                    ticks: {
-                      beginAtZero: true,
-                    },
+                  title: {
+                    display: true,
+                    text: `Items for ${category.name}`,
+                    fontSize: 20,
                   },
-                },
-                title: {
-                  display: true,
-                  text: `Items for ${category.name}`,
-                  fontSize: 20,
-                },
-                legend: {
-                  display: true,
-                  position: 'top',
-                },
-              }}
-            />
-          )}
-        </div>
-      ))}
+                  legend: {
+                    display: true,
+                    position: 'top',
+                  },
+                }}
+              />
+            )}
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
