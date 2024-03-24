@@ -12,11 +12,6 @@
   }
 }
 
-h2 {
-  // display: none;
-  cursor: pointer;
-}
-
 // .chartTitle {
 //   font-size: 20px;
 //   text-align: center;
@@ -40,16 +35,18 @@ h2 {
 //   margin-right: 5px;
 // }
 .CategoriesWrapper {
+  border-radius: 30px;
+  background-color: var(--bg-white-color);
+  padding: 20px 0 0 0;
+
   @media screen and (min-width: 768px) {
     width: 704px;
-    border-radius: 30px;
-    background-color: var(--bg-white-color);
-    padding: 20px 0 0 0;
   }
   @media screen and (min-width: 1280px) {
     width: 1034px;
   }
 }
+
 .LinkIncome {
   display: flex;
   justify-content: center;
