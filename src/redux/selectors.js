@@ -8,6 +8,8 @@ export const selectUserEmail = state => state.auth.user.email;
 
 export const selectIsRefreshing = state => state.auth.isRefreshing;
 
+export const selectBalance = state => state.auth.user.balance;
+
 export const selectIncomeSummary = store =>
   store.transactions.incomes.monthsStats;
 
@@ -15,9 +17,8 @@ export const selectExpensesSummary = store =>
   store.transactions.expences.monthsStats;
 
 export const selectIsLoading = store => store.transactions.isLoading;
-// export const selectBalance = store => store.balance.balance;
 
-export const selectBalance = store => store.transactions.newBalance;
+// export const selectBalance = store => store.transactions.newBalance;
 export const selectExpenseTransactions = store =>
   store.transactions.expences.expenseTransactions;
 
