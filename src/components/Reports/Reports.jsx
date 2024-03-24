@@ -4,8 +4,8 @@ import  BalanceForm  from '../BalanceForm/BalanceForm';
 import { DateComponent } from '../DateComponent/DateComponent';
 import { ReportsSummary } from '../ReportsSummary/ReportsSummary';
 import { ButtonToHome } from '../ButtonToHome/ButtonToHome';
-import { CategoriesListIcon } from '../CategoriesIconsList/CategoriesIconsList';
-// import { ReportsChart } from './ReportsChart';
+// import { CategoriesListIcon } from '../CategoriesIconsList/CategoriesIconsList';
+import { ReportsChart } from './ReportsChart';
 
 export const ReportsPage = () => {
   return (
@@ -14,8 +14,8 @@ export const ReportsPage = () => {
       <DateComponent />
       <BalanceForm />
       <ReportsSummary />
-      <CategoriesListIcon />
-      {/* <ReportsChart /> */}
+      {/* <CategoriesListIcon /> */}
+      <ReportsChart />
     </ReportsPageContainer>
   );
 };
