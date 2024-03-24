@@ -18,6 +18,10 @@ export const DateSelectWrapper = styled.div`
       right: -450px;
     }
   }
+  h3 {
+    font-weight: 500;
+    color: var(--secondaryTextColor);
+  }
 `;
 export const DateSelect = styled.div`
   display: flex;
