@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-// axios.defaults.baseURL = 'https://kapusta-a0a137454a45.herokuapp.com/';
-axios.defaults.baseURL = 'http://localhost:4000'
+axios.defaults.baseURL = 'https://kapusta-a0a137454a45.herokuapp.com/';
+// axios.defaults.baseURL = 'http://localhost:4000'
 
 export const addExpenseTransaction = async info => {
   const { data } = await axios.post('/transaction/expenses', info);
@@ -52,6 +52,6 @@ export const getUserInfo = async () => {
 };
 
 export const updateUserBalance = async balance => {
-  const response = await axios.patch('/user/balance', {balance});
+  const response = await axios.patch('/user/balance', { balance });
   return response.data;
 };
