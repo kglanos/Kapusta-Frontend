@@ -25,16 +25,19 @@ const ModalBalance = () => {
   }, []);
 
   return (
-    <>
-      {isModalOpen && (
-        <Modal onClick={handleClickWindow}>
-          <Title>
-            Hello! To get started, enter the current balance of your account!
-          </Title>
-          <Text>You can't spend money until you have it = </Text>
-        </Modal>
-      )}
-    </>
+    (
+      <>
+        {isModalOpen && (
+          <Modal onClick={handleClickWindow}>
+            <Title>
+              Hello! To get started, enter the current balance of your account!
+            </Title>
+            <Text>You can't spend money until you have it = </Text>
+          </Modal>
+        )}
+      </>
+    ),
+    modalRoot
   );
 };
 
