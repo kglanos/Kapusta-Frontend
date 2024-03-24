@@ -1,8 +1,9 @@
 .chartContainer {
   width: 280px;
   height: auto;
-  // padding-top: 32px;
+  padding-top: 32px;
   margin: 0 auto;
+  border-radius: 30px;
   @media screen and (min-width: 768px) {
     width: 704px;
   }
@@ -38,8 +39,29 @@ h2 {
 //   display: inline-block;
 //   margin-right: 5px;
 // }
-*
-
+.CategoriesWrapper {
+  @media screen and (min-width: 768px) {
+    width: 704px;
+    border-radius: 30px;
+    background-color: var(--bg-white-color);
+    padding: 20px 0 0 0;
+  }
+  @media screen and (min-width: 1280px) {
+    width: 1034px;
+  }
+}
+.LinkIncome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  transition: 0.25s ease-in-out;
+  @media screen and (min-width: 768px) {
+  }
+}
+.LinkIncome:hover {
+  gap: 20px;
+}
 .CategoriesList {
   width: 300px;
   display: flex;
@@ -50,6 +72,7 @@ h2 {
   row-gap: 20px;
   padding: 20px 0px;
   background-color: var(--bg-white-color);
+  border-radius: 30px;
 
   // border-bottom: 1px solid var(--line-bg-color);
   @media screen and (min-width: 768px) {
