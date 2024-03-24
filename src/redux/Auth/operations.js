@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { createAsyncThunk } from '@reduxjs/toolkit';
+import { updateUserBalance } from '../Transactions/apiTransactions';
 
 axios.defaults.baseURL = 'https://kapusta-a0a137454a45.herokuapp.com/';
 // axios.defaults.baseURL = 'http://localhost:4000'
@@ -69,12 +70,22 @@ export const getUserInfo = async () => {
   return data;
 };
 
+export const updateBalance = createAsyncThunk(
+  'users/updateBalance',
+  async (value, thunkAPI) => {
+    try {
+      const data = await updateUserBalance(value);
+      return data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.message);
+    }
+  }
+);
 export const refreshUser = createAsyncThunk(
   'auth/refreshUser',
   async (_, thunkAPI) => {
     const state = thunkAPI.getState();
     const persistedToken = state.auth.token;
-
     setAuthHeader(persistedToken);
     if (!persistedToken) {
       return thunkAPI.rejectWithValue('No token');
