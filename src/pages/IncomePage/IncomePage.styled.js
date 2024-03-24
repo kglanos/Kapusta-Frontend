@@ -1,15 +1,5 @@
 import styled from 'styled-components';
 
-export const BackgroundContainer = styled.div`
-  position: absolute;
-  z-index: -1;
-  top: 56px;
-  margin: 500px auto;
-  width: 320px;
-  height: 258px;
-  background-color: #f5f6fb;
-  border-radius: 0 0 0 112px;
-`;
 export const FrameContainer = styled.div`
   /* background-color: transparent; */
 
@@ -43,10 +33,39 @@ export const TableAndSummaryContainer = styled.div`
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
-    padding: 20px;
+    padding: 0;
+    padding-top: 48px;
   }
 
   @media screen and (min-width: 1280px) {
     max-width: 1098px;
+    padding-top: 60px;
+  }
+`;
+
+export const StyledHomePage = styled.div`
+  margin-top: 14px;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 96px;
+  }
+`;
+
+export const ReportsAndBalanceContainer = styled.div`
+
+    @media screen and (min-width: 769px) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 auto;
+      margin-bottom: 60px;
+      margin-right: 32px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      max-width: 1098px;
+      margin-bottom: 8px;
+      margin-right: 91px;
+    }
   }
 `;

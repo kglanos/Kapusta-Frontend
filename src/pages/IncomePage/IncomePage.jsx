@@ -5,13 +5,11 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useScreenSize } from 'hooks/useScreenSize';
 import { ReportsLink } from 'components/ReportsLink/ReportsLink';
 import BalanceForm from 'components/BalanceForm/BalanceForm';
-import { StyledHomePage, ReportsAndBalanceContainer } from './Home.styled';
 import { TransactionsList } from '../../components/Expenses/TransactionsList/TransactionsList';
 import {
   TransactionNavMobile,
   TransactionNavDesktop,
 } from 'components/Expenses/TransactionCategoryNav/TransactionCategoryNav';
-// import { TotalTransactionsData } from '../../components/Expenses/TransactionCategoryNav/TransactionCategoryNav';
 
 import Form from 'components/Expenses/Form';
 import { Summary } from 'components/Summary/Summary';
@@ -23,13 +21,18 @@ import {
   selectIsLoggedIn,
 } from '../../redux/selectors';
 import { getIncome } from '../../redux/Transactions/operations';
-import { FrameContainer, TableAndSummaryContainer } from './IncomePage.styled';
+import {
+  FrameContainer,
+  TableAndSummaryContainer,
+  StyledHomePage,
+  ReportsAndBalanceContainer,
+} from './IncomePage.styled';
 import { CabbagesBottom } from '../../components/Background/Authorized/CabbagesBottom';
 
 const Income = () => {
   const dispatch = useDispatch();
 
-  const allincomes = useSelector(selectIncomeTransactions);
+  const allIncomes = useSelector(selectIncomeTransactions);
   const user = useSelector(selectIsLoggedIn);
   const balance = useSelector(selectBalance);
   const color = 'green';
@@ -50,7 +53,6 @@ const Income = () => {
         <title>Income</title>
       </Helmet>
       <CabbagesBottom />
-      {/* {mobileScreen && <BackgroundContainer />} */}
       {mobileScreen && <ToTransactionButton />}
       <StyledHomePage>
         <ReportsAndBalanceContainer>
@@ -72,7 +74,7 @@ const Income = () => {
         <Form />
         <TableAndSummaryContainer>
           <TransactionListDesktop>
-            {allincomes}
+            {allIncomes}
             {color}
           </TransactionListDesktop>
           {desktopScreen && <Summary />}
