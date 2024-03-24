@@ -1,17 +1,17 @@
-import css from './NotFoundPage.module.css';
-import kapusta from '../../images/desktop/cabbageGroupDesktop.png';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
+import { ButtonMainPage } from './ButtonMainPage';
+import { NotFoundContainer } from './NotFoundPage.styled';
+import { CabbagesBottom } from '../../components/Background/Authorized/CabbagesBottom';
 
 const NotFound = () => {
   return (
     <HelmetProvider>
-      <div className={css.NotFoundContainer}>
-        <Helmet>
-          <title>Page Error</title>
-        </Helmet>
-        Sorry, page not found !{' '}
-        <img src={kapusta} alt="kapusta" width="80%" height="30%" />
-      </div>
+      <Helmet>
+        <title>Page Error</title>
+      </Helmet>
+      <ButtonMainPage />
+      <NotFoundContainer>Sorry, page not found ! </NotFoundContainer>
+      <CabbagesBottom />
     </HelmetProvider>
   );
 };

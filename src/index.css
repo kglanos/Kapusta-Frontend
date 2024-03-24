@@ -18,7 +18,7 @@ body {
 
   @media screen and (min-width: 768px) {
     background-image: url('./images/tablet/tablet-bg.png');
-    background-size: 100vw 768px;
+    background-size: 100vw 583px;
 
     @media screen and (min-width: 1280px) {
       background-image: url('./images/desktop/desktop-bg.png');
@@ -109,7 +109,7 @@ input {
   }
 }
 .delete-icon {
-  justify-content: center; /* Wycentrowanie ikony w poziomie */
-  align-items: center; /* Wycentrowanie ikony w pionie */
+  justify-content: center;
+  align-items: center;
   margin-right: 27px;
 }
