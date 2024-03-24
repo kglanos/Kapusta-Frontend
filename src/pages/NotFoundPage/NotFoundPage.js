@@ -1,9 +1,10 @@
 import { Helmet, HelmetProvider } from 'react-helmet-async';
-import { ButtonMainPage } from './ButtonMainPage';
+import { ButtonMainPage } from './ButtonMainPage/ButtonMainPage';
 import { NotFoundContainer, Image, Text } from './NotFoundPage.styled';
 import { CabbagesBottom } from '../../components/Background/Authorized/CabbagesBottom';
 import ImageComponent from './Image';
 import errorImage from './moneylost.jpg';
+
 const NotFound = () => {
   return (
     <HelmetProvider>
