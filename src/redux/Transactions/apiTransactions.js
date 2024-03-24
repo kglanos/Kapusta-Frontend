@@ -51,7 +51,7 @@ export const getUserInfo = async () => {
   return data;
 };
 
-export const updateUserBalance = async value => {
-  const { data } = await axios.patch('/user/balance', value);
-  return data;
+export const updateUserBalance = async balance => {
+  const response = await axios.patch('/user/balance', {balance});
+  return response.data;
 };
