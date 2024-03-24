@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Bar, Chart } from 'react-chartjs-2'; // Importujemy CategoryScale z chart.js
-import { Chart as ChartJS } from 'chart.js/auto';
+import { Bar } from 'react-chartjs-2'; // Importujemy CategoryScale z chart.js
+// import { Chart as ChartJS } from 'chart.js/auto';
 import { categoriesData } from './CategoriesData';
 import css from './ReportsChart.module.scss';
 
