@@ -35,14 +35,19 @@ export const TransactionListDesktop = ({ children }) => {
 
   const headers = ['DATE', 'DESCRIPTION', 'CATEGORY', 'SUM', ''];
 
+  function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
+
   return (
     !isLoading && (
       <StyledTransactionTable className="container">
         <thead>
           <tr>
-            {!mobileScreen &&headers.map(header => (
-              <th key={header}>{header.toUpperCase()}</th>
-            ))}
+            {!mobileScreen &&
+              headers.map(header => (
+                <th key={header}>{header.toUpperCase()}</th>
+              ))}
           </tr>
           <tr></tr>
         </thead>
@@ -53,7 +58,7 @@ export const TransactionListDesktop = ({ children }) => {
             return (
               <tr key={_id} style={{ height: 40 }}>
                 <td>{date.split('-').reverse().join('.')}</td>
-                <td>{description}</td>
+                <td>{capitalizeFirstLetter(description)}</td>
                 <td>{category}</td>
                 <td style={{ color }}>
                   {minus} {amount}.00 USD
