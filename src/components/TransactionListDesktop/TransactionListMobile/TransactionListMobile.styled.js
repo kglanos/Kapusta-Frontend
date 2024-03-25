@@ -2,107 +2,79 @@ import styled from 'styled-components';
 
 export const StyledTransactionTable = styled.table`
   tbody {
-    margin-top: 60px;
-    width: 100%;
     display: block;
+    margin-top: 60px;
+    min-width: 282px;
+    max-width: 282px;
+    max-height: 160px;
+    min-height: 160px;
     overflow-y: scroll;
     overflow-x: hidden;
-    max-height: 150px;
     border-top: none;
 
-    &::-webkit-scrollbar {
-      width: 6.26px;
-    }
-    &::-webkit-scrollbar-track {
-      box-shadow: inset 0 0 10px #f5f6fb;
-    }
-    &::-webkit-scrollbar-thumb {
-      background: #ff751d;
-      border-radius: 2px;
-    }
-
     tr {
-      justify-content: center;
-      display: flex;
-      &:not(:last-child) {
-        border-bottom: 2px solid #f5f6fb;
+    display: flex;    
+    justify-content: flex-start;
+    margin-top: 6px;
+    width: 282px;
+    
+    &:not(:last-child) {
+    border-bottom: 2px solid #f5f6fb;
       }
 
       td {
         position: relative;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        overflow-x: hidden;
         display: flex;
-        height: 40px;
+        align-items: center;
+        justify-content: flex-start;
+        height: 20px;
+        overflow-x: hidden;
         overflow: hidden;
-
-        &:nth-child(1) {
-          /* Pierwsza kolumna */
-          flex: 1 0 50%;
-          justify-content: flex-start;
-          //   font-weight: 700;
-
-          //   padding-right: 20px;
-        }
-        &:nth-child(2) {
-          /* Druga kolumna */
-          //   display: flex;
-          justify-content: flex-end;
-          //   font-weight: 700;
-          //   padding-left: 25px;
-        }
-        &:nth-child(3) {
-          /* Trzecia kolumna */
-          flex: 1 0 5px;
-
-          justify-content: flex-end;
-          //   padding-left: 6.8px;
-        }
-      }
-    }
   }
 `;
 
 export const DescriptionAndDetailsWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  font-size: 12px;
+  justify-content: flex-start;
+  margin-bottom: 8px;
   gap: 3px;
+  min-width: 125px;
+  max-width: 125px;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `;
 
 export const DateAndCategoryWrapper = styled.div`
   display: flex;
-  font-size: 8px;
-  justify-content: space-between;
+  padding: 0;
+  height: 15px;
   gap: 20px;
-  margin-top: 3px;
+  min-width: 141px;
+  max-width: 141px;
+  font-size: 8px;
+  font-weight: 400;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `;
 
-// export const AmoutWrapper = styled.div`
-//   //   display: flex;
-//   justify-content: flex-end;
-// `;
+export const AmoutWrapper = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  min-width: 120px;
+  max-width: 120px;
+  font-weight: 700;
+`;
 
-// export const DeleteWrapper = styled.div`
-//   //   display: flex;
-//   justify-content: center;
-// `;
-
-// &:nth-child(4) {
-//   /* Czwarta kolumna */
-//   flex: 1 0 107px;
-//   padding-left: 1.2px;
-//   justify-content: flex-end;
-//   font-weight: 700;
-// }
-// &:nth-child(5) {
-//   /* Piąta kolumna */
-//   flex: 1 0 82px;
-//   padding-left: 32px;
-// }
-
-//  white-space: nowrap; /* Zapobieganie zawijaniu tekstu */
-//           overflow: hidden; /* Ukrywanie tekstu, który nie zmieści się w kontenerze */
-//           text-overflow: ellipsis; /* Pokazywanie "..." dla tekstu, który jest zbyt długi, aby się zmieścić */
+export const DeleteWrapper = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 1.65px;
+`;

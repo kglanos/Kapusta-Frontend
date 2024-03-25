@@ -93,13 +93,14 @@ input {
 }
 
 .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  padding-left: 20px;
-  padding-right: 20px;
-  margin-right: auto;
-  margin-left: auto;
+  padding-inline: auto;
+  margin-inline: auto;
 
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: 768px) {
     padding-left: 50px;
     padding-right: 50px;
   }
@@ -111,7 +112,6 @@ input {
 .delete-icon {
   justify-content: center;
   align-items: center;
-  margin-right: 10px;
 
   @media screen and (min-width: 768px) {
     margin-right: 27px;
