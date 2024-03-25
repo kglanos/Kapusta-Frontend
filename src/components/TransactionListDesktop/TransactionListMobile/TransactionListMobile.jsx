@@ -7,8 +7,8 @@ import {
   StyledTransactionTable,
   DescriptionAndDetailsWrapper,
   DateAndCategoryWrapper,
-  //   AmoutWrapper,
-  //   DeleteWrapper,
+  AmoutWrapper,
+  DeleteWrapper,
 } from './TransactionListMobile.styled';
 
 export const TransactionListMobile = ({ children }) => {
@@ -37,6 +37,10 @@ export const TransactionListMobile = ({ children }) => {
     return second - first;
   });
 
+  function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
+
   return (
     !isLoading && (
       <StyledTransactionTable className="container">
@@ -46,28 +50,28 @@ export const TransactionListMobile = ({ children }) => {
             return (
               <tr key={_id} style={{ height: 46 }}>
                 <DescriptionAndDetailsWrapper>
-                  <td>{description}</td>
+                  <td>{capitalizeFirstLetter(description)}</td>
                   <DateAndCategoryWrapper>
                     <td>{date.split('-').reverse().join('.')}</td>
                     <td>{category}</td>
                   </DateAndCategoryWrapper>
                 </DescriptionAndDetailsWrapper>
-                {/* <AmoutWrapper> */}
-                <td style={{ color }}>
-                  {minus} {amount}.00 USD
-                </td>
-                {/* </AmoutWrapper> */}
-                {/* <DeleteWrapper> */}
-                <td>
-                  <span
-                    id={_id}
-                    onClick={handleDelete}
-                    style={{ cursor: 'pointer' }}
-                  >
-                    <DeleteIcon className="delete-icon" />
-                  </span>
-                </td>
-                {/* </DeleteWrapper> */}
+                <AmoutWrapper>
+                  <td style={{ color }}>
+                    {minus} {amount}.00 USD
+                  </td>
+                </AmoutWrapper>
+                <DeleteWrapper>
+                  <td>
+                    <span
+                      id={_id}
+                      onClick={handleDelete}
+                      style={{ cursor: 'pointer' }}
+                    >
+                      <DeleteIcon className="delete-icon" />
+                    </span>
+                  </td>
+                </DeleteWrapper>
               </tr>
             );
           })}
