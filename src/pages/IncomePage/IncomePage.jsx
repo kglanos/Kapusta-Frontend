@@ -13,6 +13,7 @@ import {
 
 import Form from 'components/Expenses/Form';
 import { Summary } from 'components/Summary/Summary';
+import { TransactionListMobile } from '../../components/TransactionListDesktop/TransactionListMobile/TransactionListMobile';
 import { TransactionListDesktop } from 'components/TransactionListDesktop/TransactionListDesktop';
 import { ToTransactionButton } from 'components/ToTransactionButton/ToTransactionButton';
 import {
@@ -32,7 +33,7 @@ import { CabbagesBottom } from '../../components/Background/Authorized/CabbagesB
 const Income = () => {
   const dispatch = useDispatch();
 
-  const allIncomes = useSelector(selectIncomeTransactions);
+  const allIncome = useSelector(selectIncomeTransactions);
   const user = useSelector(selectIsLoggedIn);
   const balance = useSelector(selectBalance);
   const color = 'green';
@@ -72,13 +73,20 @@ const Income = () => {
         {' '}
         {!mobileScreen && <TransactionNavDesktop />}
         <Form />
-        <TableAndSummaryContainer>
-          <TransactionListDesktop>
-            {allIncomes}
+        {mobileScreen ? (
+          <TransactionListMobile>
+            {allIncome}
             {color}
-          </TransactionListDesktop>
-          {desktopScreen && <Summary />}
-        </TableAndSummaryContainer>
+          </TransactionListMobile>
+        ) : (
+          <TableAndSummaryContainer>
+            <TransactionListDesktop>
+              {allIncome}
+              {color}
+            </TransactionListDesktop>
+            {desktopScreen && <Summary />}
+          </TableAndSummaryContainer>
+        )}
       </FrameContainer>
       {tabletScreen && <Summary />}
     </HelmetProvider>
