@@ -13,6 +13,7 @@ import {
 
 import Form from 'components/Expenses/Form';
 import { Summary } from 'components/Summary/Summary';
+import { TransactionListMobile } from '../../components/TransactionListDesktop/TransactionListMobile/TransactionListMobile';
 import { TransactionListDesktop } from 'components/TransactionListDesktop/TransactionListDesktop';
 import { ToTransactionButton } from 'components/ToTransactionButton/ToTransactionButton';
 import {
@@ -72,13 +73,20 @@ const Expenses = () => {
         {' '}
         {!mobileScreen && <TransactionNavDesktop />}
         <Form />
-        <TableAndSummaryContainer>
-          <TransactionListDesktop>
+        {mobileScreen ? (
+          <TransactionListMobile>
             {allExpenses}
             {color}
-          </TransactionListDesktop>
-          {desktopScreen && <Summary />}
-        </TableAndSummaryContainer>
+          </TransactionListMobile>
+        ) : (
+          <TableAndSummaryContainer>
+            <TransactionListDesktop>
+              {allExpenses}
+              {color}
+            </TransactionListDesktop>
+            {desktopScreen && <Summary />}
+          </TableAndSummaryContainer>
+        )}
       </FrameContainer>
       {tabletScreen && <Summary />}
     </HelmetProvider>
