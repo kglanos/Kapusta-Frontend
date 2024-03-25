@@ -33,7 +33,7 @@ export const StyledTransactionTable = styled.table`
   }
 `;
 
-export const DescriptionAndDetailsWrapper = styled.div`
+export const DescriptionAndDetailsWrapper = styled.span`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -48,7 +48,7 @@ export const DescriptionAndDetailsWrapper = styled.div`
   text-overflow: ellipsis;
 `;
 
-export const DateAndCategoryWrapper = styled.div`
+export const DateAndCategoryWrapper = styled.span`
   display: flex;
   padding: 0;
   height: 15px;
@@ -62,7 +62,7 @@ export const DateAndCategoryWrapper = styled.div`
   text-overflow: ellipsis;
 `;
 
-export const AmoutWrapper = styled.div`
+export const AmoutWrapper = styled.span`
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -71,7 +71,7 @@ export const AmoutWrapper = styled.div`
   font-weight: 700;
 `;
 
-export const DeleteWrapper = styled.div`
+export const DeleteWrapper = styled.span`
   display: flex;
   justify-content: flex-end;
   align-items: center;
