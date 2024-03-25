@@ -8,7 +8,7 @@ export const selectUserEmail = state => state.auth.user.email;
 
 export const selectIsRefreshing = state => state.auth.isRefreshing;
 
-export const selectBalance = state => state.auth.user.balance;
+export const selectBalance = state => state.auth.balance;
 
 // export const selectIsRegisteredIn = state => state.auth.isRegisteredIn;
 
@@ -31,7 +31,7 @@ export const selectExpensesSummary = store =>
 export const selectIncomeSummary = store =>
   store.transactions.incomes.monthsStats;
 
-// export const selectBalance = store => store.transactions.newBalance;
+// export const selectNewBalance = store => store.transactions.newBalance;
 
 /* EXTRADATA SELECTORS */
 

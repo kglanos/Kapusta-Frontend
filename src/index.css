@@ -117,3 +117,7 @@ input {
     margin-right: 27px;
   }
 }
+
+.blueModal {
+  overflow: hidden;
+}
