@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.css": "/Kapusta-Frontend/static/css/main.2398cf0b.css",
-    "main.js": "/Kapusta-Frontend/static/js/main.7962f7e1.js",
+    "main.css": "/Kapusta-Frontend/static/css/main.1ce27c3a.css",
+    "main.js": "/Kapusta-Frontend/static/js/main.77f2cf1b.js",
     "static/js/47.9bc42db0.chunk.js": "/Kapusta-Frontend/static/js/47.9bc42db0.chunk.js",
     "static/js/528.dd3e317c.chunk.js": "/Kapusta-Frontend/static/js/528.dd3e317c.chunk.js",
-    "static/js/274.d0cbf0f4.chunk.js": "/Kapusta-Frontend/static/js/274.d0cbf0f4.chunk.js",
-    "static/js/638.88cace1d.chunk.js": "/Kapusta-Frontend/static/js/638.88cace1d.chunk.js",
+    "static/js/274.158af41f.chunk.js": "/Kapusta-Frontend/static/js/274.158af41f.chunk.js",
+    "static/js/638.352a33c5.chunk.js": "/Kapusta-Frontend/static/js/638.352a33c5.chunk.js",
     "static/css/709.ca7dfde1.chunk.css": "/Kapusta-Frontend/static/css/709.ca7dfde1.chunk.css",
     "static/js/709.0f41ef82.chunk.js": "/Kapusta-Frontend/static/js/709.0f41ef82.chunk.js",
     "static/js/131.244d233b.chunk.js": "/Kapusta-Frontend/static/js/131.244d233b.chunk.js",
@@ -15,7 +15,7 @@
     "static/js/64.d9139761.chunk.js": "/Kapusta-Frontend/static/js/64.d9139761.chunk.js",
     "static/js/796.d4b29734.chunk.js": "/Kapusta-Frontend/static/js/796.d4b29734.chunk.js",
     "static/js/13.66de9581.chunk.js": "/Kapusta-Frontend/static/js/13.66de9581.chunk.js",
-    "static/js/717.2739a026.chunk.js": "/Kapusta-Frontend/static/js/717.2739a026.chunk.js",
+    "static/js/444.fd1d6c20.chunk.js": "/Kapusta-Frontend/static/js/444.fd1d6c20.chunk.js",
     "static/media/moneylost.jpg": "/Kapusta-Frontend/static/media/moneylost.dc30dfae6d352163e794.jpg",
     "static/media/sprite.svg": "/Kapusta-Frontend/static/media/sprite.6a88062b39dce553fb1bca4c452baf8c.svg",
     "static/media/cabbageGroupTablet.png": "/Kapusta-Frontend/static/media/cabbageGroupTablet.b251567a3cc3863b9a0d.png",
@@ -42,12 +42,12 @@
     "static/media/arrow-bottom.svg": "/Kapusta-Frontend/static/media/arrow-bottom.d0daa32725811f1fd9548377d47b8559.svg",
     "static/media/arrow-l.svg": "/Kapusta-Frontend/static/media/arrow-l.ed65ae738f78a2df12fa63ecf435fb95.svg",
     "static/media/arrow-r.svg": "/Kapusta-Frontend/static/media/arrow-r.4a8e7df3679a8f6d1fe7582d50a53944.svg",
-    "main.2398cf0b.css.map": "/Kapusta-Frontend/static/css/main.2398cf0b.css.map",
-    "main.7962f7e1.js.map": "/Kapusta-Frontend/static/js/main.7962f7e1.js.map",
+    "main.1ce27c3a.css.map": "/Kapusta-Frontend/static/css/main.1ce27c3a.css.map",
+    "main.77f2cf1b.js.map": "/Kapusta-Frontend/static/js/main.77f2cf1b.js.map",
     "47.9bc42db0.chunk.js.map": "/Kapusta-Frontend/static/js/47.9bc42db0.chunk.js.map",
     "528.dd3e317c.chunk.js.map": "/Kapusta-Frontend/static/js/528.dd3e317c.chunk.js.map",
-    "274.d0cbf0f4.chunk.js.map": "/Kapusta-Frontend/static/js/274.d0cbf0f4.chunk.js.map",
-    "638.88cace1d.chunk.js.map": "/Kapusta-Frontend/static/js/638.88cace1d.chunk.js.map",
+    "274.158af41f.chunk.js.map": "/Kapusta-Frontend/static/js/274.158af41f.chunk.js.map",
+    "638.352a33c5.chunk.js.map": "/Kapusta-Frontend/static/js/638.352a33c5.chunk.js.map",
     "709.ca7dfde1.chunk.css.map": "/Kapusta-Frontend/static/css/709.ca7dfde1.chunk.css.map",
     "709.0f41ef82.chunk.js.map": "/Kapusta-Frontend/static/js/709.0f41ef82.chunk.js.map",
     "131.244d233b.chunk.js.map": "/Kapusta-Frontend/static/js/131.244d233b.chunk.js.map",
@@ -57,10 +57,10 @@
     "64.d9139761.chunk.js.map": "/Kapusta-Frontend/static/js/64.d9139761.chunk.js.map",
     "796.d4b29734.chunk.js.map": "/Kapusta-Frontend/static/js/796.d4b29734.chunk.js.map",
     "13.66de9581.chunk.js.map": "/Kapusta-Frontend/static/js/13.66de9581.chunk.js.map",
-    "717.2739a026.chunk.js.map": "/Kapusta-Frontend/static/js/717.2739a026.chunk.js.map"
+    "444.fd1d6c20.chunk.js.map": "/Kapusta-Frontend/static/js/444.fd1d6c20.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2398cf0b.css",
-    "static/js/main.7962f7e1.js"
+    "static/css/main.1ce27c3a.css",
+    "static/js/main.77f2cf1b.js"
   ]
 }
