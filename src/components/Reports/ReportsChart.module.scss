@@ -25,14 +25,13 @@
 }
 
 .LinkIncome {
-  padding-top: 32px;
+  padding: 20px 0 0 0;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 15px;
   transition: 0.25s ease-in-out;
   @media screen and (min-width: 768px) {
-    padding: 20px 0 0 0;
   }
 }
 .LinkIncome:hover {
