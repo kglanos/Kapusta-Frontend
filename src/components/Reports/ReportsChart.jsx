@@ -78,6 +78,7 @@ export const ReportsChart = () => {
               <Bar
                 data={getDataForCategory(category)}
                 options={{
+                  // indexAxis: window.innerWidth < 768 ? 'y' : 'x',
                   scales: {
                     x: {
                       stacked: true,
@@ -95,9 +96,12 @@ export const ReportsChart = () => {
                       gridLines: {
                         drawBorder: false,
                       },
-                      ticks: {
-                        beginAtZero: true,
-                      },
+                    },
+                  },
+                  layout: {
+                    padding: {
+                      left: 3,
+                      right: 3,
                     },
                   },
 
@@ -110,15 +114,7 @@ export const ReportsChart = () => {
                       display: false,
                     },
                   },
-                  layout: {
-                    padding: {
-                      left: 50,
-                      right: 50,
-                      top: 0,
-                      bottom: 50,
-                    },
-                  },
-                  barThickness: 38,                
+                  barThickness: window.innerWidth < 768 ? 15 : 38,
                 }}
               />
             )}
