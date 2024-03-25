@@ -93,7 +93,6 @@ export const ReportsChart = () => {
                     y: {
                       stacked: true,
                       gridLines: {
-                        color: '#ff751d',
                         drawBorder: false,
                       },
                       ticks: {
@@ -101,15 +100,25 @@ export const ReportsChart = () => {
                       },
                     },
                   },
-                  title: {
-                    display: true,
-                    text: `Items for ${category.name}`,
-                    fontSize: 20,
-                  },
+
                   legend: {
                     display: true,
                     position: 'top',
                   },
+                  plugins: {
+                    legend: {
+                      display: false,
+                    },
+                  },
+                  layout: {
+                    padding: {
+                      left: 50,
+                      right: 50,
+                      top: 0,
+                      bottom: 50,
+                    },
+                  },
+                  barThickness: 38,                
                 }}
               />
             )}
