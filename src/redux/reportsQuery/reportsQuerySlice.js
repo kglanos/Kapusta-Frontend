@@ -19,4 +19,6 @@ const reportQuerySlice = createSlice({
 export const { reportsQueryAction, filteredDataAction } =
   reportQuerySlice.actions;
 
+// tu brakuje selektorów?
+
 export const reportsQueryReducer = reportQuerySlice.reducer;

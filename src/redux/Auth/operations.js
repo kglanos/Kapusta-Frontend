@@ -2,7 +2,7 @@ import axios from 'axios';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { updateUserBalance } from '../Transactions/apiTransactions';
 
-axios.defaults.baseURL = 'https://kapusta-a0a137454a45.herokuapp.com/';
+axios.defaults.baseURL = 'https://kapusta-a0a137454a45.herokuapp.com/'; // to do .env
 // axios.defaults.baseURL = 'http://localhost:4000'
 
 const setAuthHeader = token => {

@@ -25,10 +25,10 @@ export const selectIncomeTransactions = store =>
 export const selectAllTransactions = store =>
   store.transactions.allTransactions;
 
-export const selectExpensesSummary = store =>
+export const selectExpensesSummary = store => // to mozna dynamicznie obliczać. Mozna ale nie trzeba. Przy obliczaniu dynamicznym musimy się tylko martwić o to aby expenses były najnowsze.
   store.transactions.expences.monthsStats;
 
-export const selectIncomeSummary = store =>
+export const selectIncomeSummary = store => // to można dynamiczne obliczać
   store.transactions.incomes.monthsStats;
 
 // export const selectNewBalance = store => store.transactions.newBalance;

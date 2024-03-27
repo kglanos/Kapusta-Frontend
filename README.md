@@ -1,3 +1,4 @@
+#km To warto zmienić :)
 # React homework template
 
 Ten projekt został stworzony przy pomocy

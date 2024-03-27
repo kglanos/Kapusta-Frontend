@@ -15,14 +15,27 @@ const initialState = {
   error: null,
   incomes: {
     incomeTransactions: [],
-    monthsStats: {},
+    monthsStats: {}, // to można obliczać podczas pobierania danych
   },
   expences: {
     expenseTransactions: [],
-    monthsStats: {},
+    monthsStats: {}, // to można obliczać podczas pobierania danych.
   },
-  allTransactions: [],
+  allTransactions: [], // czym się to różni od income czy expenses
 };
+/*
+ * Często można mieć dylemat czy robić pewne rzeczy na froncie czy backendzie.
+ * Wtedy warto pamiętać że BE jest tylko jeden a FE już nie. I czasem niektóre obliczenia
+ * można przeżucić na FE jak np obliczanie statystyki itp
+ * Dane potrzebne do wyswietlenia można obliczyć już podczas pobierania ich z store.
+const initialState = {
+  newBalance: 0,
+  isLoading: false,
+  error: null,
+  incomes: [],
+  expences: [],
+};
+*/
 
 export const handlePending = state => {
   state.isLoading = true;
