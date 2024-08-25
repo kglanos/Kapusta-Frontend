@@ -1,0 +1,27 @@
+.chartContainer {
+  width: 100%;
+  height: aoto;
+}
+
+.chartTitle {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.legend {
+  list-style: none;
+  padding: 0;
+}
+
+.legendItem {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.legendColor {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  margin-right: 5px;
+}/*# sourceMappingURL=ReportsChart.module.css.map */
